@@ -1,0 +1,106 @@
+{
+    "title":  "F1 TV Keyframe SSIM",
+    "subTitle":  "Higher is better",
+    "series":  [
+                    {
+                        "serie":  "1920x1080",
+                        "data":  [
+                                        {
+                                            "x":  "Keyframe 20",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 21",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 22",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 23",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 24",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 25",
+                                            "y":  "1"
+                                        },
+                                        {
+                                            "x":  "Keyframe 26",
+                                            "y":  "1"
+                                        }
+                                    ]
+                    },
+                   {
+                       "serie":  "1280x720",
+                       "data":  [
+                                    {
+                                        "x":  "Keyframe 20",
+                                        "y":  "0.984"
+                                    },
+                                    {
+                                        "x":  "Keyframe 21",
+                                        "y":  "0.974"
+                                    },
+                                    {
+                                        "x":  "Keyframe 22",
+                                        "y":  "0.981"
+                                    },
+                                    {
+                                        "x":  "Keyframe 23",
+                                        "y":  "0.948"
+                                    },
+                                    {
+                                        "x":  "Keyframe 24",
+                                        "y":  "0.988"
+                                    },
+                                    {
+                                        "x":  "Keyframe 25",
+                                        "y":  "0.992"
+                                    },
+                                    {
+                                        "x":  "Keyframe 26",
+                                        "y":  "0.951"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "640x360",
+                       "data":  [
+                                    {
+                                        "x":  "Keyframe 20",
+                                        "y":  "0.972"
+                                    },
+                                    {
+                                        "x":  "Keyframe 21",
+                                        "y":  "0.952"
+                                    },
+                                    {
+                                        "x":  "Keyframe 22",
+                                        "y":  "0.973"
+                                    },
+                                    {
+                                        "x":  "Keyframe 23",
+                                        "y":  "0.915"
+                                    },
+                                    {
+                                        "x":  "Keyframe 24",
+                                        "y":  "0.981"
+                                    },
+                                    {
+                                        "x":  "Keyframe 25",
+                                        "y":  "0.988"
+                                    },
+                                    {
+                                        "x":  "Keyframe 26",
+                                        "y":  "0.903"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  ""
+}

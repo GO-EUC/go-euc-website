@@ -1,0 +1,41 @@
+{
+    "title":  "SSIM Azure Virtual Desktop",
+    "subTitle":  "Higher is better",
+    "series":  [
+                   {
+                       "serie":  "AVD ",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9768"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9784"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9777"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "AVD Optimized",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9898"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9904"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9901"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  ""
+}

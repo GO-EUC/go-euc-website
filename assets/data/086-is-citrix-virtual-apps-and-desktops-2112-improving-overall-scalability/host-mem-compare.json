@@ -1,0 +1,43 @@
+{
+    "title":  "Comparison Host Free Memory in mbytes in %",
+    "subTitle":  "Lower is better",
+    "series":  [
+                   {
+                       "serie":  "CVAD 1912 LTSR",
+                       "data":  [
+                                    {
+                                        "x":  "Mem Free Mbytes",
+                                        "y":  100
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2106",
+                       "data":  [
+                                    {
+                                        "x":  "Mem Free Mbytes",
+                                        "y":  97
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2109",
+                       "data":  [
+                                    {
+                                        "x":  "Mem Free Mbytes",
+                                        "y":  97
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2112",
+                       "data":  [
+                                    {
+                                        "x":  "Mem Free Mbytes",
+                                        "y":  101
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}

@@ -1,0 +1,136 @@
+---
+layout: page
+title: About
+image: '/assets/images/head.jpg'
+comments: false
+---
+<p>
+{{site.title}} believes in:
+</p>
+
+<blockquote>
+<p>Doing research is creating new knowledge.</p>
+<p><cite>Neil Armstrong</cite></p>
+</blockquote>
+<p>
+    The mission of {{site.title}} is:
+</p>
+
+<blockquote>
+Research new technologies, to inspire and serve the community by providing new knowledge.
+</blockquote>
+
+<p>
+Our platform is setup to serve this mission. We believe this is valuable information to every IT administrator, Consultant or manager that has something to do with end-user computing. {{site.title}} serves the community using our website and various community events, facilitating the {{site.title}} researchers. Everything published on {{site.title}} is open and freely available on the website without any registration.
+</p>
+
+<p>
+As {{site.title}} is a non-profit foundation, this way it is ensured the platform is fully independent and unbiased to serve the community. All researches are done based on community insights and suggestions.
+</p>
+
+<p>
+In order to keep the {{site.title}} platform running we heavily rely on sponsors. All funding collected from our sponsors are invested in the {{site.tile}} platform. This way we can continue serve the community with great content. It is important to understand all involved sponsors are carefully selected to re-ensure the independent status of the {{site.title}} platform.
+</p>
+
+<p>
+If you have any questions, please feel free to reach out at info[at]go-euc.com.
+</p>
+
+<h2>Founders</h2>
+{% assign ryan = site.authors['ryan'] %}
+{% assign eltjo = site.authors['eltjo'] %}
+{% assign bas = site.authors['bas'] %}
+<div class="row grid">
+    <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+        <div class="member__box">
+            <a href="{{site.baseurl}}/members/{{ryan.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ ryan.picture }}" alt="{{ ryan.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ ryan.display_name }}
+                </div>
+                <div class="member__box-title">
+                    {{ ryan.title }} at at {{ ryan.company }}
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+        <div class="member__box">
+            <a href="{{site.baseurl}}/members/{{eltjo.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ eltjo.picture }}" alt="{{ eltjo.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ eltjo.display_name }}
+                </div>
+                <div class="member__box-title">
+                    {{ eltjo.title }} at at {{ eltjo.company }}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<h2>Foundation Board</h2>
+{% assign ryan = site.authors['ryan'] %}
+{% assign eltjo = site.authors['eltjo'] %}
+{% assign bas = site.authors['bas'] %}
+<div class="row grid">
+    <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+        <div class="member__box">
+            <a href="{{site.baseurl}}/members/{{ryan.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ ryan.picture }}" alt="{{ ryan.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ ryan.display_name }}
+                </div>
+                <div class="member__box-title">
+                    Founder and Chair of the Board
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+        <div class="member__box">
+            <a href="{{site.baseurl}}/members/{{eltjo.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ eltjo.picture }}" alt="{{ eltjo.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ eltjo.display_name }}
+                </div>
+                <div class="member__box-title">
+                    Founder and Vice Chair of the Board
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+        <div class="member__box">
+            <a href="{{site.baseurl}}/members/{{bas.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ bas.picture }}" alt="{{ bas.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ bas.display_name }}
+                </div>
+                <div class="member__box-title">
+                    Board member
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

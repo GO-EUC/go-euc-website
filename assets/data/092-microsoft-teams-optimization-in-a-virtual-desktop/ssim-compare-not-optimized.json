@@ -1,0 +1,58 @@
+{
+    "title":  "SSIM Not Optimized",
+    "subTitle":  "Higher is better",
+    "series":  [
+                   {
+                       "serie":  "AVD ",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9768"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9784"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9777"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Citrix",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9727"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9742"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.974"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Cloud PC",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9213"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9277"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9272"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  ""
+}

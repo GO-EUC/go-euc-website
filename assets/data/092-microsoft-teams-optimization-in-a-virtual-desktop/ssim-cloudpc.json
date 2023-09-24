@@ -1,0 +1,41 @@
+{
+    "title":  "SSIM CloudPC",
+    "subTitle":  "Higher is better",
+    "series":  [
+                   {
+                       "serie":  "Cloud PC",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9213"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9277"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9272"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Cloud PC Optimized",
+                       "data":  [
+                                    {
+                                        "x":  "Average",
+                                        "y":  "0.9853"
+                                    },
+                                    {
+                                        "x":  "99th",
+                                        "y":  "0.9861"
+                                    },
+                                    {
+                                        "x":  "95th",
+                                        "y":  "0.9860"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  ""
+}

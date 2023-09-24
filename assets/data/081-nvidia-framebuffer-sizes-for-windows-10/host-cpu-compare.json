@@ -1,0 +1,34 @@
+{
+    "title":  "Host CPU Utilization % Avg.",
+    "subTitle":  "Lower is better",
+    "series":  [
+                   {
+                       "serie":  "NVIDIA 1Q",
+                       "data":  [
+                                    {
+                                        "x":  "Host CPU Utilization",
+                                        "y":  7.2
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "NVIDIA 2Q",
+                       "data":  [
+                                    {
+                                        "x":  "Host CPU Utilization",
+                                        "y":  8.2
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "NVIDIA 4Q",
+                       "data":  [
+                                    {
+                                        "x":  "Host CPU Utilization",
+                                        "y":  8.1
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}

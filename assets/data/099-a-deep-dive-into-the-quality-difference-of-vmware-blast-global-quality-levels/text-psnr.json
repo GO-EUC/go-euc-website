@@ -1,0 +1,52 @@
+{
+  "title": "Text only - PSNR",
+  "subTitle": "Higher is better",
+  "series": [
+    {
+      "serie": "Level 1",
+      "data": [
+        {
+          "x": "PSNR",
+          "y": "33.0"
+        }
+      ]
+    },
+    {
+      "serie": "Level 2",
+      "data": [
+        {
+          "x": "PSNR",
+          "y": "46.2"
+        }
+      ]
+    },
+    {
+      "serie": "Level 3",
+      "data": [
+        {
+          "x": "PSNR",
+          "y": "49.0"
+        }
+      ]
+    },
+    {
+      "serie": "Level 4",
+      "data": [
+        {
+          "x": "PSNR",
+          "y": "49.1"
+        }
+      ]
+    },
+    {
+      "serie": "Level 5",
+      "data": [
+        {
+          "x": "PSNR",
+          "y": "49.0"
+        }
+      ]
+    }
+  ],
+  "unit": ""
+}

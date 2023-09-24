@@ -1,0 +1,26 @@
+<div class="col col-4 col-d-6 col-t-12">
+  <div class="widget widget-sponsor">
+
+    <div class="widget__head">
+      <h3 class="widget__title">Sponsors</h3>
+    </div>
+
+    {% for sponsor in site.sponsors %}
+
+    {% assign sponsorName = sponsor[0] %}
+    {% assign sponsorInfo = site.sponsors[sponsorName] %}
+    {% assign today_date = 'now' | date: "%y %m %d" %}
+    {% assign contract_date =  sponsorInfo.date | date: "%y %m %d" %}
+
+    {% if sponsorInfo.level <= 2 %}
+      {% if contract_date >= today_date %}
+        <div>
+            <a href="{{sponsorInfo.site}}" target="_blank"><img width="200" src="{{ site.baseurl }}/{{sponsorInfo.logo-light}}" style="max-width: 100%; height: auto; margin-bottom: 30px;" sizes="(max-width: 200px) 100vw, 200px"></a>
+        </div>
+        {% endif %}
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+</div>

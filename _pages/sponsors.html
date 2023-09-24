@@ -1,0 +1,31 @@
+---
+layout: page
+title: Sponsors
+image: '/assets/images/head.jpg'
+comments: false
+---
+
+<div class="row grid">
+
+
+
+    {% for sponsor in site.sponsors %}
+
+    {% assign name = sponsor[0] %}
+    {% assign info = site.sponsors[name] %}
+
+    {% assign today_date = 'now' | date: "%y %m %d" %}
+    {% assign contract_date =  info.date | date: "%y %m %d" %}
+
+    {% if contract_date >= today_date %}
+    <div class="col col-6 col-d-6 col-t-12 grid__post member-grid animate">
+        <a href="{{site.baseurl}}/sponsors/{{info.page}}">
+            <div class="sponsor-box">
+                <img class="sponsor-box-logo" src="{{ site.baseurl }}/{{ info.logo-light }}" alt="{{ info.name }}">
+            </div>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>

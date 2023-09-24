@@ -1,0 +1,75 @@
+{
+  "title": "Comparison Click to Photon in ms",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "144Hz",
+      "data": [
+        {
+          "x": "Average",
+          "y": "21.1"
+        },
+        {
+          "x": "Min",
+          "y": "17.4"
+        },
+        {
+          "x": "Max",
+          "y": "25.8"
+        }
+      ]
+    },
+    {
+      "serie": "60Hz",
+      "data": [
+        {
+          "x": "Average",
+          "y": "52.5"
+        },
+        {
+          "x": "Min",
+          "y": "48.3"
+        },
+        {
+          "x": "Max",
+          "y": "58.4"
+        }
+      ]
+    },
+    {
+      "serie": "Citrix HDX",
+      "data": [
+        {
+          "x": "Average",
+          "y": "105.4"
+        },
+        {
+          "x": "Min",
+          "y": "95.3"
+        },
+        {
+          "x": "Max",
+          "y": "118.9"
+        }
+      ]
+    },
+    {
+      "serie": "Citrix HDX 60 FPS",
+      "data": [
+        {
+          "x": "Average",
+          "y": "58.5"
+        },
+        {
+          "x": "Min",
+          "y": "50.6"
+        },
+        {
+          "x": "Max",
+          "y": "67.0"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}

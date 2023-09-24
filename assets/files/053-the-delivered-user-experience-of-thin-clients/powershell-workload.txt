@@ -1,0 +1,118 @@
+$text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend enim turpis, eget consectetur purus feugiat et. Integer at erat quis ligula lacinia aliquam nec et sapien. Integer at ultrices quam. Donec malesuada lorem eget scelerisque dapibus. Fusce ultrices eros purus, eget consectetur ante aliquet sit amet. Etiam tincidunt erat eget tristique lobortis. Praesent ultricies tincidunt ornare. Donec sit amet neque ac massa facilisis faucibus. Vestibulum at eleifend felis. Donec et urna ac orci luctus feugiat. Nulla rutrum pharetra leo. Maecenas tempus dolor nisi, sed molestie nibh pharetra eget. Curabitur varius nulla a felis cursus faucibus. Mauris vel lacus tristique orci maximus pulvinar. Cras a ligula volutpat metus ornare porttitor sit amet et sapien. Phasellus mattis vehicula nisl, vel vulputate nisl aliquet et.
+
+Integer non molestie erat. Aliquam erat volutpat. Sed eros metus, mattis gravida efficitur elementum, maximus at lorem. Quisque convallis tempus ipsum et fringilla. Nulla ac fringilla purus. Curabitur sit amet faucibus lacus, at interdum odio. Praesent id dolor libero. Phasellus iaculis dolor nisi. Maecenas cursus finibus nunc id dapibus. Aliquam lacinia tincidunt nisi, eu gravida odio imperdiet at. Aliquam rhoncus justo porttitor, posuere mi sed, vehicula justo. Fusce et dui quam. Donec et dignissim justo. Duis bibendum metus sagittis venenatis interdum. Vestibulum vulputate diam ac nisl consequat, quis ultricies urna ultricies. Sed ac metus vel purus faucibus suscipit.
+
+Vestibulum lacus ex, pellentesque ut ultricies at, gravida et mi. Duis porta tellus eget justo tincidunt viverra. Vivamus faucibus nunc at ligula viverra, eget hendrerit velit venenatis. Quisque sit amet lacus sed leo cursus rutrum quis in est. In hac habitasse platea dictumst. Proin elementum nibh vitae magna sodales ultricies. Nulla viverra, neque at vestibulum placerat, lectus enim rutrum orci, sit amet consectetur tellus odio sit amet augue. Vestibulum sapien libero, dictum id neque vitae, placerat blandit purus. Aliquam orci orci, egestas id metus sit amet, congue ultricies tortor. Morbi non felis non neque dictum pulvinar.
+
+Phasellus vitae odio ultricies, ultricies neque non, lacinia dolor. Sed eu aliquet sem, sit amet gravida tellus. Duis nec enim et nunc scelerisque placerat. Nam luctus gravida ipsum, at lobortis ligula faucibus vel. Quisque dapibus egestas nunc, at condimentum purus ullamcorper ac. Aliquam dictum diam vitae dolor convallis dapibus. Aenean varius fringilla dictum.
+
+Donec eget lacus a ipsum imperdiet iaculis a vel mauris. Fusce sit amet efficitur nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus blandit mauris sapien, ut luctus ipsum placerat at. Cras eu risus dignissim, blandit erat consectetur, pharetra erat. Nam et pulvinar purus. Donec dolor tellus, dictum ut odio sed, iaculis dignissim augue. Aliquam imperdiet luctus fermentum. Nulla facilisi. Nulla molestie bibendum lacinia.
+
+Donec eu ipsum nec nibh fringilla lacinia quis ac ligula. Mauris at ipsum cursus, commodo tellus non, pretium dolor. Nulla pharetra orci felis, sit amet rutrum diam sodales eu. Donec volutpat turpis tortor. Donec ut nisl nec arcu porta lobortis eu nec magna. Aenean sit amet tortor laoreet, aliquet dui at, lacinia massa. Donec lectus libero, blandit sit amet efficitur tempor, sagittis sed urna. Nunc vel eros vel ante porta imperdiet quis posuere erat. Nam condimentum nibh ut metus commodo efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus euismod efficitur. Nunc nibh urna, porttitor id luctus pellentesque, tincidunt sed odio. Pellentesque pellentesque, metus at tincidunt porta, sem quam sagittis erat, ut lobortis velit est quis massa. Fusce at vulputate ante.
+
+Fusce ut est et nisi hendrerit suscipit et ut orci. Quisque a scelerisque arcu. Ut facilisis mattis porttitor. Integer condimentum at nibh cursus maximus. Suspendisse mi mi, ultrices a tincidunt gravida, pulvinar ac sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam at purus ut arcu laoreet efficitur eu ac nibh. Morbi sed orci ligula. Donec ornare, mi non ultrices egestas, libero metus placerat nibh, a interdum nisl nunc at enim. Integer mattis porttitor sodales. Integer consequat tortor vel euismod vestibulum. Donec sed ex tincidunt, malesuada erat eu, ultrices nunc. Pellentesque in lacinia eros, non gravida tellus. Donec dapibus tempus enim, nec venenatis metus hendrerit non. Nullam tempus sem at justo consequat, ut aliquam est malesuada.
+
+Donec consequat augue nec dui tincidunt, sed laoreet tortor placerat. Nunc tellus enim, lacinia nec finibus a, congue tincidunt odio. Quisque vel auctor metus. Aenean id fringilla mauris, in euismod magna. Etiam gravida in eros ac efficitur. Mauris ac lorem vulputate, malesuada felis vel, sodales risus. Curabitur condimentum nisi sed enim consectetur iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id risus vitae mi pretium euismod. Quisque in diam lacus. Proin pharetra, dui a pharetra elementum, magna magna commodo orci, eu vulputate mi ex ac quam. Suspendisse quis ligula vitae est tempus tincidunt ut non risus. Quisque nec semper ante.
+
+Suspendisse id lacinia lacus. Vestibulum elementum nibh diam. Phasellus felis odio, ultricies quis ante nec, vulputate interdum ex. Donec luctus nunc nec odio elementum luctus. Nulla cursus vulputate justo ut dictum. Fusce ullamcorper ipsum ante, fermentum lacinia nulla mattis quis. Aliquam consequat sem vel turpis iaculis vestibulum. Maecenas placerat nibh sit amet lacus mollis, ac tristique libero rhoncus. Vivamus ultrices blandit massa. Proin sit amet lobortis ipsum. Ut et consequat risus.
+
+Suspendisse vehicula ornare turpis. Ut posuere sapien mi, in interdum mi venenatis vel. Mauris consectetur arcu hendrerit tempus auctor. Proin fermentum nisl in posuere posuere. Etiam gravida tincidunt eros. Cras sit amet magna magna. Vivamus convallis orci nulla, eget sagittis neque tristique in. Phasellus nec orci nunc. Phasellus lacinia imperdiet mattis. Aenean aliquam hendrerit metus, eget tempor magna malesuada a. Nunc at massa et quam elementum egestas. Pellentesque quis tellus rutrum libero congue convallis. Sed fermentum euismod justo nec viverra. Maecenas at nunc a sapien ullamcorper aliquam. Nunc commodo leo nisi, at ullamcorper justo suscipit quis.
+
+Sed semper egestas gravida. Quisque laoreet ex eu neque sollicitudin, at porta velit sagittis. Ut non diam eros. Maecenas a facilisis leo. Morbi quis sem turpis. Ut pharetra mauris ac ligula tempor, quis sagittis turpis imperdiet. Maecenas eu dolor lacus. Nunc ut faucibus lectus, non egestas diam. Donec sit amet mauris ac tellus dictum placerat quis sit amet lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet ex vitae lorem pretium vehicula. In suscipit ac leo quis tincidunt. Proin pharetra ligula et ipsum lobortis, et posuere metus facilisis. In auctor risus iaculis lectus tempor luctus. Sed elementum dolor non erat faucibus finibus. Vestibulum volutpat nisl non nunc condimentum, non pharetra nulla consequat.
+
+Mauris bibendum ipsum ut tincidunt faucibus. Pellentesque congue a libero ac pellentesque. Cras ut facilisis dui, sed porta enim. Vivamus hendrerit ante eu metus bibendum, sed aliquam libero hendrerit. Vivamus urna est, maximus sit amet metus vel, consequat semper augue. Donec bibendum at lorem vel ultrices. Duis imperdiet aliquet nibh sed ultrices. Proin varius convallis odio, a tempus justo aliquam quis. Nunc ullamcorper orci a libero lacinia, sed ornare dolor dignissim. Quisque molestie dui vel velit aliquam porttitor eget id diam. Aenean tempor a turpis in consequat.
+
+Curabitur ut imperdiet orci. Donec finibus sapien rhoncus lectus interdum, non aliquet velit condimentum. Ut ante sem, pharetra maximus porttitor ut, dictum ac libero. Pellentesque a nisl scelerisque, porta lorem ut, aliquam nisi. Aliquam condimentum sem quis tortor faucibus consequat. Vestibulum aliquam, erat sed convallis molestie, nibh eros posuere urna, non pretium nisi ipsum facilisis urna. Donec efficitur, lectus ac congue elementum, quam dolor ultrices nisl, non pellentesque nisi tortor in tellus. Pellentesque a rutrum orci. Etiam eget enim ac ligula molestie tincidunt. Aenean tincidunt sagittis nulla vel venenatis.
+
+In finibus tellus non tellus facilisis tincidunt. Nam a luctus nibh. Proin commodo ornare dolor eleifend ultrices. Maecenas consectetur lectus at lacus tristique, dignissim bibendum nunc iaculis. Nunc eget pulvinar purus. Curabitur egestas dapibus augue vel molestie. Quisque nec justo at orci efficitur tristique. Sed at ornare turpis, et tincidunt est. Nulla tempor urna maximus venenatis pretium. Donec egestas lacinia arcu sit amet porttitor. Aenean hendrerit elementum ullamcorper."
+
+
+$testname = "Igel_u3_2020"
+
+# Admin creds
+$creds = Get-Credential
+
+Start-Process .\RemoteDisplayAnalyzer.exe -ArgumentList "-disablegpu -logging $env:USERPROFILE\Desktop\$($testname).csv"
+Start-Process "C:\Windows\System32\logman.exe" -ArgumentList "create counter $testname --v -si `"00:00:01`" -f csv -c `"\Processor(*)\*`" `"\Memory\*`" `"\PhysicalDisk(*)\*`" `"\Network Interface(*)\*`" `"\NVIDIA GPU(*)\*`"" -Credential $creds
+Start-Process "C:\Windows\System32\logman.exe" -ArgumentList "start $testname" -Credential $creds
+
+Start-Sleep 30
+
+$wshell = New-Object -ComObject wscript.shell
+
+# Microsoft Word
+New-Item "$env:USERPROFILE\Desktop\Document.docx" -type file | Out-Null
+Start-Sleep 1
+Start-Process "$env:USERPROFILE\Desktop\Document.docx"
+
+Start-Sleep 5
+
+$wshell.AppActivate('Document')
+Start-Sleep 1
+
+$wshell.AppActivate('Document')
+Start-Sleep 1
+
+$textArray = $text.ToCharArray()
+$i = 0
+foreach ($letter in $textArray) {
+
+    if ($i -eq 600) {
+        break;
+    }
+    
+    $wshell.AppActivate('Document')
+
+    $wshell.SendKeys($letter)
+    Start-Sleep -Milliseconds (Get-Random -Minimum 50 -Maximum 400)
+    $i++
+
+}
+
+$wshell.SendKeys('{enter}')
+
+$wshell.AppActivate('Document')
+$wshell.SendKeys('^s')
+
+$i = 0
+foreach ($letter in $textArray) {
+
+    if ($i -eq 400) {
+        break;
+    }
+    
+    $wshell.AppActivate('Document')
+
+    $wshell.SendKeys($letter)
+    Start-Sleep -Milliseconds (Get-Random -Minimum 50 -Maximum 400)
+    $i++
+
+}
+
+Get-Process "WinWord" | Stop-Process
+
+Start-Sleep 5
+
+start microsoft-edge:https://carvisualizer.plus360degrees.com/threejs/
+
+Start-Sleep 120
+
+$wshell.SendKeys('^w')
+
+Start-Sleep 30
+
+start microsoft-edge:http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4
+
+Start-Sleep 120
+
+$wshell.SendKeys('^w')
+
+
+#DONE!
+
+Start-Sleep 15
+
+Get-Process RemoteDisplayAnalyzer | Stop-Process
+
+Start-Process "C:\Windows\System32\logman.exe" -ArgumentList "stop $testname" -Credential $creds
+Start-Process "C:\Windows\System32\logman.exe" -ArgumentList "delete $testname" -Credential $creds

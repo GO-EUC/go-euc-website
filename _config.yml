@@ -1,0 +1,342 @@
+#-------------------------------
+# General Site Settings
+title: GO-EUC
+logo: 'assets/images/logo-white.png'
+description: Research is creating new knowledge
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
+paypal: https://www.paypal.com/donate/?hosted_button_id=FE592EDA2QQT6
+
+
+#-------------------------------
+# Hero Settings
+hero:
+  title: GO-EUC
+  description: Research is creating new knowledge
+  image: 'assets/images/head.jpg'
+
+#-------------------------------
+# Footer section
+# Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
+# Other icons can be found at https://ionicons.com/v4/
+social:
+- {icon: "ion-logo-twitter", link: "https://twitter.com/g0_euc"}
+- {icon: "ion-logo-youtube", link: "https://www.youtube.com/channel/UC8wCPbi_qZk6jRewEnuKtZw"}
+- {icon: "ion-logo-github", link: "https://github.com/go-euc"}
+- {icon: "ion-logo-linkedin", link: "https://www.linkedin.com/company/go-euc/"}
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: ict-r
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: 'G-QERQ4899QY'
+
+
+#-------------------------------
+# Newsletter
+mailchimp: disable # To enable the mailchimp form, use the value 'enable'. To disable the form, leave the field blank.
+mailchimp-identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+
+authors:
+  ryan:
+    active: true
+    founder: true
+    name: Ryan
+    display_name: Ryan Ververs-Bijkerk
+    company: GO-INIT
+    title: 'Technologist'
+    picture: 'assets/images/authors/ryan.png'
+    web: https://www.logitblog.com
+    twitter: https://twitter.com/logitblog
+    linkedin: https://www.linkedin.com/in/ryanbijkerk
+    github: https://github.com/RyanBijkerk
+    reddit: https://www.reddit.com/u/ryanbijkerk
+    page: ryan-ververs-bijkerk
+    description: "Ryan is a self-employed Technologist at GO-INIT focused on the EUC and Code area. Ryan is primarily focusing on the user experience in centralized desktop environments. "
+  eltjo:
+    active: true
+    founder: true
+    name: Eltjo
+    display_name: Eltjo van Gulik
+    company: Citrix
+    title: 'Principal Product Manager'
+    picture: 'assets/images/authors/eltjo.png'
+    twitter: https://twitter.com/eltjovg
+    linkedin: https://www.linkedin.com/in/eltjovangulik/
+    page: eltjo-van-gulik
+    description: "Eltjo van Gulik is the Principal Product Manager for HDX at Citrix and one of the co-founders of G0-EUC. Social, a tad pedantic and suitably lazy."
+  omar:
+    active: true
+    name: Omar
+    display_name: Omar Bouhaj
+    company: 'SLTN Inter Access'
+    title: 'Solutions Architect EUC'
+    picture: 'assets/images/authors/omar.png'
+    twitter: https://twitter.com/omar_bouhaj
+    linkedin: https://www.linkedin.com/in/omarbouhaj/
+    page: omar-bouhaj
+    description: "Dedicated, passionate and innovative IT professional. Omar is an enthusiastic and driven technical consultant and currently a consultant at ICT-Partners West, focused on the End-User Computing (EUC) area. With the primary focus on the user experience in centralized desktop environments."
+  sven:
+    active: false
+    name: Sven
+    display_name: Sven Huisman
+    company: Nutanix
+    title: Solutions Architect
+    picture: 'assets/images/authors/sven.png'
+    web: https://svenhuisman.com/
+    twitter: https://twitter.com/svenh
+    linkedin: https://www.linkedin.com/in/svenhuisman/
+    page: sven-huisman
+    description: "Sven is working as a solutions architect at Nutanix with the focus on End User Computing. The opinions expressed here represent his own and not those of his employer."
+  krishan:
+    active: false
+    name: Krishan
+    display_name: Krishan Khoesial
+    company: Cegeka
+    title: Workspace Consultant
+    picture: 'assets/images/authors/krishan.png'
+    linkedin: https://www.linkedin.com/in/kvkhoesial/
+    page: krishan-khoesial
+    description: "Krishan is a Workspace Consultant at Cegeka. He has more than a decade experience in End User Computing and conducted many performance scans for customers, national and international."
+  marcel:
+    active: false
+    name: Marcel
+    display_name: Marcel Beck
+    company: BeckSpace
+    title: Workspace Consultant
+    picture: 'assets/images/authors/marcel.png'
+    linkedin: https://www.linkedin.com/in/msbeck/
+    page: marcel-beck
+    description: "Marcel is a full-time Workspace Consultant/Architect and part-time beer drinker from the north of The Netherlands."
+  ruud:
+    active: false
+    name: Ruud
+    display_name: Ruud Hund
+    company: Cegeka
+    title: Thought Leader Connected Workspace
+    picture: 'assets/images/authors/ruud.png'
+    twitter: https://twitter.com/RuudHund
+    linkedin: https://www.linkedin.com/in/ruudhund/
+    page: ruud-hund
+    description: "Ruud is a Thought Leader Connected Workspace at Cegeka. Ruud has over 10+ years experience in designing and building network infrastructures."
+  bas:
+    active: true
+    name: Bas
+    display_name: Bas Stapelbroek
+    company: Citrix
+    title: Sales Engineer
+    picture: 'assets/images/authors/bas.png'
+    web: http://www.basstapelbroek.com/
+    twitter: https://twitter.com/hapster84
+    linkedin: https://www.linkedin.com/in/basstapelbroek/
+    page: bas-stapelbroek
+    description: "Bas Stapelbroek is a sales engineer and works for Citrix in the Netherlands."
+  tom:
+    active: false
+    name: Tom
+    display_name: Tom de Jong
+    company: RawWorks
+    title: Workspace Consultant
+    picture: 'assets/images/authors/tom.png'
+    linkedin: https://www.linkedin.com/in/tom-de-jong-5131809a/
+    page: tom-de-jong
+    description: "Tom de Jong is working as a EUC consultant on the Citrix portfolio. He is based in the most beautiful part from the Netherlands, which is the West-Friesland region."
+  patrick:
+    active: true
+    name: Patrick
+    display_name: Patrick van den Born
+    company: De Technische Jongens
+    title: The Architect
+    picture: 'assets/images/authors/patrick.png'
+    web: https://www.vandenborn.it/
+    twitter: https://twitter.com/pvdnborn
+    linkedin: https://www.linkedin.com/in/patrick-van-den-born-2b3567a/
+    page: patrick-van-den-born
+    description: "Patrick van den Born is an independent senior Consultant and IT Architect focused on the End User Computing, Public Cloud, Everything-as-Code, and DevOps area."
+  gerjon:
+    active: false
+    name: Gerjon
+    display_name: Gerjon Kunst
+    company: RawWorks
+    title: Principal consultant
+    picture: 'assets/images/authors/gerjon.png'
+    web: https://www.gerjon.com
+    twitter: https://twitter.com/gkunst
+    linkedin: https://www.linkedin.com/in/gerjonkunst/
+    page: gerjon-kunst
+    description: "Gerjon Kunst is Principal Consultant at RawWorks in het Netherlands, focusing on future Workspace and Cloud."
+  jeff:
+    active: false
+    name: Jeff
+    display_name: Jeff Stokes
+    company: Tanium
+    title: Principal Engineer
+    picture: 'assets/images/authors/jeff.png'
+    web: https://illuminati.services/
+    twitter: https://twitter.com/WindowsPerf
+    linkedin: https://www.linkedin.com/in/jeffstokes/
+    page: jeff-stokes
+    description: "Jeff Stokes is a Principal Engineer at Tanium, and an expert in the fields of Windows performance analytics, debugging, VDI, and Windows imaging and deployment."
+  benny:
+    active: true
+    name: Benny
+    display_name: Benny Tritsch
+    company: Dr. Tritsch IT Consulting
+    title: Owner
+    picture: 'assets/images/authors/benny.png'
+    web: http://drtritsch.com/
+    twitter: https://twitter.com/drtritsch
+    linkedin: https://www.linkedin.com/in/drtritsch
+    page: benny-tritsch
+    description: "Dr. Benny Tritsch is a self-employed end-user computing expert located in Germany, specializing in modern workplace designs, graphics remoting and end-user experience analysis."
+  anton:
+    active: true
+    name: Anton
+    display_name: Anton van Pelt
+    company: AntonvanPelt.com
+    title: Senior IT consultant
+    picture: 'assets/images/authors/anton.png'
+    web: https://www.antonvanpelt.com/
+    twitter: https://twitter.com/antonvanpelt
+    linkedin: https://www.linkedin.com/in/antonvanpelt/
+    page: anton-van-pelt
+    description: "Anton van Pelt is an independent senior IT consultant and architect with over 18 years of experience in complex IT environments."
+  silas:
+    active: false
+    name: Silas
+    display_name: Silas Arentsen
+    company: STYR-IT
+    title: Freelance System Engineer
+    picture: 'assets/images/authors/silas.png'
+    web: https://styr-it.nl/
+    linkedin: https://www.linkedin.com/in/silasarentsen/
+    page: silas-arentsen
+    description: "Silas is calm and reliable system engineer. Love complex challenges and automating repetitive tasks. Extensive experience on Citrix (CVAD, ADC, CEM) and Microsoft products. Very eager to learn and open to new challenges."
+  esther:
+    active: true
+    name: Esther
+    display_name: Esther Barthel
+    company: cognition IT
+    title: Solutions Architect
+    picture: 'assets/images/authors/esther.png'
+    web: https://www.cloud-devops.ninja/
+    twitter: https://twitter.com/virtuEs_IT
+    linkedin: https://www.linkedin.com/in/ebarthel/
+    page: esther-barthel
+    description: "Esther Barthel is an independent solutions architect focussed on End User Computing, DevOps engineering and Cloud."
+  fredrik:
+    active: true
+    name: Fredrik
+    display_name: Fredrik Brattstig
+    company: IGEL Technology
+    title: Technology Evangelist
+    picture: 'assets/images/authors/fredrik.png'
+    web: https://virtualbrat.com
+    twitter: https://twitter.com/virtualbrat
+    linkedin: https://www.linkedin.com/in/fredrikbrattstig/
+    page: fredrik-brattstig
+    description: "Fredrik Brattstig is a Technology Evangelist at IGEL Technology with over 20 years of experience of the VDI/Remote Apps and Desktops niche, and lives by the mantra of providing High-End User Experience."
+  sven-j:
+    active: true
+    name: Sven
+    display_name: Sven Jansen
+    company: deviceTRUST
+    title: Pre-Sales Manager
+    picture: 'assets/images/authors/sven-j.png'
+    twitter: https://twitter.com/jansvensen
+    linkedin: https://www.linkedin.com/in/sven-jansen-b763b654/
+    github: https://github.com/dTSvenJansen
+    page: sven-jansen
+    description: "Sven Jansen is a Pre-Sales Manager for “deviceTRUST”, and is responsible for anything technical between customers, partners and deviceTRUST. A responsible position that mixes being close to technology and also to people very well."
+  mick:
+    active: true
+    name: Mick
+    display_name: Mick Hilhorst
+    company: OBS
+    title: Senior Consultant
+    picture: 'assets/images/authors/mick.png'
+    web: https://www.mickhilhorst.com/
+    twitter: https://twitter.com/mickhilhorst
+    linkedin: https://www.linkedin.com/in/mick-hilhorst/
+    github: https://github.com/LooseDevGoose
+    page: mick-hilhorst
+    description: "Mick Hilhorst is a Senior Consultant at Orange Business Services, who takes care of the many challenges customers may face regarding the Citrix Portfolio"
+
+# Sponsors
+sponsors:
+  tricerat:
+    name: Tricerat
+    level: 2
+    date: 2023-03-31
+    logo-light: 'assets/images/sponsor/tricerat/logo-white.png'
+    logo: 'assets/images/sponsor/tricerat/logo.png'
+    page: 'tricerat'
+    site: 'https://www.tricerat.com'
+  loadgen:
+    name: LoadGen
+    level: 2
+    date: 2023-12-31
+    logo-light: 'assets/images/sponsor/loadgen/logo-white.png'
+    logo: 'assets/images/sponsor/loadgen/logo.png'
+    page: 'loadgen'
+    site: 'https://www.loadgen.com'
+  ict-p:
+    name: ICT-Partners
+    level: 2
+    date: 2020-08-31
+    logo-light: 'assets/images/sponsor/ict-partners/logo.png'
+    logo: 'assets/images/sponsor/ict-partners/logo.png'
+    page: 'ict-partners'
+    site: 'https://www.ict-partners.nl'
+
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: /:title/
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
+  - jekyll-redirect-from
+  - jekyll-toc
+
+kramdown:
+  parse_block_html: true
+
+paginate: 8
+paginate_path: "/page/:num"
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+# tag_page_dir:         tag
+# tag_page_layout:      tag_page
+# tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+markdown: kramdown
+highlighter: github.dark
+
+kramdown:
+  parse_block_html: true
+  input: GFM
+  syntax_highlighter: github.dark
+
+exclude:
+    - node_modules

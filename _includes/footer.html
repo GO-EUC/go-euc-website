@@ -1,0 +1,27 @@
+<!-- begin footer-widgets -->
+<section class="footer-widgets">
+  <div class="container">
+    <div class="row">
+
+      {% include footer-widgets/widget-events.html %}
+      {% include footer-widgets/widget-sponsors.html %}
+      {% include footer-widgets/widget-beer.html %}
+    </div>
+  </div>
+</section>
+<!-- end footer-widgets -->
+
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+      <div class="footer__inner">
+        <div class="copyright">{{site.time | date: '%Y'}} <a href="/">{{site.title}}</a>. &copy; This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Commons Attribution-ShareAlike 4.0 International License. <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></div>
+        {% include social-links.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

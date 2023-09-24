@@ -1,0 +1,58 @@
+{
+    "title":  "Comparison Host Storage in %",
+    "subTitle":  "Lower is better",
+    "series":  [
+                   {
+                       "serie":  "Office 2016",
+                       "data":  [
+                                    {
+                                        "x":  "Commands/sec",
+                                        "y":  100
+                                    },
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  100
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  100
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Office 2019",
+                       "data":  [
+                                    {
+                                        "x":  "Commands/sec",
+                                        "y":  112
+                                    },
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  115
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  108
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Office 2021 LTSC",
+                       "data":  [
+                                    {
+                                        "x":  "Commands/sec",
+                                        "y":  113
+                                    },
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  117
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  108
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}

@@ -1,0 +1,43 @@
+{
+    "title":  "Comparison Session Frames per Second (FPS) in %",
+    "subTitle":  "",
+    "series":  [
+                   {
+                       "serie":  "CVAD 1912 LTSR",
+                       "data":  [
+                                    {
+                                        "x":  "Session FPS",
+                                        "y":  100
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2106",
+                       "data":  [
+                                    {
+                                        "x":  "Session FPS",
+                                        "y":  83
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2109",
+                       "data":  [
+                                    {
+                                        "x":  "Session FPS",
+                                        "y":  83
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2112",
+                       "data":  [
+                                    {
+                                        "x":  "Session FPS",
+                                        "y":  82
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}

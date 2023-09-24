@@ -1,0 +1,75 @@
+{
+  "title": "60 FPS Comparison Click to Photon in ms",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "144Hz",
+      "data": [
+        {
+          "x": "Average",
+          "y": "21.1"
+        },
+        {
+          "x": "Min",
+          "y": "17.4"
+        },
+        {
+          "x": "Max",
+          "y": "25.8"
+        }
+      ]
+    },
+    {
+      "serie": "60Hz",
+      "data": [
+        {
+          "x": "Average",
+          "y": "52.5"
+        },
+        {
+          "x": "Min",
+          "y": "48.3"
+        },
+        {
+          "x": "Max",
+          "y": "58.4"
+        }
+      ]
+    },
+    {
+      "serie": "VMware Blast",
+      "data": [
+        {
+          "x": "Average",
+          "y": "117.5"
+        },
+        {
+          "x": "Min",
+          "y": "95.8"
+        },
+        {
+          "x": "Max",
+          "y": "133.9"
+        }
+      ]
+    },
+    {
+      "serie": "VMware Blast 60 FPS",
+      "data": [
+        {
+          "x": "Average",
+          "y": "64.4"
+        },
+        {
+          "x": "Min",
+          "y": "55.8"
+        },
+        {
+          "x": "Max",
+          "y": "103.0"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}

@@ -1,0 +1,34 @@
+{
+    "title":  "Session GPU Usage % Max.",
+    "subTitle":  "Lower is better",
+    "series":  [
+                   {
+                       "serie":  "NVIDIA 1Q",
+                       "data":  [
+                                    {
+                                        "x":  "GPU",
+                                        "y":  13.9
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "NVIDIA 2Q",
+                       "data":  [
+                                    {
+                                        "x":  "GPU",
+                                        "y":  14.1
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "NVIDIA 4Q",
+                       "data":  [
+                                    {
+                                        "x":  "GPU",
+                                        "y":  13.5
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}

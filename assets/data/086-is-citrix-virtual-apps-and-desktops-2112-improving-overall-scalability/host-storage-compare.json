@@ -1,0 +1,59 @@
+{
+    "title":  "Comparison Host Storage in %",
+    "subTitle":  "Lower is better",
+    "series":  [
+                   {
+                       "serie":  "CVAD 1912 LTSR",
+                       "data":  [
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  100
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  100
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2106",
+                       "data":  [
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  73
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  106
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2109",
+                       "data":  [
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  69
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  93
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "CVAD 2112",
+                       "data":  [
+                                    {
+                                        "x":  "Reads/sec",
+                                        "y":  90
+                                    },
+                                    {
+                                        "x":  "Writes/sec",
+                                        "y":  104
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "%"
+}
