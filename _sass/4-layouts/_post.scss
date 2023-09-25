@@ -215,9 +215,9 @@
 
 .post__content,
 .page__content {
-  color: $gray;
+  color: white;
   a {
-    border-bottom: 2px solid rgba($text-color, .1);
+    border-bottom: 2px solid white;
     &:hover {
       border-color: $brand-color;
       color: $text-color;
