@@ -19,7 +19,7 @@ layout: default
       {% for page_reviewer in page.reviewers %}
       {% assign reviewer = site.authors[page_reviewer] %}
       <div class="post__author">
-        <a href="{{ site.baseurl }}/member/{{ reviewer.page }}" aria-label="{{ reviewer.name }}"><img class="post__author-image"
+        <a href="{{ site.baseurl }}/member/{{ reviewer.page }}" aria-label="{{ reviewer.name }}"><img class="post__author-image" style="border: 0px;"
             src="{{ site.baseurl }}/{{ reviewer.picture }}" alt="{{ reviewer.name }}'s Picture"></a>
       </div>
       {% endfor %}
@@ -78,11 +78,13 @@ layout: default
     {% for page_author in page.authors %}
     {% assign author = site.authors[page_author] %}
     <div class="post__author-box">
-        <div class="post__author-box-imagebox">
-          <div class="post__author-box-image">
-              <img src="{{ site.baseurl }}/{{ author.picture }}" alt="{{ author.display_name }}">
+        <a href="{{ site.baseurl }}/members/{{ author.page }}">
+          <div class="post__author-box-imagebox">
+            <div class="post__author-box-image">
+                <img src="{{ site.baseurl }}/{{ author.picture }}" alt="{{ author.display_name }}">
+            </div>
           </div>
-        </div>
+        </a>
         <div class="post__author-box-name">
           {{ author.display_name }}
         </div>
