@@ -12,10 +12,12 @@
     {% assign today_date = 'now' | date: "%y %m %d" %}
     {% assign contract_date =  sponsorInfo.date | date: "%y %m %d" %}
 
-    {% if sponsorInfo.level <= 2 %}
+    {% if sponsorInfo.level >= 2 %}
       {% if contract_date >= today_date %}
         <div>
-            <a href="{{sponsorInfo.site}}" target="_blank"><img src="{{ site.baseurl }}/{{sponsorInfo.logo-light}}" style="width: 100%; height: auto; margin-bottom: 30px;" sizes="(max-width: 200px) 100vw, 200px"></a>
+            <a href="{{sponsorInfo.site}}" target="_blank">
+              <img src="{{ site.baseurl }}/{{sponsorInfo.logo-light}}">
+            </a>
         </div>
         {% endif %}
       {% endif %}
