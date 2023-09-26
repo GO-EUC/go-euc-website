@@ -268,14 +268,6 @@ authors:
 
 # Sponsors
 sponsors:
-  tricerat:
-    name: Tricerat
-    level: 2
-    date: 2023-03-31
-    logo-light: 'assets/images/sponsor/tricerat/logo-white.png'
-    logo: 'assets/images/sponsor/tricerat/logo.png'
-    page: 'tricerat'
-    site: 'https://www.tricerat.com'
   loadgen:
     name: LoadGen
     level: 2
@@ -284,14 +276,6 @@ sponsors:
     logo: 'assets/images/sponsor/loadgen/logo.png'
     page: 'loadgen'
     site: 'https://www.loadgen.com'
-  ict-p:
-    name: ICT-Partners
-    level: 2
-    date: 2020-08-31
-    logo-light: 'assets/images/sponsor/ict-partners/logo.png'
-    logo: 'assets/images/sponsor/ict-partners/logo.png'
-    page: 'ict-partners'
-    site: 'https://www.ict-partners.nl'
 
 
 #-------------------------------
