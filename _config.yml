@@ -4,7 +4,7 @@ title: GO-EUC
 logo: 'assets/images/logo-white.png'
 description: Research is creating new knowledge
 baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.go-euc.com" # The base hostname & protocol for your site, e.g. http://example.com
 paypal: https://www.paypal.com/donate/?hosted_button_id=FE592EDA2QQT6
 
 
