@@ -1,7 +1,7 @@
 ---
 layout: page
 title: What it takes to be a GO-EUC member
-image: '/assets/images/head.jpg'
+image: 'assets/images/head.jpg'
 comments: false
 ---
 ![passion]({{site.baseurl}}/assets/images/pages/membership/membership-feature-image.png)
