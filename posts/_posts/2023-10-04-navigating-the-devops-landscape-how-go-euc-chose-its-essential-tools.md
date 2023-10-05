@@ -1,7 +1,7 @@
 ---
 layout: post
 toc: true
-title:  "Navigating the DevOps landscape: How GO-EUC chose tts essential tools"
+title:  "Navigating the DevOps landscape: How GO-EUC chose its essential tools"
 hidden: false
 authors: [ryan]
 reviewers: [anton, eltjo]
