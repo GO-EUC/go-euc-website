@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The real impact of Citrix MCSIO"
 hidden: false
 authors: [tom]
@@ -29,7 +30,7 @@ In order to test the improvement of MCSIO, the following scenarios are executed:
   * MCSIO with 512MB RAM cache
 
 Each scenario is tested using the default testing methodology which is described in detail [here]({{site.baseurl}}/insight-in-the-testing-methodology){:target="_blank"}. As it is a best practice, each deployment is fully updated and optimized using the Citrix Optimizer with the corresponding template.
-Scalability is an important factor in the researches on {{site.title}}, but in order to see the behaviour and load of the VM this research is done using a single VM and user. 
+Scalability is an important factor in the researches on {{site.title}}, but in order to see the behaviour and load of the VM this research is done using a single VM and user.
 
 To ensure the MCSIO cache is used, the default workload has been modified. To generate file load, 256MB of .pst files are copied during the progression of the workload. The used workload in this research can be found [here]({{site.baseurl}}/assets/files/039-the-real-impact-of-citrix-mcsio/KnowledgeWorker_RDA_filecopy.txt){:target="_blank"}.
 
@@ -37,7 +38,7 @@ To ensure the MCSIO cache is used, the default workload has been modified. To ge
 As MCSIO is using a cache in memory, it is expected to see a reduction in storage load. Although this should improve the experience, a filter driver is used and it may have an impact on CPU performance.
 
 This research is focusing on a single VM and user, however, the impact and differences from a host perspective should still be a noticeable.
- 
+
 <a href="{{site.baseurl}}/assets/images/posts/039-the-real-impact-of-citrix-mcsio/039-citrix-mcsio-host-cpu.png" data-lightbox="host-cpu">
  ![host-cpu]({{site.baseurl}}/assets/images/posts/039-the-real-impact-of-citrix-mcsio/039-citrix-mcsio-host-cpu.png)
 </a>
@@ -51,7 +52,7 @@ This research is focusing on a single VM and user, however, the impact and diffe
 <p align="center" style="margin-top: -30px;" >
   <i>Lower is better</i>
 </p>
- 
+
 There is no noticeable difference on the CPU utilization. This shows the MCSIO filter driver has no impact on the CPU utilization. This will definitely have a positive impact on the overall user capacity.
 As MCSIO is a storage optimization technology, it is expected to see a difference on both reads and writes activities.
 
@@ -137,11 +138,11 @@ As MCSIO has an overflow to disk, it is interesting to see the difference in the
 <p align="center" style="margin-top: -30px;" >
   <i>Lower is better</i>
 </p>
-   
+
 The charts show that the cache is used in both cases. It makes sense as the 512MB has more room, the cache size is way bigger. An important note, in both scenarios the cache is fully utilized.
 
 Now it is possible to see both read and writes activities in the MCSIO memory cache.
- 
+
 <a href="{{site.baseurl}}/assets/images/posts/039-the-real-impact-of-citrix-mcsio/039-citrix-mcsio-vm-ram-reads.png" data-lightbox="vm-ram-reads">
 ![vm-ram-reads]({{site.baseurl}}/assets/images/posts/039-the-real-impact-of-citrix-mcsio/039-citrix-mcsio-vm-ram-reads.png)
 </a>

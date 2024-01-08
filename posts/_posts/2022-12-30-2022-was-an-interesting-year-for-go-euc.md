@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "2022 was an interesting year for GO-EUC"
 hidden: false
 authors: [bas, ryan, eltjo]
@@ -53,4 +54,3 @@ To end 2022, here are a few of our favorite posts:
 Thanks to our members, our sponsors: [LoadGen](https://www.go-euc.com/sponsors/loadgen/){:target="_blank"} & [Tricerat](https://www.go-euc.com/sponsors/tricerat/){:target="_blank"} and ofcourse [you](https://media.tenor.com/eoP4KDwExdcAAAAC/phil-dunphy-ty-burrell.gif){:target="_blank"}, the reader. If you have any questions or ideas, please feel free to reach out and we all wish you a wonderful 2023!
 
 Photo by <a href="https://unsplash.com/@kentas_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Kenta Kikuchi</a> on <a href="https://unsplash.com/photos/487WP1XzB64?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-  

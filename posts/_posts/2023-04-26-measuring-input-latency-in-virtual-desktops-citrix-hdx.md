@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Measuring Input Latency in Virtual Desktops: Citrix HDX"
 hidden: false
 authors: [ ryan, eltjo]
@@ -59,7 +60,7 @@ It’s evident that increasing the framerate from 30 FPS to 60 FPS has significa
 
 This improvement can be attributed to the increased framerate, which allows for more frequent screen updates and therefore, quicker response times for the end-users inputs. With lower latency, users will experience smoother and more responsive interactions in a VDI environment.
 
-Comparing the two settings in more detail, the 60 FPS configuration has a lower median latency, which is consistent with the lower average latency observed earlier. Additionally, the standard deviation is smaller for the 60 FPS setting, which means that the latency measurements are more consistent and less spread out, compared to the 30 FPS setting. 
+Comparing the two settings in more detail, the 60 FPS configuration has a lower median latency, which is consistent with the lower average latency observed earlier. Additionally, the standard deviation is smaller for the 60 FPS setting, which means that the latency measurements are more consistent and less spread out, compared to the 30 FPS setting.
 Please note for this research only 100 measurements were done, which is a relatively small sample size. The spread and the distribution of the data should be even more consistent with an increased sample size. More information about the median and how to handle outliers can be found in the following article: [Stuck in the middle, an introduction into statistical analysis for GO-EUC](https://www.go-euc.com/stuck-in-the-middle/){:target="_blank"}
 
 For the 30 FPS run the outcome is fairly consistent across all runs, however there are a few outliers in each run. Overall, the distributions are relatively consistent, though. The presence of outliers suggests that occasional spikes in latency might occur. The consistency data across the runs show that the 30 FPS Citrix HDX setting provides a stable overall performance in terms of latency.
@@ -71,7 +72,7 @@ The standard deviations for each of the 5 runs vary only slightly. This means th
 Overall, the latency values are relatively close to each other across all of the performed runs, which indicates that the performance is fairly consistent across the board.
 
 ## Conclusion
-This three part research series has delved into the input latency of virtual desktops, specifically focusing on measuring input latency using NVIDIA LDAT for the two most predominant remoting protocol players in the market, VMware Blast and Citrix HDX. A key aspect of the user experience in a virtual desktop environment is input latency, which can significantly impact overall satisfaction and user experience. 
+This three part research series has delved into the input latency of virtual desktops, specifically focusing on measuring input latency using NVIDIA LDAT for the two most predominant remoting protocol players in the market, VMware Blast and Citrix HDX. A key aspect of the user experience in a virtual desktop environment is input latency, which can significantly impact overall satisfaction and user experience.
 
 The Citrix HDX protocol's out-of-the-box experience was evaluated using default settings, and it was found that increasing the frame rate from 30 FPS to 60 FPS dramatically reduced the average end-to-end latency. With a 45% reduction in latency, users experience smoother and more responsive interactions in the virtual desktop environment, which is crucial for optimal performance and user satisfaction.
 
@@ -82,4 +83,3 @@ As mentioned in the previous post, while remoting protocols inherently introduce
 This last part also concludes this research series on latency in VDI environments. If you like this content, please leave a comment below.
 
 Photo by <a href="https://unsplash.com/@comparefibre?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Compare Fibre</a> on <a href="https://unsplash.com/photos/8xnaQKWjDrM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-  

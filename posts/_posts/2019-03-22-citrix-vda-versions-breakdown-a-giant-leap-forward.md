@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix VDA versions breakdown, a giant leap forward"
 hidden: false
 authors: [eltjo]
@@ -31,10 +32,10 @@ This means that there are five scenarios in total:
 To get some context for the different VDA versions here is a small breakdown of some of the more notable VDA improvements and new features that we suspect can have an impact on the user experience or the server scalability of the environment:
 
 
-| Version | Feature | Remark | 
+| Version | Feature | Remark |
 | :-----: | :-----: | :----: |
 | 7.18 | Battery icon notification | While not necessarily performance related a very much requested feature nonetheless |
-| 7.18 | Enhanced server VDA webcam functionality | Thinwire enhancements (‘Build to lossless’ preference of the Visual quality policy setting is now H.264 instead of JPEG for moving images) | 
+| 7.18 | Enhanced server VDA webcam functionality | Thinwire enhancements (‘Build to lossless’ preference of the Visual quality policy setting is now H.264 instead of JPEG for moving images) |
 | 7.18 | H.264 | Build-to-Lossless |
 | 1808.2 | Better network throughput over high latency connection | [https://support.citrix.com/article/CTX125027](https://support.citrix.com/article/CTX125027){:target="_blank"} |
 | 1808.2 | Chrome enhancement to browser content redirection | Browser content redirection now supports the Chrome browser in addition to the previously supported Internet Explorer browser |

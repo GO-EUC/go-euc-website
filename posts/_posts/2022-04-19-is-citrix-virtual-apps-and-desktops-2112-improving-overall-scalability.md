@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Is Citrix Virtual Apps and Desktops 2112 improving overall scalability?"
 hidden: false
 authors: [ryan]
@@ -20,7 +21,7 @@ HDX graphics improvements
 
 Source: [Citrix Virtual Apps and Desktops 7 2112](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/whats-new.html){:target="_blank"}
 
-As showcased in the [previous research](https://www.go-euc.com/significant-hdx-improvements-with-cvad-2112/){:target="_blank"}, GO-EUC can confirm significant improvements in the Citrix HDX protocol. To recap: 
+As showcased in the [previous research](https://www.go-euc.com/significant-hdx-improvements-with-cvad-2112/){:target="_blank"}, GO-EUC can confirm significant improvements in the Citrix HDX protocol. To recap:
 
 <i>“For graphics-related workloads in 3D-Pro use cases, release 2112 Citrix has made impressive improvements compared to the previous releases. Citrix has outdone themselves with this release and delivered on their HDX graphics improvements.”</i>
 
@@ -75,7 +76,7 @@ The previous research showed significant improvement in the session FPS compared
 
 {% include chart.html type='bar' data_file='assets/data/086-is-citrix-virtual-apps-and-desktops-2112-improving-overall-scalability/session-rtt-compare.json' %}
 
-It is essential to know a high round trip time will negatively influence the user experience as there is a higher delay in interaction with the session. The results show a decrease in RTT for all versions. As the difference might be 9%, the absolute difference is only 2ms, which any user will not directly notice. 
+It is essential to know a high round trip time will negatively influence the user experience as there is a higher delay in interaction with the session. The results show a decrease in RTT for all versions. As the difference might be 9%, the absolute difference is only 2ms, which any user will not directly notice.
 
 ## Conclusion
 The previous Citrix VDA research showed a signification improvement in the user experience when using the latest VDA version. The release notes states there is an overall performance improvement in scalability, but the general conclusion states busted ([MythBusters](https://en.wikipedia.org/wiki/MythBusters){:target="_blank"} reference).
@@ -87,4 +88,3 @@ However, based on the improvement Citrix has added, it is expected to see an imp
 Are you using CVAD 2112 in your environment and seeing overall improvements? Please share your experience in the comments or on the [World of EUC Slack channel](https://goeuc.slack.com){:target="_blank"}.
 
 Photo by [i yunmai](https://unsplash.com/@yunmai?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"} on [Unsplash](https://unsplash.com/s/photos/scale?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"}
-

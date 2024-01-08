@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Performance impact of Citrix CVAD 2003"
 hidden: false
 authors: [eltjo, ryan]
@@ -18,7 +19,7 @@ While this might not come as a surprise, the fact remains, however, that Citrix 
 
 Next to that, Citrix deprecated the use of the NVIDIA GRID version 9 display drivers for the hardware encoding with NVIDIA GPUs.
 
-Apart from the public cloud support deprecation, Citrix has also added quite a few improvements to the functionalities of the product. 
+Apart from the public cloud support deprecation, Citrix has also added quite a few improvements to the functionalities of the product.
 
   * Citrix Scout data masking;
   * Updated browser content redirection routing with new proxy capabilities;
@@ -27,9 +28,9 @@ Apart from the public cloud support deprecation, Citrix has also added quite a f
   * Loss tolerant mode.
 
 Citrix also added support for Electron based applications like Teams and Slack to the Server OS VDA.
-As a preview function, Citrix also released support for the dragging and dropping of files from and to a Citrix session. 
+As a preview function, Citrix also released support for the dragging and dropping of files from and to a Citrix session.
 
-For a full description of the new functionalities please see the what’s new page [here](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/whats-new.html){:target="_blank"}. 
+For a full description of the new functionalities please see the what’s new page [here](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/whats-new.html){:target="_blank"}.
 
 ## Setup and Configuration
 This research is focused on how this CR release stacks up against its LTSR counterpart, release 1912, and predecessors CR 1906 and 1909.
@@ -51,7 +52,7 @@ The ‘visual quality’ policy settings are kept as default, meaning it is set 
 
 The ‘loss tolerant mode’ that is available in combination with the Citrix Workspace App 2002 or higher has not been tested either. The default thresholds of 5% packet loss and a RTT latency of 300ms will not trigger a switch to EDT lossy in the lab environment.
 
-Setting the “Wait for printers to be created before an application starts” feature to enabled, could impose a connection delay and have a negative impact on application start times, but in the lab and workload setup, no printers are used. More information can be found [here](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/printing-policy-settings.html#wait-for-printers-to-be-created){:target="_blank"}. 
+Setting the “Wait for printers to be created before an application starts” feature to enabled, could impose a connection delay and have a negative impact on application start times, but in the lab and workload setup, no printers are used. More information can be found [here](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/policies/reference/ica-policy-settings/printing-policy-settings.html#wait-for-printers-to-be-created){:target="_blank"}.
 
 In this research the user density is determined based on a CPU threshold. As the CPU threshold is reached, it is possible to calculate the active users on the system. Please be aware, this is not a recommend method as other factors can influence the user density of the environment. Based on previous researches it is known that the GO-EUC environment is limited by CPU, so therefore this method is used for now.
 
@@ -151,7 +152,7 @@ In addition to the host metrics, it is also important to take give thought to th
 
 As with the other metrics, there is only a minimal difference in the reported FPS for all scenarios. As a consequence, the variance in bandwidth consumption between the VDA versions is also minimal.
 
-We do see a slightly increase in RTT with VDA 2003 in comparison to the previous VDA versions, something that we cannot account for at this point. 
+We do see a slightly increase in RTT with VDA 2003 in comparison to the previous VDA versions, something that we cannot account for at this point.
 
 ## Conclusion
 One of the biggest shifts of Citrix CVAD 2003 is the deprecation of the public cloud support. This strategy of Citrix could have a major effect to some Citrix customers. A hybrid public cloud configuration is still possible using the LTSR edition of Citrix. Besides the bug fixes you are going to miss out on added features that are only available in the CR editions.

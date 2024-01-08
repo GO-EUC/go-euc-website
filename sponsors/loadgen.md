@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Sponsor LoadGen
+title: LoadGen
+image: '/assets/images/head.jpg'
 comments: false
 ---
 {% assign sponsor = site.sponsors['loadgen'] %}
 
-<img style="float: left; width: 250px; margin-right: 30px;" src="{{ site.url }}{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}"> 
+<img style="float: left; width: 250px; margin-right: 30px;" src="{{ site.url }}{{ sponsor.logo-light | relative_url }}" alt="{{ sponsor.name }}">
 
 LoadGen offers customers and service providers a complete software solution to test, and maintain the optimal performance, user experience, scalability, and availability of (virtual) desktop environments including all of your business applications.
 

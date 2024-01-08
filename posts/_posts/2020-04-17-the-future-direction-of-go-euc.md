@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The future direction of GO-EUC"
 hidden: false
 authors: [ryan]
@@ -10,7 +11,7 @@ image: assets/images/posts/000-future-direction-of-go-euc/000-future-direction-o
 We thought and worked hard on the future direction of GO-EUC these last months. In order to get closer to the community we decided to change our current structure. This article will announce the future direction for GO-EUC and share some details with you and the community. The future direction also include some change in the sponsor program, where we need your help. Before sharing the announcement, lets first start with the vision and mission of GO-EUC.
 
 ## What is the vision and mission of GO-EUC?
-Our vision is “doing research is creating new knowledge”, which are the famous words of Neil Armstrong. 
+Our vision is “doing research is creating new knowledge”, which are the famous words of Neil Armstrong.
 
 The mission of GO-EUC is to facilitate the individual with research capabilities for exploring new technologies, to inspire and serve the community by providing new knowledge.
 
@@ -20,7 +21,7 @@ Our platform is to serve this mission. We believe this is valuable information t
 It is always important to define the scope. In this case, as the name of our platform states, GO-EUC is focused on end-user computing. But what is end-user computing?
 
 > End-user computing (EUC) refers to systems in which non-programmers can create working applications. EUC is a group of approaches to computing that aim to better integrate end users into the computing environment. These approaches attempt to realize the potential for high-end computing to perform problem-solving in a trustworthy manner.
-> 
+>
 > Source: [https://en.wikipedia.org/wiki/End-user_computing](https://en.wikipedia.org/wiki/End-user_computing){:target="_blank"}.
 
 The broad scope allows the platform to research various topics within the EUC space.
@@ -42,7 +43,7 @@ With the transformation to a non-profit foundation it is going to impact our cur
   * Disk: Local NVME or SSD with a total capacity of 2TB or higher
   * GPU: <del>A NVIDIA or AMD GPU for VDI workloads</del> (Update: NVIDIA has commited to provide GPU's)
 
-We prefer this environment to be at least available for a minimum of 1 year and hosted in our own selected datacenter, so we can access the hardware at any given time. 
+We prefer this environment to be at least available for a minimum of 1 year and hosted in our own selected datacenter, so we can access the hardware at any given time.
 
 In return we provide the hardware vendor the following platinum sponsor package:
   * Logo on the GO-EUC website
@@ -64,7 +65,7 @@ Additionally, we are also thinking organizing our own virtual event with serving
 ## Summary
 Before wrapping up, we would like issue a big thank you to [ICT-Partners](https://www.ict-partners.nl){:target="_blank"}. ICT-Partners provided the opportunity to start GO-EUC and supports transforming to the new structure. Without ICT-Partners we would not have been where we are right now. We are proud to announce that ICT-Partners will still be involved a sponsor of GO-EUC!
 The transformation to the GO-EUC foundation makes the platform a real independent community driven platform, to serve relevant EUC content to the community. In order to get this going we really need <b>your</b> help. We need to reach the hardware vendors that are willing to help GO-EUC. If you have any connection, please share this with the hardware vendors, or even just in your network. This is very appreciated. You can reach me at ryan[at]logitblog.com or via social media like LinkedIn or Twitter.
-Doing research is creating new knowledge! 
+Doing research is creating new knowledge!
 
 Cheers,
 

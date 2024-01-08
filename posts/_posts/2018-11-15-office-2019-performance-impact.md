@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Office 2019 performance impact"
 hidden: false
 authors: [omar]

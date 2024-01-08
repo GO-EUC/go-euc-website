@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Important: Influence of Citrix & Login VSI on the results"
 hidden: false
 authors: [ryan, eltjo]

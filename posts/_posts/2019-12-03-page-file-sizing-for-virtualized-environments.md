@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Page file sizing for virtualized environments"
 hidden: false
 authors: [marcel]

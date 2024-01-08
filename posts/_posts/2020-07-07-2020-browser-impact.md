@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Browser Performance Impact 2020"
 hidden: false
 authors: [omar]

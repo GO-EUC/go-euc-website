@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Microsoft Teams optimization in a virtual desktop"
 hidden: false
 authors: [ryan, eltjo]
@@ -43,7 +44,7 @@ Applying the Teams optimization depends on the used solution and therefore it is
 ### Azure Virtual Desktop & CloudPC
 For Azure Virtual Desktop, there are multiple steps required to ensure the Teams optimization is enabled. This starts with the prerequisites, which is ensuring Microsoft Teams is aware that it is installed in a virtual environment. This can be done by setting the following registry key:
 
-```HKLM:\SOFTWARE\Microsoft\Teams\IsWVDEnvironment``` type ```DWORD``` with value 1. 
+```HKLM:\SOFTWARE\Microsoft\Teams\IsWVDEnvironment``` type ```DWORD``` with value 1.
 
 <i>Note: This is also the registry key to disable the optimization (by setting the value to 0).</i>
 
@@ -71,14 +72,14 @@ An alternative way to check for the Teams optimization is by using the [Remote D
 </a>
 
 ## The definition of User Experience
-In contrast to most of the previous researches, this research will not be focused on performance or scalability, but rather on the user experience of the Teams desktop client. For this reason, some context is needed as to what the user experience is exactly. 
+In contrast to most of the previous researches, this research will not be focused on performance or scalability, but rather on the user experience of the Teams desktop client. For this reason, some context is needed as to what the user experience is exactly.
 Let’s start with the definition. According to the oxford dictionary, this is the definition of “user experience”:
 
 > what it is like for somebody to use a particular product such as a website, for example how easy or pleasant it is to use. They seek to continuously improve the user experience of the games.
 
 Source: [user experience - OxfordLearnersDictionaries.com](https://www.oxfordlearnersdictionaries.com/definition/english/user-experience?q=user+experience){:target="_blank"}
 
-With this definition in mind, this means that certain well-chosen metrics are needed to quantify a qualitative measure like how easy or how pleasant it is to use. From our knowledge and experience, there are three main aspects that define quality in this frame of reference, being: Latency, Video quality, and audio quality. This research will focus on the latter two, video and audio quality. 
+With this definition in mind, this means that certain well-chosen metrics are needed to quantify a qualitative measure like how easy or how pleasant it is to use. From our knowledge and experience, there are three main aspects that define quality in this frame of reference, being: Latency, Video quality, and audio quality. This research will focus on the latter two, video and audio quality.
 
 Teams is primarily a communication tool for most organizations, and therefore predominantly used for meetings. Audio and video play a crucial part in the overall user experience and perceived quality perception.
 
@@ -94,7 +95,7 @@ The structural similarity index measure (SSIM) is a method for predicting the pe
 Source: [Structural similarity - Wikipedia](https://en.wikipedia.org/wiki/Structural_similarity){:target="_blank"}
 
 ### ViSQOL (Virtual Speech Quality Objective Listener)
-Many situations can result in poor or subpar audio quality in Teams, ranging from resource constraints on both the VDI and the endpoint to the use of unsupported microphone devices on a technical level. Other factors like background noise or distance to the microphone can also result in poor audio quality. Using audio and video recordings of the actual Teams call allows for analysis of both audio and video. To determine the perceived audio quality ViSQOL (Virtual Speech Quality Objective Listener) is used, which is an objective, full-reference metric for perceived audio quality. It uses a spectro-temporal measure of similarity between a reference and a test speech signal to produce a MOS-LQO (Mean Opinion Score - Listening Quality Objective) score. MOS-LQO scores range from 1 (the worst) to 5 (the best). 
+Many situations can result in poor or subpar audio quality in Teams, ranging from resource constraints on both the VDI and the endpoint to the use of unsupported microphone devices on a technical level. Other factors like background noise or distance to the microphone can also result in poor audio quality. Using audio and video recordings of the actual Teams call allows for analysis of both audio and video. To determine the perceived audio quality ViSQOL (Virtual Speech Quality Objective Listener) is used, which is an objective, full-reference metric for perceived audio quality. It uses a spectro-temporal measure of similarity between a reference and a test speech signal to produce a MOS-LQO (Mean Opinion Score - Listening Quality Objective) score. MOS-LQO scores range from 1 (the worst) to 5 (the best).
 
 Source: [google/visqol: Perceptual Quality Estimator for speech and audio (github.com)](https://github.com/google/visqol){:target="_blank"}
 
@@ -109,7 +110,7 @@ To summarize, the following solutions are included in this research:
   * Azure Virtual Desktop
   * Windows 365 Cloud PC
 
-In case of Windows 365 Cloud PC, the standard configuration has been used, which contains 2vCPUs, 8GB of memory, and 128 GB of storage. Both Citrix DaaS and Azure Virtual Desktop are hosted on a similar configuration, a D2S_v5 SKU, which contains 2vCPUs and 8GB of memory with premium SSD. 
+In case of Windows 365 Cloud PC, the standard configuration has been used, which contains 2vCPUs, 8GB of memory, and 128 GB of storage. Both Citrix DaaS and Azure Virtual Desktop are hosted on a similar configuration, a D2S_v5 SKU, which contains 2vCPUs and 8GB of memory with premium SSD.
 
 These specs meet the minimal requirements for Microsoft Teams to support both audio and video calls as explicitly stated on the plans and pricing page of Windows 365 Cloud PC
 
@@ -117,7 +118,7 @@ Please note that while the configuration is similar with regard to the vCPU coun
 
 The endpoint used for the tests is configured for high performance video and audio streaming, to ensure it does not impact any of the test results. It has the following specifications:
 
-  * AMD Ryzen 7 5700x 
+  * AMD Ryzen 7 5700x
   * NVIDIA Geforce RTX 3700 Ti
   * 16GB Memory
   * 2TB NVME SSD
@@ -133,7 +134,7 @@ For each virtual desktop solution, the following configuration scenarios are inc
   * Teams optimization enabled
   * Teams optimization disabled
 
-This means a total of six scenarios. 
+This means a total of six scenarios.
 
 <i>Note: Due to resource and time limitations, VMware Horizon was not included in this research.</i>
 
@@ -165,13 +166,13 @@ As mentioned, the overall implementation of the Teams optimization is in general
 
 {% include chart.html type='hbar' data_file='assets/data/092-microsoft-teams-optimization-in-a-virtual-desktop/ssim-compare-not-optimized.json' %}
 
-Now, these results do show a clear difference for the Cloud PC even though the sizing of the Cloud PC is the same. We are suspecting this is caused by a SKU, but this cannot be confirmed. 
+Now, these results do show a clear difference for the Cloud PC even though the sizing of the Cloud PC is the same. We are suspecting this is caused by a SKU, but this cannot be confirmed.
 
 For audio the metric is also higher is better, only the scale is from 5 to 1, where 5 is identical to the reference.
 
 {% include chart.html type='hbar' data_file='assets/data/092-microsoft-teams-optimization-in-a-virtual-desktop/mos-compare.json' %}
 
-The results show Teams optimization is delivering the best audio quality compared to the original source. 
+The results show Teams optimization is delivering the best audio quality compared to the original source.
 
 ## Conclusion
 Based on this research, we can conclude that testing the user experience of Microsoft Teams is challenging. Especially when using SSIM, which is a full reference comparison that requires the exact same resolution and scale of the presented images to compare successfully. Even though Microsoft stated the webcam streams are not resized, adjustments in scale were noticed during this research.
@@ -192,4 +193,3 @@ When preparing an AVD deployment, please ensure that the WebRTC requirement is i
 Are you using Microsoft Teams in a virtual environment? Please let us know what your experience is in the comments below.
 
 Photo by <a href="https://unsplash.com/@emilianocicero?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Emiliano Cicero</a> on <a href="https://unsplash.com/s/photos/webcam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
-  

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "A deep dive into the quality difference of VMware Blast Global Quality Levels"
 hidden: false
 authors: [ryan]

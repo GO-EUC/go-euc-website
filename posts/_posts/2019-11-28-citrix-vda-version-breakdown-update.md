@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix VDA version breakdown update"
 hidden: false
 authors: [eltjo, ryan]

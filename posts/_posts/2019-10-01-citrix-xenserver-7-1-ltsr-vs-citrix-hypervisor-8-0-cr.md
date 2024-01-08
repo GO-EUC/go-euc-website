@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix XenServer 7.1 LTSR vs. Citrix Hypervisor 8.0 CR"
 hidden: false
 authors: [krishan]
@@ -165,7 +166,7 @@ Nevertheless upgrading to the Citrix Hypervisor 8.0 does make sure your platform
 Based on these results it is important to validate this in your own environment before upgrading to Citrix Hypervisor 8.0. Another important fact to take into account is the supported hardware with Citrix Hypervisor 8.0.
 
 > The kernel device drivers have also been updated to newer versions. Some hardware that was supported in previous releases might not work with the newer drivers.
-> 
+>
 > Source: [https://docs.citrix.com/en-us/citrix-hypervisor/citrix-hypervisor-8.0.pdf](https://docs.citrix.com/en-us/citrix-hypervisor/citrix-hypervisor-8.0.pdf){:target="_blank"}
 
 More information about the HCL can be found here. [http://hcl.vmd.citrix.com/](http://hcl.vmd.citrix.com){:target="_blank"}

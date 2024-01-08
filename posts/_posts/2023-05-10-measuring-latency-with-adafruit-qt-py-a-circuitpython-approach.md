@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Measuring Latency with Adafruit QT Py: A CircuitPython Approach"
 hidden: false
 authors: [eltjo]
@@ -26,7 +27,7 @@ According to Wikipedia, in 2019, resources for CircuitPython were moved to circu
 With Circuitpython code can be easily edited on-the-fly, as the microcontrollers will present themselves as USB storage devices when connected to a computer. This means that code can be edited easily with any code- or even text editor, and the changes can be saved directly to the device where the changes can be seen directly.
 
 ## Hardware requirements
-To create a DIY latency measurement device, two main components are needed, a microcontroller and a compatible light sensor. 
+To create a DIY latency measurement device, two main components are needed, a microcontroller and a compatible light sensor.
 
 In a previous attempt a Adafruit Trinket M0 was used in combination with a TCS34725 RGB sensor. This setup however required soldering the light sensor board to the microcontroller:
 
@@ -62,7 +63,7 @@ Similarly like with the NVIDIA LDAT, the microcontroller and sensor need to be a
 
 ## Software requirements
 
-In addition to the hardware requirements there are several software requirements for this project. 
+In addition to the hardware requirements there are several software requirements for this project.
 
 Make sure to install the latest version of CircuitPython on the Adafruit QT Py. Please refer to the CircuitPython website for detailed instruction on how to install the latest version to the microcontroller.
 
@@ -77,7 +78,7 @@ For the calibration process, Python will need to be installed on a Windows, MacO
 The calibration routine uses the tkinter package. Tkinter is a standard Python interface to the Tcl/Tk GUI toolkit. Both Tk and tkinter are available on most Unix platforms, including macOS, as well as on Windows systems.
 
 ## Implementing the Latency Measurement code
-In this section, we'll walk you through the process of implementing the latency measurement setup using the Adafruit QT Py, CircuitPython, and the BH1750 light sensor. 
+In this section, we'll walk you through the process of implementing the latency measurement setup using the Adafruit QT Py, CircuitPython, and the BH1750 light sensor.
 
 Start off with the first section to initialize the I2C bus and the BH1750 sensor, as well as the HID mouse and DotStar LED:
 
@@ -159,10 +160,10 @@ led[0] = (0, 0, 0)
 led.show()
 ```
 
-This is all the code you need for the basic setup of the latency measurements. 
+This is all the code you need for the basic setup of the latency measurements.
 
 ## Calibration process
-In order to make sure that the results are calibrated in this section a basic calibration process is defined. 
+In order to make sure that the results are calibrated in this section a basic calibration process is defined.
 
 To make sure that the latency measurements are accurate, it is essential to perform at least a basic calibration process. This calibration serves as a way to determine the inherent latency of the QT Py and the light sensor for example, helping to account for any delays introduced by these components. However, it is important to note that this is only a very basic form of calibration and might not account for all possible sources of latency or variations in latency.
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Nutanix lab architecture and hardware setup overview 2019 – Current"
 hidden: false
 authors: [sven]

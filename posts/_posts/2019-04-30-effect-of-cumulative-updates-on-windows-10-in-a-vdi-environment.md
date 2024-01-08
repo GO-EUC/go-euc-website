@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Effect of cumulative updates on Windows 10 in a VDI environment"
 hidden: false
 authors: [ryan]

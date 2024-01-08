@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix Policy Templates"
 hidden: false
 authors: [eltjo]
@@ -23,7 +24,7 @@ Below is a breakdown of the components that have been changed since the original
 | :-----------------------------------: | :----------------------------------------: |
 | Windows version 10 build 1709	        | Windows version 10 build 1809              |
 | VDA version 7.15 CU2	                | VDA version 7 1811                         |
-| Full Login VSI Progress bar visible   | Login VSI modification on the progress bar | 
+| Full Login VSI Progress bar visible   | Login VSI modification on the progress bar |
 
 More information on the testing platform can be found [here]({{site.baseurl}}/architecture-and-hardware-setup-overview-2018){:target="_blank"}. For more insights into the testing methodology please review the following [post]({{site.baseurl}}/insight-in-the-testing-methodology){:target="_blank"}.
 
@@ -36,13 +37,13 @@ Other built-in templates include templates for the Legacy OSes running Windows 2
 The policy templates set the values below as following:
 
 | Setting | Default value | High Server Scalability | Very High User Definition Experience |
-| :-----: | :-----------: | :---------------------: | :----------------------------------: | 
+| :-----: | :-----------: | :---------------------: | :----------------------------------: |
 | Multimedia conferencing | Allowed | Prohibited | Allowed |
 | Dynamic windows preview | Enabled | Not Configured | Enabled |
 | Legacy graphics mode | Disabled | Not Configured | Disabled |
-| Use asynchronous writes | Disabled | Not Configured | Disabled | 
+| Use asynchronous writes | Disabled | Not Configured | Disabled |
 | Desktop wallpaper | Allowed | Prohibited | Allowed |
-| Menu animation | Allowed | Prohibited | Allowed | 
+| Menu animation | Allowed | Prohibited | Allowed |
 | View window contents while dragging | Allowed | Allowed | Allowed |
 | Audio quality	| High – High definition audio | Medium – optimized for speech | High – high definition audio |
 | Flash video fallback prevention | Not Configured | Only small content | Not Configured |
@@ -187,7 +188,7 @@ Because with the ‘High Server Scalability’ template no encoding is used, the
 Citrix states the following about bandwidth usage for the ‘Very High User Definition’ template:
 
 > As mentioned in the built-in policy description, applying this template may consume more bandwidth and reduce user density per server.
-> 
+>
 > Source: [https://docs.citrix.com/en-us/advanced-concepts/implementation-guides/hdx-policy-templates.html](https://docs.citrix.com/en-us/advanced-concepts/implementation-guides/hdx-policy-templates.html){:target="_blank"}
 
 Instead, the metric shows a significant decrease in bandwidth consumption when using the ‘Very High Definition User Experience’ template.
@@ -273,7 +274,7 @@ From both a host and the perspective of an end-point, delivering the highest def
 
 The most common alleviation, using server GPUs, can potentially limit the overall impact at the datacenter side. The HDX policy setting ‘Use hardware encoding for video codec’ is selected by default. Using endpoints with faster CPUs and GPUs that can decode H.264, like the Raspberry Pi, can enhance the user experience from the end-points side of the equation.
 
-As per best practice, if you don’t need to delivery 3D of CAD workloads, keep everything at default if you use a VDA 7.18 or later and let the system decide. You get the best balance between user experience and scalability. 
+As per best practice, if you don’t need to delivery 3D of CAD workloads, keep everything at default if you use a VDA 7.18 or later and let the system decide. You get the best balance between user experience and scalability.
 Source: [https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when](https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when){:target="_blank"}
 
 If you want to share your insights on using the built-in policy templates or would like to discuss our findings, please reach to us or join the [Slack channel](https://worldofeuc.slack.com){:target="_blank"}.

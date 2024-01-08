@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix Optimizer version 2 – Windows 10 1809"
 hidden: false
 authors: [eltjo, ryan]
@@ -15,7 +16,7 @@ CTXO Version 2 is currently in closed beta and will be released shortly. One of 
 CTXO creator [Martin Zugec](https://twitter.com/martinzugec){:target="_blank"} about the goal of CTXO version 2:
 
 <a href="{{site.baseurl}}/assets/images/posts/004-office-2019-performance-impact/004-office2019-vsi-avg-appstat-bar-ind.png" data-lightbox="app-start-detail-compare">
-> <img style="width: 150px; float: left; margin-right: 15px; margin-top: 5px" src="{{site.baseurl}}/assets/images/posts/011-citrix-optimizer-version-2-windows-10-1809/011-ctxo-win10-martin-zugec.png"/> With version 2 of Optimizer, we have decided to move to the next big step in our vision – get community more involved in developing, improving and testing Citrix Optimizer. 
+> <img style="width: 150px; float: left; margin-right: 15px; margin-top: 5px" src="{{site.baseurl}}/assets/images/posts/011-citrix-optimizer-version-2-windows-10-1809/011-ctxo-win10-martin-zugec.png"/> With version 2 of Optimizer, we have decided to move to the next big step in our vision – get community more involved in developing, improving and testing Citrix Optimizer.
 </a>
 >
 > To start, we are adding template builder feature to make it easier to create new templates and marketplace feature to make sharing of custom templates easier.

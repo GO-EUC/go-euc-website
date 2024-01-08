@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Performance difference of Citrix ICA Visual Quality profiles"
 hidden: false
 authors: [ryan]

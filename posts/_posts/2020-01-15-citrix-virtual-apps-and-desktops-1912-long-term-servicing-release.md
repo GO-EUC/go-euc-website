@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix Virtual Apps and Desktops 1912 Long-Term Servicing Release"
 hidden: false
 authors: [ryan, eltjo]

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "What is the best Azure Virtual Machine size for WVD using Citrix Cloud?"
 hidden: false
 authors: [patrick]
@@ -22,34 +23,34 @@ With the Azure lock-in of Windows 10 multi-session, the choice of hardware resou
   * B4ms
 
 ### D4s_v3
-The Dsv3-series VM is, from a vCPU and vMEM-ratio, a good candidate for EUC workloads. The number of cores compared to the virtual memory is in balance and usable for a EUC workloads. This virtual machine is using hyperthreading, so all the vCores are scheduled on the lCores of the physical CPU. There is a vCore to core overcommit ratio of 2 vCPUs to 1 Core. 
+The Dsv3-series VM is, from a vCPU and vMEM-ratio, a good candidate for EUC workloads. The number of cores compared to the virtual memory is in balance and usable for a EUC workloads. This virtual machine is using hyperthreading, so all the vCores are scheduled on the lCores of the physical CPU. There is a vCore to core overcommit ratio of 2 vCPUs to 1 Core.
 
 > The Dsv3-series support premium storage and run on the Intel® Xeon® Platinum 8272CL processor (second generation Intel® Xeon® Scalable processors), Intel® Xeon® 8171M 2.1GHz (Skylake), Intel® Xeon® E5-2673 v4 2.3 GHz (Broadwell), or the Intel® Xeon® E5-2673 v3 2.4 GHz (Haswell) processors with Intel Turbo Boost Technology 2.0 and **feature Intel® Hyper-Threading Technology**. The Dsv3-series sizes offer a combination of vCPU(s), memory, and temporary storage well suited for most production workloads.
-> 
+>
 > [Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/){:target="_blank"}
 
 ### DS3_v2
 The Dsv2-series VM is the older brother of the Dsv3 series VM. It uses the same underlying CPUs as the Dsv3-series. The only difference here is that hyperthreading is not used on the physical CPU. This VM has less vMEM compared to the Dsv3-series. There is a vCore to core overcommit ratio of 1 vCPUs to 1 Core.
 
 > The Dsv2-series virtual machines run on the Intel® Xeon® Platinum 8272CL processor (second generation Intel® Xeon® Scalable processors), Intel® Xeon® 8171M 2.1GHz (Skylake), Intel® Xeon® E5-2673 v4 2.3 GHz (Broadwell), or the Intel® Xeon® E5-2673 v3 2.4 GHz (Haswell) processors with the Intel Turbo Boost Technology 2.0. The D1-5 v2 sizes offer a balanced combination of vCPU(s), memory, and local disk for most production workloads.
-> 
+>
 > [Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/){:target="_blank"}
 
 ### F4S_v2
 The F-series VM is optimized for Compute workloads and therefore has a lower vCPU to vMEM ratio compared to the previous D-series specified above. This VM has a vCore to core overcommit ratio of 2 vCPUs to 1 Core.
 
 > The F-series virtual machines feature 2-GiB RAM and 16 GiB of local SSD temporary storage per CPU core and are optimized for compute intensive workloads. The F-series sizes are based Intel® Xeon® Platinum 8272CL processor (second generation Intel® Xeon® Scalable processors), Intel® Xeon® 8171M 2.1GHz (Skylake), Intel® Xeon® E5-2673 v4 2.3 GHz (Broadwell), or the Intel® Xeon® E5-2673 v3 2.4 GHz (Haswell) processor. These virtual machines are suitable for scenarios like batch processing, web servers, analytics, and gaming.
-> 
+>
 > [Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/){:target="_blank"}
 
 ### B4ms
-The Bs-series VM is a cost-efficient burstable virtual machine. Customers can benefit from the CPU banking and crediting model of this burstable VM when the CPU is not utilized intensively. This VM is a good candidate for applications with a high memory and low CPU demands. Although this VM is not recommended for regular EUC workloads. 
-More information about the burstable VM rules can be found [here](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable){:target="_blank"}. 
+The Bs-series VM is a cost-efficient burstable virtual machine. Customers can benefit from the CPU banking and crediting model of this burstable VM when the CPU is not utilized intensively. This VM is a good candidate for applications with a high memory and low CPU demands. Although this VM is not recommended for regular EUC workloads.
+More information about the burstable VM rules can be found [here](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable){:target="_blank"}.
 
 No overcommit ratio for Bs-series VMs is documented by Microsoft.
 
 > Bs-series are economical virtual machines that provide a low-cost option for workloads that typically run at a low to moderate baseline CPU performance, but sometimes need to burst to significantly higher CPU performance when the demand rises. These workloads don’t require the use of the full CPU all the time, but occasionally will need to burst to finish some tasks more quickly. Many applications such as development and test servers, low traffic web servers, small databases, micro services, servers for proof-of-concepts, build servers, and code repositories fit into this model.
-> 
+>
 > [Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/){:target="_blank"}
 
 For more information about Azure Compute Units see the [Microsoft documentation](https://docs.microsoft.com/en-US/azure/virtual-machines/acu){:target="_blank"}.
@@ -65,22 +66,22 @@ The machines used are created using Citrix Virtual Apps and Desktops Service fro
 The default [testing methodology]({{site.baseurl}}/insight-in-the-testing-methodology-2020/) is used for this research.
 
 ## Expectations
-For on-premises sizing there are different calculations for VDI- or SBC workloads. Since Windows 10 multi-session is a multi-session OS the SBC “rule of thumb” on-premises user density calculation is applied: 
+For on-premises sizing there are different calculations for VDI- or SBC workloads. Since Windows 10 multi-session is a multi-session OS the SBC “rule of thumb” on-premises user density calculation is applied:
 
 | SKU | Monthly Cost |  vCPU | CPU speed* | vMEM | Est. Users | Est. Bottleneck |
 | :---| :----------- | :---- | :--------- | :--- | :--------- | :-------------- |
-| D4S_v3 | € 147,74 | 4 | 2300 MHz | 16 GB | 11 | vCPU | 
+| D4S_v3 | € 147,74 | 4 | 2300 MHz | 16 GB | 11 | vCPU |
 | B4ms | € 118,19 | 4 | 2300 MHz | 16 GB | 11 | vCPU |
-| DS3_v2 | € 167,44 | 4 | 2300 MHz | 14 GB | 10 | vMEM | 
+| DS3_v2 | € 167,44 | 4 | 2300 MHz | 14 GB | 10 | vMEM |
 | F4S_v2 | € 119,43 | 4 | 2300 MHz | 8 GB | 4 | vMEM |
 
-\* Please note CPU speed can vary due to host placement in the Azure platform. 
+\* Please note CPU speed can vary due to host placement in the Azure platform.
 
 **Rule of thumb explained: Number of users based on CPU (multi-session)**
 
 Medium-Heavy user weight = 800 MHz per user.
 
-Number of users is = vCPU * CPU-speed / user-weight. 
+Number of users is = vCPU * CPU-speed / user-weight.
 
 Example: D4S_v3 = 4 vCPU * 2300 MHz / 800 Mhz = 11,5 users (rounded: 11 users)
 
@@ -88,7 +89,7 @@ Example: D4S_v3 = 4 vCPU * 2300 MHz / 800 Mhz = 11,5 users (rounded: 11 users)
 
 Medium-Heavy user 1 GB per user.
 
-Number of users = (Total MEM – 4 GB OS reservation) / user-weight. 
+Number of users = (Total MEM – 4 GB OS reservation) / user-weight.
 
 Example: D4S_v3 = (16 GB – 4 GB OS reservation) / 1 = 12 users
 
@@ -128,7 +129,7 @@ There is an expectation to see inconsistency between the runs. As multiple runs 
 
 During this research the CPU performance is consistent between the different runs.
 
-Citrix MCS will power off and destroy the VM after each run and will rebuild and power on the VM at a new run. In theory the VM could be started on different virtualization hosts with different type of CPUs in the Azure West Europe datacenter. 
+Citrix MCS will power off and destroy the VM after each run and will rebuild and power on the VM at a new run. In theory the VM could be started on different virtualization hosts with different type of CPUs in the Azure West Europe datacenter.
 
 <a href="{{site.baseurl}}/assets/images/posts/060-what-is-the-best-azure-virtual-machine-size-for-wvd-using-citrix-cloud/060-best-azure-vm-size-cpu-util.png" data-lightbox="cpu-util">
 ![cpu-util]({{site.baseurl}}/assets/images/posts/060-what-is-the-best-azure-virtual-machine-size-for-wvd-using-citrix-cloud/060-best-azure-vm-size-cpu-util.png)
@@ -189,7 +190,7 @@ Not all the burstable VM CPU credits where used during the test. The B4ms is sho
 ### New SKUs available!!
 In the meantime, there are some new SKUs available on the Microsoft Azure platform. Some new SKUs are also very interesting for Windows 10 multi-session workloads. These new SKUs where not available in our Azure subscriptions during this research. A validation for this SKUs is in the pipeline, when these SKUs are available for GO-EUC.
 
-For now, if you are doing a proof of concept with Windows 10 multi-session, besides the listed SKUs in this research, you might consider to test the following Virtual Machine SKUs, if available in your region or subscription: 
+For now, if you are doing a proof of concept with Windows 10 multi-session, besides the listed SKUs in this research, you might consider to test the following Virtual Machine SKUs, if available in your region or subscription:
 
   * Dd v4-series (Intel Platinum 8272CL @ 2,5 GHz)
   * Das v4-series (AMD EPYC 7452 @ 2,35 GHz)

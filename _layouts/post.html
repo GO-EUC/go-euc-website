@@ -1,177 +1,158 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
 
-<!-- Begin Article
-================================================== -->
+<div class="post-head">
 
-	<div class="row">
+  <div class="container">
+    {% if page.image %}
+    <div>
+      <div class="image-box">
+        <img class="post-image lazy" data-src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+      </div>
+    </div>
+    {% endif %}
 
-		<!-- Post -->               
-		<div class="col-sm-8">
-			<div class="mainheading">              
-                
-                
-                <!-- Post Title -->
-                <h1 class="posttitle">{{ page.title }}</h1> 
-                
-			</div>
+  <div class="post-info">
+    <div class="post__reviewers">
+      {% if page.reviewers %}
+      {% for page_reviewer in page.reviewers %}
+      {% assign reviewer = site.authors[page_reviewer] %}
+      <div class="post__author">
+        <a href="{{ site.baseurl }}/member/{{ reviewer.page }}" aria-label="{{ reviewer.name }}"><img class="post__author-image" style="border: 0px;"
+            src="{{ site.baseurl }}/{{ reviewer.picture }}" alt="{{ reviewer.name }}'s Picture"></a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
 
+    <div class="post__meta">
+      <span class="post__minutes">
+        {% assign words = page.content | number_of_words %}
+        {% if words < 360 %}
+          1 min read
+        {% else %}
+          {{ words | divided_by:180 }} min read
+        {% endif %}
+        <time class="post__date"
+          datetime="{{ page.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}{{ page.date | date: date_format }}</time>
+      </span>
+    </div>
 
-            <!-- Post Date -->
-            <p>
-                <small>
-                    <span class="post-date" style="float: left"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-                    {% if page.authors %}
-                    {% for page_author in page.authors %}
-                    {% assign author = site.authors[page_author] %}
-                        <a href="{{site.baseurl}}/members/{{author.page}}" title="{{author.display_name}}">
-                            <img src="{{site.baseurl}}/{{author.picture}}"  class="post-author-image"></img>
-                        </a>
-                    {% endfor %}
-                    {% endif %}
-                    </span>
+    <h2 class="post__title">{{page.title}}</h2>
 
-                    <span style="float: right">
-                    {% if page.reviewers %}
-                    {% for page_reviewer in page.reviewers %}
-                    {% assign reviewer = site.authors[page_reviewer] %}
-                        <a href="{{site.baseurl}}/members/{{reviewer.page}}" title="{{reviewer.display_name}}">
-                            <img src="{{site.baseurl}}/{{reviewer.picture}}" class="post-author-image"></img>
-                        </a>
-                    {% endfor %}
-                    {% endif %}
-                    </span>
-                             
-                    {% if page.last_modified_at %}
-                    (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                    {% endif %}
-                </small>
-            </p>
+    <div class="post__bottom">
+      {% if page.authors %}
+      {% for page_author in page.authors %}
+      {% assign author = site.authors[page_author] %}
+      <div class="post__author">
+        <a href="{{site.baseurl}}/member/{{author.page}}" aria-label="{{author.name}}"><img class="post__author-image"
+            src="{{ site.baseurl }}/{{ author.picture }}" alt="{{author.name}}'s Picture"></a>
+      </div>
 
-			<!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid" style="width:100%" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
-			<!-- End Featured Image -->
+      <div class="post__bottom-meta" style="margin-right: 15px;">
+        <a href="{{site.baseurl}}/member/{{author.page}}" class="post__author-link">{{author.display_name}}</a>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
 
-			<!-- Post Content -->
-			<div class="article-post">
-                <h2>Table of Content</h2>
-                {% include toc.html html=content %}
-				{{content}}
-                <div class="clearfix"></div>
-			</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <!-- Post Date -->
-            <p>
-            <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                {% endif %}
-                </small>
-            </p>
-            
-            <!-- Post Categories -->
-            <div class="after-post-tags">
-                    <ul class="tags">
-                        {% assign sortedTags = page.tags | sort %}
-                        {% for tag in sortedTags %}
+<!-- begin post -->
+<div class="container">
+  <article class="post animate">
 
-                        {% if tag != "posts" and tag != "events" %}
+    <div class="post__content">
+      {% if page.toc %}
+        <h4>Table of Contents</h4>
+        {% include toc.html html=content %}
+      {% endif %}
+      {{ content }}
+    </div>
 
-                        <li>
-                            <div class="tag">{{ tag }}</div>
-                            <!-- <a href="{{ site.baseurl }}/category/{{ tag | slugify }}/">{{ tag }}</a> -->
-                        </li>
-                        {% endif %}
-
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!-- End Categories -->
-                        
-            <!-- share -->
-            {% include share.html %}
-
-            <!-- share -->
-             <!-- Author Box -->
-                {% if page.authors %}	
-                {% for page_author in page.authors %}
-                {% assign author = site.authors[page_author] %}
-                
-				<div class="row post-top-meta" >
-                    <div class="author-box">
-
-                        <!-- image -->
-                        <div class="author-box-picture">
-                            <img class="author-box-picture-image" src="{{ site.baseurl }}/{{ author.picture }}" alt="{{ author.display_name }}">
-                        </div>
-
-                        <!-- name -->
-                        <div class="author-box-name">
-                            {{ author.display_name }}
-                        </div>
-                        
-                        <!-- description -->
-                        <div class="author-box-description">
-                            {{ author.description }}
-                        </div>
-
-                        <div class="author-box-clearfix"> </div>
-
-                        <div class="author-box-socials">
-                            {% if author.linkedin %}
-                            <a href="{{author.linkedin}}" target="_blank"><img class="author-box-socials-icon" src="{{ site.baseurl }}/assets/images/social/027-linkedin.png" alt="linkedin"></a>
-                            {% endif %}
-    
-                            {% if author.twitter %}
-                            <a href="{{author.twitter}}" target="_blank"><img class="author-box-socials-icon" src="{{ site.baseurl }}/assets/images/social/008-twitter.png" alt="twitter"></a>
-                            {% endif %}
-    
-                            {% if author.web %}
-                            <a href="{{author.web}}" target="_blank"><img class="author-box-socials-icon" src="{{ site.baseurl }}/assets/images/social/030-html-5.png" alt="website"></a>
-                            {% endif %}
-    
-                            {% if author.github %}
-                            <a href="{{author.github}}" target="_blank"><img class="author-box-socials-icon" src="{{ site.baseurl }}/assets/images/social/050-github.png" alt="github"></a>
-                            {% endif %}
-
-                            {% if author.reddit %}
-                            <a href="{{author.reddit}}" target="_blank"><img class="author-box-socials-icon" src="{{ site.baseurl }}/assets/images/social/018-reddit.png" alt="reddit"></a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}				
-                {% endif %}
-
-                
-            
-            
-            <!-- Begin Comments
-            ================================================== -->
-            <section>
-            <div id="comments">                          
-                {% include disqus.html %} 
+    {% if page.authors %}
+    {% for page_author in page.authors %}
+    {% assign author = site.authors[page_author] %}
+    <div class="post__author-box">
+        <a href="{{ site.baseurl }}/members/{{ author.page }}">
+          <div class="post__author-box-imagebox">
+            <div class="post__author-box-image">
+                <img src="{{ site.baseurl }}/{{ author.picture }}" alt="{{ author.display_name }}">
             </div>
-            </section>
-            <!--End Comments
-            ================================================== -->
-            
-            
-
-		</div>
-		<!-- End Post -->
-        
-        <!-- Sidebar -->
-        <div class="col-sm-4">
-            {% include sidebar.html %}
+          </div>
+        </a>
+        <div class="post__author-box-name">
+          {{ author.display_name }}
         </div>
+        <div class="post__author-box-description">
+          {{ author.description }}
+        </div>
+        <div class="post__author-box-socials">
+          {% if author.linkedin %}
+          <a href="{{author.linkedin}}" target="_blank"><i class="ion ion-logo-linkedin"></i></a>
+          {% endif %}
 
-	</div>
+          {% if author.twitter %}
+          <a href="{{author.twitter}}" target="_blank"><i class="ion ion-logo-twitter"></i></a>
+          {% endif %}
 
-<!-- End Article
-================================================== -->
+          {% if author.web %}
+          <a href="{{author.web}}" target="_blank"><i class="ion ion-logo-wordpress"></i></a>
+          {% endif %}
+
+          {% if author.github %}
+          <a href="{{author.github}}" target="_blank"><i class="ion ion-logo-github"></i></a>
+          {% endif %}
+
+          {% if author.reddit %}
+          <a href="{{author.reddit}}" target="_blank"><i class="ion ion-logo-reddit"></i></a>
+          {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="post__share">
+      <div class="share__list">
+        <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+        <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIN" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="post__navigation">
+      {% if page.previous.url %}
+      {% unless page.previous.url contains 'event-'%}
+      <a class="prev" href="{{page.previous.url}}">
+        <img class="post__nav-image lazy" data-src="{{site.baseurl}}/{{page.previous.image}}" alt="{{page.previous.title}}">
+        <div class="post__nav-box">
+          <div class="post__nav post__nav__prev"><i class="ion ion-md-arrow-round-back"></i> Previous Post</div>
+          <h4 class="post__nav__title">{{page.previous.title}}</h4>
+        </div>
+      </a>
+      {% endunless %}
+      {% endif %}
+      {% if page.next.url %}
+      {% unless page.previous.url contains 'event-'%}
+      <a class="next" href="{{page.next.url}}">
+        <img class="post__nav-image lazy" data-src="{{site.baseurl}}/{{page.next.image}}" alt="{{page.next.title}}">
+        <div class="post__nav-box">
+          <div class="post__nav post__nav__next">Next Post <i class="ion ion-md-arrow-forward"></i></div>
+          <h4 class="post__nav__title">{{page.next.title}}</h4>
+        </div>
+      </a>
+      {% endunless %}
+      {% endif %}
+    </div>
+
+  </article>
+</div>
+<!-- end post -->
+
+{% include related-posts.html %}
+
+{% if site.disqus-identifier %} {% include disqus-comments.html %} {% endif %}

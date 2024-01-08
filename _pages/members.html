@@ -1,0 +1,109 @@
+---
+layout: page
+title: Members
+image: 'assets/images/head.jpg'
+comments: false
+---
+
+<div>
+
+
+    <h2>Founders</h2>
+    {% assign ryan = site.authors['ryan'] %}
+    {% assign eltjo = site.authors['eltjo'] %}
+    <div class="row grid">
+        <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+            <div class="member__box">
+                <a href="{{site.baseurl}}/members/{{ryan.page}}">
+                    <div class="member__box-imagebox">
+                        <div class="member__box-image">
+                            <img src="{{ site.baseurl }}/{{ ryan.picture }}" alt="{{ ryan.display_name }}">
+                        </div>
+                    </div>
+                    <div class="member__box-name">
+                        {{ ryan.display_name }}
+                    </div>
+                    <div class="member__box-title">
+                        {{ ryan.title }} at at {{ ryan.company }}
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+            <div class="member__box">
+                <a href="{{site.baseurl}}/members/{{eltjo.page}}">
+                    <div class="member__box-imagebox">
+                        <div class="member__box-image">
+                            <img src="{{ site.baseurl }}/{{ eltjo.picture }}" alt="{{ eltjo.display_name }}">
+                        </div>
+                    </div>
+                    <div class="member__box-name">
+                        {{ eltjo.display_name }}
+                    </div>
+                    <div class="member__box-title">
+                        {{ eltjo.title }} at {{ eltjo.company }}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Members</h2>
+    <div>
+    <div class="row grid">
+    {% for author in site.authors %}
+    {% assign name = author[0] %}
+
+    {% assign info = site.authors[name] %}
+    {% if info.active == true and info.founder != true %}
+        <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+            <div class="member__box">
+                <a href="{{site.baseurl}}/members/{{info.page}}">
+                <div class="member__box-imagebox">
+                    <div class="member__box-image">
+                        <img src="{{ site.baseurl }}/{{ info.picture }}" alt="{{ info.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ info.display_name }}
+                </div>
+                <div class="member__box-title">
+                    {{ info.title }} at {{ info.company }}
+                </div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+
+
+    <h2>Past Members</h2>
+    <div>
+    <div class="row grid">
+    {% for author in site.authors %}
+    {% assign name = author[0] %}
+
+    {% assign info = site.authors[name] %}
+    {% if info.active == false and info.founder != true %}
+        <div class="col col-4 col-d-6 col-t-12 grid__post member-grid animate">
+            <div class="member__box">
+                <a href="{{site.baseurl}}/members/{{info.page}}">
+                <div class="member__box-imagebox">
+                    <div style="border: 2px solid #474350" class="member__box-image">
+                        <img style="-webkit-filter: grayscale(100%); filter: grayscale(100%);" src="{{ site.baseurl }}/{{ info.picture }}" alt="{{ info.display_name }}">
+                    </div>
+                </div>
+                <div class="member__box-name">
+                    {{ info.display_name }}
+                </div>
+                <div class="member__box-title">
+                    {{ info.title }} at {{ info.company }}
+                </div>
+                </a>
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+</div>

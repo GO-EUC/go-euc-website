@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix Optimizer Windows 10 1903 Template"
 hidden: false
 authors: [ryan]

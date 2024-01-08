@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Performance difference between user profiles"
 hidden: false
 authors: [ryan]

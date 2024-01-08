@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Architecture and hardware setup overview 2020 – Current"
 hidden: false
 authors: [ryan, eltjo]
@@ -19,11 +20,11 @@ The current research environment consists of five dedicated servers located in o
 
 | Role | Model | CPU | Mem | Disk | GPU |
 |:---- | :---- | :-- | :-- | :--- | :-- |
-| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA | 
-| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA |  
-| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2667 v4 (3.20 GHz) | 256GB | 1.46TB SSD | Tesla M10 |   
-| Worker | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA |  
-| Worker | SuperMicro SYS-6029U-TR4 | 2x Intel Xeon Gold 6148 (2.40 GHz) | 512GB | 1TB SSD | 4x Tesla T4 |  
+| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA |
+| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA |
+| Infrastructure | HPE DL380 Gen 9 | 2x Intel Xeon E5-2667 v4 (3.20 GHz) | 256GB | 1.46TB SSD | Tesla M10 |
+| Worker | HPE DL380 Gen 9 | 2x Intel Xeon E5-2640 v3 (2.60 GHz) | 256GB | 1.46TB SSD | NA |
+| Worker | SuperMicro SYS-6029U-TR4 | 2x Intel Xeon Gold 6148 (2.40 GHz) | 512GB | 1TB SSD | 4x Tesla T4 |
 
 <br>
 
@@ -34,7 +35,7 @@ The current research environment consists of five dedicated servers located in o
 
 **Update: January 2021**
 
-Since January 2021, the SuperMicro worker has been added to the GO-EUC environment. 
+Since January 2021, the SuperMicro worker has been added to the GO-EUC environment.
 Thanks to NVIDIA provided the GPU capabilities in the form of four Tesla T4 and one Tesla M10 GPU boards as of January 2021.
 
 ## Infrastructure
@@ -58,6 +59,3 @@ As the technologies are evolving towards the cloud it is important for GO-EUC to
 
 ## Update strategy
 It is important to stay up to date with the GO-EUC environment, and therefore we strive to use the latest version of solutions and technologies that are used. This might vary over time due to the many releases of various software. As stated in the testing methodology, during the research no updates will be applied in between the tests to ensure consistency of the results throughout the duration of the research. This might vary depending on the topic.
-
-
-

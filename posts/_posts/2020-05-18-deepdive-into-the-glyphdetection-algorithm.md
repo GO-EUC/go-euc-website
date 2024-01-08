@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Deepdive into the glyphdetection algorithm"
 hidden: false
 authors: [eltjo]
@@ -10,7 +11,7 @@ image: assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-ci
 Since Citrix Virtual Apps and Desktop version 7.12 , Citrix is using  Glyph detection and caching algorithms to save on bandwidth while still delivering  a great user performance. In this research we are going to explore the glyph detection benefits and its potential drawbacks.
 
 ## Introduction to glyph detection
-The Glyph detection algorithm that Citrix uses is based on the detection of glyphs, or alphabetical or numerical characters, to determine if a portion of the screen is character based. The algorithm uses a form of OCR (Optical Character Recognition) to accomplish this. The basic idea employs real-time OCR, and the re-use of the character glyphs as and when they appear in the Citrix session. 
+The Glyph detection algorithm that Citrix uses is based on the detection of glyphs, or alphabetical or numerical characters, to determine if a portion of the screen is character based. The algorithm uses a form of OCR (Optical Character Recognition) to accomplish this. The basic idea employs real-time OCR, and the re-use of the character glyphs as and when they appear in the Citrix session.
 
 <div align="center">
 <a href="{{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-glyph-example.png" data-lightbox="glyph-example">
@@ -22,7 +23,7 @@ The Glyph detection algorithm that Citrix uses is based on the detection of glyp
 </p>
 
 The goal of the Glyph detection algorithm is to cache and re-use these character glyphs in order to save bandwidth, especially in task worker workloads. It has a huge benefit in reducing bandwidth in text heavy workloads, due to the fact that these types of workloads often consist of Excel spreadsheet work for example, which features a lot of, in this case numerical characters, that usually repeat frequently.
- 
+
 <a align="center" href="{{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-excel-block-workload.png" data-lightbox="excel-workload">
 ![excel-workload]({{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-excel-block-workload.png)
 </a>
@@ -33,9 +34,9 @@ The goal of the Glyph detection algorithm is to cache and re-use these character
 But there is a tradeoff; because the algorithm uses OCR, it will consume additional CPU cycles in order to analyze portions of the screen to function. This may have a negative effect on the performance and scalability as a drawback.
 
 The glyph detection algorithm was added to CVAD 7.12 in 2017 and has been continuously improved in every new version of CVAD. The last changes to the algorithm were introduced in version 7.18.
- 
-Prior to version 2003, glyph detection was enabled by default. To reduce CPU usage in Citrix sessions, it was changed an automatic mode from version VDA 2003 and onwards. Now, when bandwidth is low or latency is high, the algorithm automatically enables glyph caching . These bandwidth and latency thresholds are currently nonconfigurable and the transition is completely invisible to the end-user and and does not require configuration or intervention by an administrator.. 
- 
+
+Prior to version 2003, glyph detection was enabled by default. To reduce CPU usage in Citrix sessions, it was changed an automatic mode from version VDA 2003 and onwards. Now, when bandwidth is low or latency is high, the algorithm automatically enables glyph caching . These bandwidth and latency thresholds are currently nonconfigurable and the transition is completely invisible to the end-user and and does not require configuration or intervention by an administrator..
+
 To force the glyph detection on or off the following registry setting can be set:
 
 `HKLM\Software\Citrix\Graphics\GlyphCacheBehaviour = 2`
@@ -61,7 +62,7 @@ Two scenarios have been defined for the analysis of glyph detection algorithm:
 
 ## Expectations and Results
 
-The key metrics for this research are the network bandwidth consumption along with CPU utilization. 
+The key metrics for this research are the network bandwidth consumption along with CPU utilization.
 
 <a href="{{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-bandwidth.png" data-lightbox="bandwidth">
 ![bandwidth]({{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-bandwidth.png)
@@ -129,9 +130,9 @@ A closer look to the data shows a marginal higher CPU usage for the scenario wit
 | 100%                   | 99,87%                |
 
 
-The user density, or overall scalability of the system, is mostly dependent on the hosts CPU utilization, because the main bottleneck in the GO-EUC lab is CPU capacity. We can consequently determine that according to the hosts CPU utilization metrics, the overall scalability will most likely not be impacted by the algorithm. 
+The user density, or overall scalability of the system, is mostly dependent on the hosts CPU utilization, because the main bottleneck in the GO-EUC lab is CPU capacity. We can consequently determine that according to the hosts CPU utilization metrics, the overall scalability will most likely not be impacted by the algorithm.
 
-As an additional drawback, the algorithm might have an impact on the user experience when it comes to the amount number of frames that is send to the client device. A reduction in FPS might result in a degradation of the perceived user experience. 
+As an additional drawback, the algorithm might have an impact on the user experience when it comes to the amount number of frames that is send to the client device. A reduction in FPS might result in a degradation of the perceived user experience.
 
 <a href="{{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-fps.png" data-lightbox="fps">
 ![fps]({{site.baseurl}}/assets/images/posts/058-deepdive-into-the-glyphdetection-algorithm/058-citrix-glyphdetection-fps.png)
@@ -152,7 +153,7 @@ For the Excel block of the workload there is an opposite effect with a decrease 
 ## Conclusion
 While there is not much documentation available on the glyph detection, it yields impressive results.
 
-In text heavy workloads like the task worker workload for example, the glyph detection algorithm really shines and is able to reduce bandwidth consumption as much as 38% in our tests, with only minimal CPU increase. It is our estimation that the more text heavy the workload is, the more the workload will benefit from the algorithm. 
+In text heavy workloads like the task worker workload for example, the glyph detection algorithm really shines and is able to reduce bandwidth consumption as much as 38% in our tests, with only minimal CPU increase. It is our estimation that the more text heavy the workload is, the more the workload will benefit from the algorithm.
 
 In most cases glyph detection mode can be left, as per default, in automatic mode.  The automatic mode will ensure that the glyph caching will only occur on low bandwidth or high latency situations.
 

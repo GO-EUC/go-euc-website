@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Should you switch from Microsoft Office x86 to x64?"
 hidden: false
 authors: [ryan]

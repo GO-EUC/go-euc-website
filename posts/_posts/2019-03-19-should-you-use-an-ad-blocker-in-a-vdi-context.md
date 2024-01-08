@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Should you use an ad blocker in a VDI context?"
 hidden: false
 authors: [ryan]

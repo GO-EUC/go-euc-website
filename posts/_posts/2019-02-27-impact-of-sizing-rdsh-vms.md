@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Impact of sizing RDSH VMs"
 hidden: false
 authors: [sven]

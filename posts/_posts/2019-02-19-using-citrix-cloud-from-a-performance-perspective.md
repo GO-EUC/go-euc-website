@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Using Citrix Cloud from a performance perspective"
 hidden: false
 authors: [eltjo, ryan]
@@ -27,7 +28,7 @@ For more information check out the geographical considerations when choosing a r
 Since we are located in the EU, we suspected the brokering from the Citrix Cloud US location would have a significant impact on the brokering times, and in the result on the time to desktop. But Citrix claims there is only a minimal impact:
 
 > Are there performance impacts if I’m in one region and use a service in another region?
-> 
+>
 > Citrix Cloud Services are designed to be used on a global basis. For example, customers in the US that have users and Cloud Connectors in Australia will see minimal impact from latency
 
 ## Configuration and infrastructure

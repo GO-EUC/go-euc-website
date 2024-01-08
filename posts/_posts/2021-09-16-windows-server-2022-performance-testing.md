@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Microsoft Windows Server 2022 performance testing"
 hidden: false
 authors: [gerjon, tom]

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Browser Performance Impact"
 hidden: false
 authors: [omar]

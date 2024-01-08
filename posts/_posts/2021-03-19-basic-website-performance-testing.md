@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Basic website performance testing with Python and Selenium"
 hidden: false
 authors: [eltjo]
@@ -7,7 +8,7 @@ categories: [ 'Website' ]
 tags: [ 'python', 'Selenium', 'github pages', 'website performance']
 image: assets/images/posts/075-basic-website-performance-testing/075-basic-website-performance-testing-feature-image.png
 ---
-Performance testing websites is not something that is in the comfort zone for GO-EUC. Normally GO-EUC writes researches on the performance and scalability from a EUC perspective, and that is indeed our primary focus with GO-EUC. 
+Performance testing websites is not something that is in the comfort zone for GO-EUC. Normally GO-EUC writes researches on the performance and scalability from a EUC perspective, and that is indeed our primary focus with GO-EUC.
 
 This research however is taking a different approach and focuses on the performance differences between a website hosted in WordPress versus one hosted on Github pages using Selenium and Python for testing.
 
@@ -21,7 +22,7 @@ This is the famous catchphrase from Monty Python that was used from their televi
 
 Secondly whilst  GO-EUC normally predominantly uses PowerShell, this research uses Python. Again that is something completely different once again and also ties in nicely with the Monty Python quote (and yes that was a very bad word pun).
 
-A while ago the  GO-EUC website was moved from WordPress to Github pages and apart from some style changes you, the audience, should not have noticed much from that change. But one of the primary drivers to move away from Wordpress had everything to do with performance. Over time the  GO-EUC website became slower and slower. 
+A while ago the  GO-EUC website was moved from WordPress to Github pages and apart from some style changes you, the audience, should not have noticed much from that change. But one of the primary drivers to move away from Wordpress had everything to do with performance. Over time the  GO-EUC website became slower and slower.
 
 Whilst no quantitative tests were performed to validate this, it was getting more and more apparent. Because we never dove into the specifics and the data behind the observations that it had become slower, it was just an opinion. And without data, you’re just another person with an opinion.
 
@@ -44,13 +45,13 @@ Just like performance is linked very closely to end user experience in End User 
 
 ## Setup
 
-As expected, because this was a different kind of research this also meant a different setup because the standard testing methodology didn’t apply here. 
+As expected, because this was a different kind of research this also meant a different setup because the standard testing methodology didn’t apply here.
 
 For this research the GO-EUC lab was not used, and instead all of the tests were conducted from my personal workstation: a Dell XPS 13 2020 model with a Intel Core i7 1065G7 processor and 16GB of memory running Windows 10 Pro 20H2.
 
-For the webbrowser, Chrome 64-bit version 88.0.4324.190 was used, which was the latest version available at time of testing. 
+For the webbrowser, Chrome 64-bit version 88.0.4324.190 was used, which was the latest version available at time of testing.
 
-As mentioned in previous GO-EUC researches, as a general rule it would not be advisable running tests from a personal device because we cannot rule out any outside influence here. For example I had Teams running and Defender ATP was still turned on, which all could influence the results. 
+As mentioned in previous GO-EUC researches, as a general rule it would not be advisable running tests from a personal device because we cannot rule out any outside influence here. For example I had Teams running and Defender ATP was still turned on, which all could influence the results.
 
 However, because the focus is on the comparison between the two scenarios and both tests are performed on the same machine under the same conditions, and both tests were done relatively quickly after each other, the variances between the two tests should not have a significant influence on the overall results.
 
@@ -113,7 +114,7 @@ import csv
 import os.path
 ```
 
-After the modules are loaded in the CSV file is setup 
+After the modules are loaded in the CSV file is setup
 
 ```python
 csv_path = "classic_run3.csv"
@@ -172,7 +173,7 @@ for i in range(iterations):
 
 In the main loop we’ll start the navigation by calling the Selenium method <span style="font-family:Courier New;">driver.get</span> with the predefined hyperlink as the parameter.
 
-Next <span style="font-family:Courier New;">driver.execute_script</span> is called and the return value is stored in <span style="font-family:Courier New;">navigationStart</span>. 
+Next <span style="font-family:Courier New;">driver.execute_script</span> is called and the return value is stored in <span style="font-family:Courier New;">navigationStart</span>.
 
 <span style="font-family:Courier New;">driver.execute_script</span> then synchronously executes JavaScript in the current window or frame. In this case the ‘return window.performance.timing.navigationStart’ code is run.
 
@@ -236,7 +237,7 @@ The total website loading time can be calculated as follows:
 Backend performance+front end performance=total loading time
 "
 
-| Data point | GitHub Pages | WordPress | 
+| Data point | GitHub Pages | WordPress |
 | :------------- | :----------------- |:----------------- |
 | Average Total loading time | 0,9 seconds | 10 seconds |
 | Highest loading time measured | 1,8 seconds | 27 seconds |
@@ -246,9 +247,9 @@ Even the longest loading time that was measured for the GitHub Pages website var
 
 This real world example comes with one caveat, the old web hoster for the site tested: namely TeamRGE.com was really, really slow. While performance was one of the key drivers to move to GitHub pages, performance was not the only consideration for the change, but that is out of scope of this research.
 
-As this is just a basic primer on website performance testing, the backend- and frontend performance were the only two metrics collected in this research. 
+As this is just a basic primer on website performance testing, the backend- and frontend performance were the only two metrics collected in this research.
 
-For a more in-depth dive into website performance measuring it is worth noting that the Google Pagespeed APIs can be leveraged which can also be accessed with Python very easily. 
+For a more in-depth dive into website performance measuring it is worth noting that the Google Pagespeed APIs can be leveraged which can also be accessed with Python very easily.
 
 For sake of completion the Google PageSpeed data was also collected but that data hasn’t been groomed yet.
 

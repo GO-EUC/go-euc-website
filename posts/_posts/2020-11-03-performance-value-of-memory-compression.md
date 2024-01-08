@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "What is the performance value of Memory Compression for Citrix CVAD?"
 hidden: false
 authors: [tom, ryan]
@@ -7,7 +8,7 @@ categories: [ 'RDSH' ]
 tags: [ 'Windows Server 2016', 'Windows 10', 'Memory Compression', 'Citrix']
 image: assets/images/posts/066-performance-value-of-memory-compression/066-memory-compression-feature-image.png
 ---
-Performance is a very important factor of the success of a virtual desktop environment. Since the release of Windows 10 and Windows Server 2016, Microsoft implemented memory compression, which is by default disabled on the server operating systems, but enabled on Windows 10. But is there any performance value when enabling memory compression, or does it come with a performance penalty? This research will take a closer look and will show the real value of memory compression in a Citrix Virtual Apps scenario. 
+Performance is a very important factor of the success of a virtual desktop environment. Since the release of Windows 10 and Windows Server 2016, Microsoft implemented memory compression, which is by default disabled on the server operating systems, but enabled on Windows 10. But is there any performance value when enabling memory compression, or does it come with a performance penalty? This research will take a closer look and will show the real value of memory compression in a Citrix Virtual Apps scenario.
 
 ## What is Memory compression
 It is important to start with a correct understanding of memory compression. [Woshub.com](http://woshub.com/memory-compression-process-high-usage-windows-10/){:target="_blank"} shared an excellent description of memory compression.
@@ -28,9 +29,9 @@ An important note, as shown in the screenshot, when enabling memory compression,
 
 Page combining may help reduce memory usage on servers which have a lot of private, pageable pages with identical contents (which is likely to occur on multisession hosts). Page combining causes the memory manager to periodically combine pages in physical memory that have identical content. The tradeoff for page combining comes in the form of increased CPU usage and this may have a negative effect on the scalability and or performance.
 
-Please note that page combining can be disabled independently from memory compression. For this research the default behavior of enabling memory compression is tested, so both settings were enabled. 
+Please note that page combining can be disabled independently from memory compression. For this research the default behavior of enabling memory compression is tested, so both settings were enabled.
 
-Although the dedicated process is not visible in the task manager, it is possible to see the portion of memory that has been compressed. This can be done in the memory section on the performance tab. 
+Although the dedicated process is not visible in the task manager, it is possible to see the portion of memory that has been compressed. This can be done in the memory section on the performance tab.
 
 <a href="{{site.baseurl}}/assets/images/posts/066-performance-value-of-memory-compression/066-memory-compression-task-manager.png" data-lightbox="task-manager">
 ![task-manager]({{site.baseurl}}/assets/images/posts/066-performance-value-of-memory-compression/066-memory-compression-task-manager.png)
@@ -39,7 +40,7 @@ Although the dedicated process is not visible in the task manager, it is possibl
 This example is captured on a Windows 10 machine and shows it compressed 373MB on memory. In a shared user environment, it is expected a decent amount of memory can be compressed and/or to see many pages being combined, especially when user share the same type of workload.
 
 ## Infrastructure and configuration
-The research has taken place in the GO-EUC lab environment which is described [here](https://www.go-euc.com/architecture-and-hardware-setup-overview-2018/){:target="_blank"}. The desktops are delivered using Citrix Virtual Apps and Desktops using MCS running with the Citrix VDA version 1912 and Microsoft Server 2016. The VM is configured with 8vCPU, 20GB memory, and a 64GB disk. 
+The research has taken place in the GO-EUC lab environment which is described [here](https://www.go-euc.com/architecture-and-hardware-setup-overview-2018/){:target="_blank"}. The desktops are delivered using Citrix Virtual Apps and Desktops using MCS running with the Citrix VDA version 1912 and Microsoft Server 2016. The VM is configured with 8vCPU, 20GB memory, and a 64GB disk.
 
 The page file settings on the VDAs were left as per default. This means that the page file is system-managed and can increase of decrease in size automatically by Windows. The maximum page file size is 3 x RAM or 4GB, whichever is the largest amount. More information on the page file can be found [here](https://docs.microsoft.com/en-us/windows/client-management/determine-appropriate-page-file-size){:target="_blank"}.
 
@@ -70,9 +71,9 @@ Because the CPU is the primary bottleneck, the first results to have a look at w
   <i>Lower is better</i>
 </p>
 
-At first glance there is not any noticeable difference on the CPU utilization. However, the line chart does show a bit more fluctuation once memory compression is enabled. This might be caused by the additional process for memory compression. 
+At first glance there is not any noticeable difference on the CPU utilization. However, the line chart does show a bit more fluctuation once memory compression is enabled. This might be caused by the additional process for memory compression.
 
-As there is no effect on the CPU utilization there might be a visible difference on memory. As multiple data sources are collected the memory usage from both hypervisor and VM will be shown. 
+As there is no effect on the CPU utilization there might be a visible difference on memory. As multiple data sources are collected the memory usage from both hypervisor and VM will be shown.
 
 <a href="{{site.baseurl}}/assets/images/posts/066-performance-value-of-memory-compression/066-memory-compression-host-mem-free.png" data-lightbox="host-mem-free">
 ![host-mem-free]({{site.baseurl}}/assets/images/posts/066-performance-value-of-memory-compression/066-memory-compression-host-mem-free.png)
@@ -146,7 +147,7 @@ In order to prove this hypothesis, it is possible to leverage Performance Monito
   <i>Lower is better</i>
 </p>
 
-The comparison shows huge difference in the page file usage. To provide context, the following table shows the absolute numbers of the comparison. 
+The comparison shows huge difference in the page file usage. To provide context, the following table shows the absolute numbers of the comparison.
 
 | Metric          | Disabled | Enabled |
 | :-------------- | :------: | :-----: |

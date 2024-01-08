@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "What we got wrong in our 2020 goals"
 hidden: false
 authors: [bas, eltjo, ryan]
@@ -11,7 +12,7 @@ It is always good to take some time at the end of the year to reflect and valida
 
 ## Why do we do what we do?
 
-The goal of GO-EUC is to be the community research platform of EUC related topics. Now due to the transformation of GO-EUC, more about that later, we felt it was needed to draft up a mission statement that could reflect our work and ambitions. It is always good to have a mission statement to ensure everybody is heading in the same direction. For the mission statement, the inspiration came from the best of the best, the [US Navy’s Blue Angels](https://www.blueangels.navy.mil/){:target="_blank"}. 
+The goal of GO-EUC is to be the community research platform of EUC related topics. Now due to the transformation of GO-EUC, more about that later, we felt it was needed to draft up a mission statement that could reflect our work and ambitions. It is always good to have a mission statement to ensure everybody is heading in the same direction. For the mission statement, the inspiration came from the best of the best, the [US Navy’s Blue Angels](https://www.blueangels.navy.mil/){:target="_blank"}.
 
 Their mission is..
 
@@ -51,7 +52,7 @@ The first goal for 2020 was to reach even more people than in 2019. In that rega
 
 Although the number of publications published decreased in 2020 compared to 2019 from a total of 28 publications to 17 posts in 2020, the platform did manage to attract more visitors.
 
-In terms of members, GO-EUC grew from 9 to 13 active members, which means that goal was not met. Growing in members did come with a realization of the time required to onboard the new members on the platform. As GO-EUC we strive to maintain a certain level of quality which also affects the abovementioned number of publications. At GO-EUC all publications are peer-reviewed by all members before they are published. This is a time-consuming process and for the more complex publications, it can mean a couple of weeks of reviewing and editing before you can read the publication online. It is our duty to provide you, the reader, with accurate and fact-checked data and substantiated conclusions. 
+In terms of members, GO-EUC grew from 9 to 13 active members, which means that goal was not met. Growing in members did come with a realization of the time required to onboard the new members on the platform. As GO-EUC we strive to maintain a certain level of quality which also affects the abovementioned number of publications. At GO-EUC all publications are peer-reviewed by all members before they are published. This is a time-consuming process and for the more complex publications, it can mean a couple of weeks of reviewing and editing before you can read the publication online. It is our duty to provide you, the reader, with accurate and fact-checked data and substantiated conclusions.
 
 > Sometimes that data or those conclusions don't come easy and as we said before, data doesn't lie. So, if the data doesn't match up or seems incorrect the most probable reasons are that either the tests haven't run correctly or the initial assumptions must have been incorrect.
 
@@ -86,4 +87,3 @@ Cheers,
 The GO-EUC Foundation Board.
 
 <span>Photo by <a target="_blank" href="https://unsplash.com/@dannyhowe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Danny Howe</a> on <a target="_blank" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-

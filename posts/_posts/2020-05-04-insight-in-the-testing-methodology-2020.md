@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Insight in the testing methodology - Current"
 hidden: false
 authors: [ryan]
@@ -7,15 +8,15 @@ categories: [ 'infastructure' ]
 tags: [ 'infastructure', 'testing', 'data' ]
 image: assets/images/posts/000-insight-in-the-testing-methodology-2020/000-insight-in-the-testing-mehtodolodgy-2020-feature-image.png
 ---
-One of the key components in the GO-EUC researches is the testing methodology. This methodology allows us to produce consistent and reliable results that are used to publish the researches. Describing the testing methodology also allows you to reproduce and challenge our results. This article describes the details, sources and methods used for the GO-EUC researches. 
+One of the key components in the GO-EUC researches is the testing methodology. This methodology allows us to produce consistent and reliable results that are used to publish the researches. Describing the testing methodology also allows you to reproduce and challenge our results. This article describes the details, sources and methods used for the GO-EUC researches.
 
 ## Performance solution: LoadGen
 Our goal is to see the behavior of a solution in an environment that is under load. To achieve this, a load simulation solution is used. The primary solution used at GO-EUC is LoadGen. LoadGen makes it possible to simulation user behavior on virtual environments. LoadGen is the default solution in the researches, unless stated otherwise.
 
-> LoadGen offers customers and service providers a complete software solution to test, and maintain the optimal performance, user experience, scalability, and availability of (virtual) desktop environments including all of your business applications. 
-> 
-> Whatever you wish to test, LoadGen makes it easier with our user-friendly software. Load tests, stress tests, performance tests, End-to-End Monitoring. The wide range of Load and Performance Testing options allows you to create customized simulations in just a few simple steps. The outcome means that if necessary, you can take appropriate action well in time so that the user experience of your IT environment remains optimal. LoadGen simulates end-user behavior for systems such as Citrix Virtual Apps and Desktops, Microsoft Remote Desktop Services, VMware Horizon, and Fat Clients. 
-> 
+> LoadGen offers customers and service providers a complete software solution to test, and maintain the optimal performance, user experience, scalability, and availability of (virtual) desktop environments including all of your business applications.
+>
+> Whatever you wish to test, LoadGen makes it easier with our user-friendly software. Load tests, stress tests, performance tests, End-to-End Monitoring. The wide range of Load and Performance Testing options allows you to create customized simulations in just a few simple steps. The outcome means that if necessary, you can take appropriate action well in time so that the user experience of your IT environment remains optimal. LoadGen simulates end-user behavior for systems such as Citrix Virtual Apps and Desktops, Microsoft Remote Desktop Services, VMware Horizon, and Fat Clients.
+>
 > Product and Application reliability and objective simulations that identify the possible effects of planned changes to your IT environment. It allows you to test what will happen before the actual change is applied, allowing you to gain full control over the performance of your IT environment and your end-users to continue using your systems unhindered.
 >
 > More information about LoadGen can be found [here](https://www.loadgen.com){:target="_blank"}.
@@ -25,7 +26,7 @@ By default, LoadGen does not come with any standardized workloads and therefore 
 
 | Date       | Name            | Version  |
 | :--------: | :-------------: | :------: |
-| 04-20-2020 | KnowledgeWorker | [v2004.01](https://github.com/GO-EUC/go-euc-workloads/blob/master/KnowledgeWorker_v2004.1.lgs){:target="_blank"} | 
+| 04-20-2020 | KnowledgeWorker | [v2004.01](https://github.com/GO-EUC/go-euc-workloads/blob/master/KnowledgeWorker_v2004.1.lgs){:target="_blank"} |
 | 05-01-2020 | KnowledgeWorker | [v2005.01](https://github.com/GO-EUC/go-euc-workloads/blob/master/KnowledgeWorker_v2005.1.lgs){:target="_blank"} |
 | 06-11-2021 | KnowledgeWorker | [v2106.01](https://github.com/GO-EUC/go-euc-workloads/blob/master/KnowledgeWorker_v2106.1.lgs){:target="_blank"} |
 | 10-15-2021 | KnowledgeWorker | [v2110.01](https://github.com/GO-EUC/go-euc-workloads/blob/master/KnowledgeWorker_v2110.1.lgs){:target="_blank"} |
@@ -39,7 +40,7 @@ This workload contains the following default applications:
   * A modern web browser, like Google Chrome or Microsoft Edge;
   * Adobe Reader.
 
-The workload is divided into four different user types. Each user type contains the same set of applications and each user starts from a different starting point. This way the load is spread evenly during the test. 
+The workload is divided into four different user types. Each user type contains the same set of applications and each user starts from a different starting point. This way the load is spread evenly during the test.
 
 <a href="{{site.baseurl}}/assets/images/posts/000-insight-in-the-testing-methodology-2020/000-insight-in-the-testing-mehtodolodgy-2020-loadgen-workload.png" data-lightbox="host-cpu">
  ![host-cpu]({{site.baseurl}}/assets/images/posts/000-insight-in-the-testing-methodology-2020/000-insight-in-the-testing-mehtodolodgy-2020-loadgen-workload.png)
@@ -50,7 +51,7 @@ All the websites used in the workload are offline available and provided using a
 
 | Date       | Name                       | Version  |
 | :--------: | :------------------------: | :------: |
-| 04-20-2020 | Content library            | [v2004.01](https://1drv.ms/u/s!AhNjcTavBrn7sk7hEgKQBAffhqGy?e=35ajfV){:target="_blank"} | 
+| 04-20-2020 | Content library            | [v2004.01](https://1drv.ms/u/s!AhNjcTavBrn7sk7hEgKQBAffhqGy?e=35ajfV){:target="_blank"} |
 | 04-20-2020 | Webserver Docker container | [v2004.01](https://hub.docker.com/r/goeuc/webserver){:target="_blank"} |
 
 A logon script is used to stage and prepare the LoadGen users. A network share is used that provides all the files that are available in the content library. When the user login, a personal local H drive is created and the random documents are copied from the share location to the H drive. A PST file is configured in Outlook simulating an offline mailbox.

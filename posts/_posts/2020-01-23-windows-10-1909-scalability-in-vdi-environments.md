@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Windows 10 1909 Scalability in VDI environments"
 hidden: false
 authors: [omar, ryan]

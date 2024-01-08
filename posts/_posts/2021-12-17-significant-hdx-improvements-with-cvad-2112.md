@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Significant HDX improvements with CVAD 2112?"
 hidden: false
 authors: [eltjo, ryan]
@@ -46,7 +47,7 @@ For the research, the “3D workload best practices” as described in the [Tech
 | Visual Quality | High* |
 | Target Framerate | 60 |
 | Target minimum Framerate | 10 |
-| HDX Adapative transport | Off | 
+| HDX Adapative transport | Off |
 | Hardware Acceleration or graphics |	Enabled |
 | H265 Decoding for Graphics | Enabled** |
 | Optimize for 3D graphics workload | Enabled |
@@ -91,10 +92,10 @@ If two images are identical, the MSE is zero and the PSNR is infinite or undefin
 
 Both MSE and PSNR, however, estimate the absolute errors and therefore do not correlate very precisely with the perceived image quality. By definition, PSNR is nothing more than a normalized version of the MSE.
 
-To measure the perceived image similarity between two images <b>SSIM</b> or Structural Similarity Index Measure is used. 
-While also an FR approach, SSIM however is a perception-based model that considers image degradation as perceived change in structural information, while also incorporating luminance masking and contrast masking in its calculation. 
+To measure the perceived image similarity between two images <b>SSIM</b> or Structural Similarity Index Measure is used.
+While also an FR approach, SSIM however is a perception-based model that considers image degradation as perceived change in structural information, while also incorporating luminance masking and contrast masking in its calculation.
 
-In order to evaluate the image quality, the SSIM calculation is applied only on luma and therefore both images are first converted to grayscale using a color space conversion using COLOR_RGB2GRAY, effectively creating images with only one color channel. 
+In order to evaluate the image quality, the SSIM calculation is applied only on luma and therefore both images are first converted to grayscale using a color space conversion using COLOR_RGB2GRAY, effectively creating images with only one color channel.
 
 The SSIM value is a decimal value between 0 and 1, with values closer to 1 meaning a more similar image compared to the baseline image. Comparing two identical images will result in an SSIM value of 1.
 
@@ -114,7 +115,7 @@ For this research the following three scenarios are used:
 | :------ | :----- |
 | CPU | AMD Ryzen 7 5800X |
 | GPU | NVIDIA RTX 3070Ti |
-| Memory | 16GB Memory | 
+| Memory | 16GB Memory |
 | Storage | 2x 1TB NMVE |
 
 This dedicated system is used as the baseline, running with a fixed FPS of 60, which in terms resulted in a fixed score in the Superposition Benchmark.
@@ -192,7 +193,7 @@ There is a direct correlation between the FPS count and the bandwidth output: wh
 
 | | CVAD 2109 | CVAD 2112 |
 |:-- | :-- | :-- |
-| MSE | 159.01 | 119.1 | 
+| MSE | 159.01 | 119.1 |
 | PSNR | 26.03dB | 27.32dB |
 | SSIM | 0.9315 |	0.9458 |
 
@@ -231,7 +232,7 @@ For scene 2 the perceived visual quality is near indistinguishable between CVAD 
 
 | | CVAD 2109 | CVAD 2112 |
 |:-- | :-- | :-- |
-| MSE | 11.07 | 7.96 | 
+| MSE | 11.07 | 7.96 |
 | PSNR | 36.57dB | 38.11dB |
 | SSIM | 0.9573 |	0.9688 |
 
@@ -247,7 +248,7 @@ In our frame of reference, there were almost no frame drops measured, and sustai
 
 Please note as far as we can tell, these improvements are tied to NVIDIA GPU-related systems.
 
-In terms of image quality data collected with the IQA, release 2112 also showed improvements in terms of absolute quality as well as in perceived quality. 
+In terms of image quality data collected with the IQA, release 2112 also showed improvements in terms of absolute quality as well as in perceived quality.
 
 Please note that this is the first research where IQA was incorporated in the data and analysis. We are currently looking into how we can leverage the IQA in future researches. In this research, the frames were manually extracted using VLC, in future comparisons the aim is to automate this process for reproducibility and accuracy. We are committed to continually investing time and effort to produce innovations in our researches.
 

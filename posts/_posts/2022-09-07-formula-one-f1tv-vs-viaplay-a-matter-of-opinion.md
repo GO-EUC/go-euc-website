@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Formula One: F1 TV vs Viaplay a matter of opinion?"
 hidden: false
 authors: [eltjo, ryan]
@@ -11,13 +12,13 @@ image: assets/images/posts/093-formula-one-f1tv-vs-viaplay-a-matter-of-opinion/0
 In the Netherlands, there are two streaming options for watching Formula One this 2022 season: F1 TV Pro and Viaplay. Both provide live streaming of all Formula One races on PCs, mobile devices, and tv boxes, like Chromecast and Fire TVs.
 Formula One officially started to show live streaming of each race online with F1 TV in 2018. The F1 TV service includes many other features like a live view of each driver's car, live timings, and replay of all Formula One, Formula 2, and Formula 3 races. Besides the Netherlands, F1TV is available in the US, Germany, France, Mexico, Belgium, Austria, Hungary, and most countries in South America, among others.
 
-Viaplay is a video-on-demand streaming service from the Viaplay Group. Viaplay is available in the Nordic and Baltic countries, Poland, the US, and recently also in the Netherlands. 
+Viaplay is a video-on-demand streaming service from the Viaplay Group. Viaplay is available in the Nordic and Baltic countries, Poland, the US, and recently also in the Netherlands.
 Both have different options when it comes to streaming and to the quality in which they stream. This GO-EUC research will compare the options and the quality of both providers in detail.
 
-At GO-EUC we're very passionate about end-user computing. That being said, we're also very passionate about Formula One. 
+At GO-EUC we're very passionate about end-user computing. That being said, we're also very passionate about Formula One.
 
 > Please note, that this will not be a complete comparison and that is for a couple of different reasons. Firstly, the F1 streams are copyrighted which means that it will not be possible to show footage from the races in the comparisons.
-> 
+>
 > Secondly, because the quality of the streams is dependent on a lot of factors, it is nearly impossible to have a completely objective comparison done.
 
 ## Background
@@ -25,7 +26,7 @@ As mentioned in the introduction, In the Netherlands, there are two options avai
 
 [Revamped F1 TV service announced for 2021 season and launches in three new territories - Formula One®](https://www.formula1.com/en/latest/article.revamped-f1-tv-service-announced-for-2021-season-and-launches-in-three-new.gnmATn163HYW6oMYMMkRH.html){:target="_blank"}
 
-Viaplay took over the Formula One broadcasting rights from Ziggo for the 2022 season. They received a lot of backlash due to the quality of the commentary and the quality of the streams. Viaplay started streaming in a maximum resolution of 720p originally but quickly switched to Full HD 1080 at 50fps in the beginning of the season: 
+Viaplay took over the Formula One broadcasting rights from Ziggo for the 2022 season. They received a lot of backlash due to the quality of the commentary and the quality of the streams. Viaplay started streaming in a maximum resolution of 720p originally but quickly switched to Full HD 1080 at 50fps in the beginning of the season:
 
 <blockquote class="twitter-tweet"><p lang="nl" dir="ltr">Vandaag wordt de F1 pre-season testing uitgezonden in Full HD (1080p) en afgespeeld met 50 frames per seconde (fps). Houd er rekening mee dat de ondersteuning voor 50 fps apparaat specifiek is, als het apparaat deze framesnelheid niet ondersteunt, ontvangt deze 25 fps. /Dominique</p>&mdash; Viaplay Sport Nederland (@viaplaysportnl) <a href="https://twitter.com/viaplaysportnl/status/1502587633364520960?ref_src=twsrc%5Etfw">March 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -49,7 +50,7 @@ F1TV provides 6 quality settings, ranging from 1080p all the way down to a measl
 
 Source: [F1MultiViewer](https://gist.github.com/f1multiviewer/2b5eae8d9df6ebf46575aa29992d2228){:target="_blank"}.
 
-Huge shout-out to [F1MultiViewer](https://twitter.com/F1MultiViewer){:target="_blank"} for sharing the exact bandwidth numbers. 
+Huge shout-out to [F1MultiViewer](https://twitter.com/F1MultiViewer){:target="_blank"} for sharing the exact bandwidth numbers.
 
 The car onboard cameras of course are of a much lower resolution and bitrate (3500 kbit/s) to account for the fact that the data needs to be transmitted using mobile transmitters and cars moving in and out of transmission zones at speeds up to 350kph / 217mph.
 
@@ -92,7 +93,7 @@ The different decoding algorithms used for Viaplay and F1TV are as following:
 | F1 TV   | 720     | H.264 | 1280,720   |
 | F1 TV   | 1080    | H.264 | 1920,1080  |
 
-It seems that even when using the highest quality setting, Viaplay is limited to 720p and not 1080p. Furthermore, there is no reported difference between the high and average settings with both settings decoding in 960x540. 
+It seems that even when using the highest quality setting, Viaplay is limited to 720p and not 1080p. Furthermore, there is no reported difference between the high and average settings with both settings decoding in 960x540.
 
 Perhaps this is only related to the web application and with other streaming devices the highest quality will indeed be the promised 1080p quality, but the only other device that we have available is an Amazon FireTV stick. The FireTV sticks (and Google Chromecasts as well for that matter) use High-bandwidth Digital Content Protection (HDCP) as a digital copy protection system. HDCP was designed to prevent the recording and piracy of commercial movies and TV shows. Due to the usage of HDCP, the Elgato capture devices used at GO-EUC cannot capture HDMI signals with HDCP protection enabled.
 
@@ -126,7 +127,7 @@ There were some complications, however. Due to the nature of full reference comp
 Due to the inherent issues with SSIM outlined above, and to provide an additional metric for the perceived image quality, NIQE was chosen, which is a blind or no reference image quality metric.
 
 Whereas full reference IQA assessments rely on a reference image that is used in the comparison, a blind or no reference IQA, as the name implies, does not use a reference and instead relies on image features to determine the perceived quality.
- 
+
 The score used is a no reference (NR)  image quality score using the Naturalness Image Quality Evaluator (NIQE). The NIQE metric is using the default model which is computed from images of natural scenes. A lower score indicates better perceptual quality. This means when comparing two images, the original undistorted image that has best perceptual quality will have the lowest NIQE score.
 
 More information about NIQE can be found here [niqe_spl.pdf (utexas.edu)](http://live.ece.utexas.edu/research/quality/niqe_spl.pdf){:target="_blank"}.
@@ -134,7 +135,7 @@ More information about NIQE can be found here [niqe_spl.pdf (utexas.edu)](http:/
 ## F1 TV data
 The first comparison presented is the perceived quality differences between the different quality settings of both F1 TV and Viaplay.
 
-For F1 TV there were a total number of 21 keyframes extracted from the ~50 second intro and used for the SSIM comparison. 
+For F1 TV there were a total number of 21 keyframes extracted from the ~50 second intro and used for the SSIM comparison.
 
 {% include chart.html type='hbar' data_file='assets/data/093-formula-one-f1tv-vs-viaplay-a-matter-of-opinion/ssim-f1tv-set1.json'%}
 
@@ -215,4 +216,3 @@ Disclaimer: The F1 logo, FORMULA ONE, F1, GRAND PRIX and related marks are trade
 All rights in still images/ photos/ screenshots are the property of their respective owners.
 
 This website is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.
-

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The performance difference of Windows 10 2004"
 hidden: false
 authors: [krishan, marcel]
@@ -17,7 +18,7 @@ This release is a Semi-Annual Channel (SAC) version, which means this version re
 Let’s have a look at some of the new features that have been added to Windows 10 2004, before dealing with the results.
 
 ### Notepad, Paint and Wordpad are optional
-These built-in applications always have been installed. Now they are optional. 
+These built-in applications always have been installed. Now they are optional.
 
 <a href="{{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-optional-features.png" data-lightbox="optional-features">
 ![optional-features]({{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-optional-features.png)
@@ -69,7 +70,7 @@ The following scenarios are defined for this research:
 
 All tests are done using our standardized testing methodology, which is described [here](https://www.go-euc.com/insight-in-the-testing-methodology-2020/){:target="_blank"}.
 
-## Expectations and results 
+## Expectations and results
 When executing these kinds of researches there is always an expectation. Based upon previous Windows 10 researches it is expected that Windows 10 2004 will result in a slightly lower user capacity, caused by a higher resource utilization. This is because of continuously added features.
 
 The user density is determined based on a CPU threshold. As the CPU threshold is reached, it is possible to calculate the active users on the system. This is not a recommend method as other factors can influence the user density of the environment. Based on previous researches it is known that the GO-EUC environment is limited by CPU, so therefore this method is used for now.
@@ -97,7 +98,7 @@ The pattern between the different Windows 10 versions is changing. Previous rese
   <i>Lower is better</i>
 </p>
 
-Concerning CPU Utilization Windows 10 2004 looks slightly more promising than the two previous builds, 1903 and 1909. Compared to Windows 10 build 1809, there is a small increase of four percent. 
+Concerning CPU Utilization Windows 10 2004 looks slightly more promising than the two previous builds, 1903 and 1909. Compared to Windows 10 build 1809, there is a small increase of four percent.
 
 <a href="{{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-host-reads.png" data-lightbox="host-reads">
 ![host-reads]({{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-host-reads.png)
@@ -139,7 +140,7 @@ Session Frames per Second (FPS) is an indicator of the user experience. A previo
 ![session-fps-compare]({{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-session-fps-compare.png)
 </a>
 
-Higher is better or lower is better, does not apply. The FPS for video content will be different (higher) than when reading a Word document (lower). That is normal behavior. Nonetheless for heavy graphical workloads it could be noticeable. For normal VDI users, this decrease will not be noticeable. Please note, the spike at the end of the line chart heavily influences the average of the comparison. 
+Higher is better or lower is better, does not apply. The FPS for video content will be different (higher) than when reading a Word document (lower). That is normal behavior. Nonetheless for heavy graphical workloads it could be noticeable. For normal VDI users, this decrease will not be noticeable. Please note, the spike at the end of the line chart heavily influences the average of the comparison.
 
 <a href="{{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-session-rtt.png" data-lightbox="session-rtt">
 ![session-rtt]({{site.baseurl}}/assets/images/posts/064-performance-difference-of-windows-10-2004/064-windows-10-2004-session-rtt.png)
@@ -155,7 +156,7 @@ Higher is better or lower is better, does not apply. The FPS for video content w
   <i>Lower is better</i>
 </p>
 
-Round Trip Time (RTT) is the elapsed time from when the user hits a key until the response is displayed back at the endpoint. The user protocol is the ICA protocol. Looking at the line chart the behavior looks the same with each build. When the bar chart is taken into account, it is clearly seen that the RTT has decreased. 
+Round Trip Time (RTT) is the elapsed time from when the user hits a key until the response is displayed back at the endpoint. The user protocol is the ICA protocol. Looking at the line chart the behavior looks the same with each build. When the bar chart is taken into account, it is clearly seen that the RTT has decreased.
 
 | Windows 10 version | Round Trip Time (RTT) value |
 | :----------------: | :-------------------------- |
@@ -180,7 +181,7 @@ Looking at the raw data of Windows 10 1809 and Windows 10 2004 it’s a differen
   <i>Lower is better</i>
 </p>
 
-Windows 10 2004 is more efficient with bandwidth compared to Windows 10 1809 and less efficient compared to the Windows 10 1909. At this point it not clear what is causing the difference in the bandwidth, but could be related to theme of Windows 10. Think of the small optimization in the Windows start menu but also the change of background and the taskbar color. 
+Windows 10 2004 is more efficient with bandwidth compared to Windows 10 1809 and less efficient compared to the Windows 10 1909. At this point it not clear what is causing the difference in the bandwidth, but could be related to theme of Windows 10. Think of the small optimization in the Windows start menu but also the change of background and the taskbar color.
 
  > <b>Please note:</b> the session bandwidth is the bandwidth consumed by the remoting protocol, which is in this case Citrix ICA.
 
@@ -198,4 +199,3 @@ Are you deploying each version of Windows 10 within your organization to keep up
 Let us know in the comments below or share it on the [Slack channel](https://worldofeuc.slack.com){:target="_blank"}.
 
 Photo by [Meriç Dağlı](https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText){:target="_blank"} on [Unsplash](https://unsplash.com/s/photos/seattle?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText){:target="_blank"}
-

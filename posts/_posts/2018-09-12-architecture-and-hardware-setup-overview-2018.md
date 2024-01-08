@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Architecture and hardware setup overview 2018 – 2020"
 hidden: false
 authors: [eltjo, ryan]

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Impact of MSIX packaged applications in a virtual desktop"
 hidden: false
 authors: [ryan]

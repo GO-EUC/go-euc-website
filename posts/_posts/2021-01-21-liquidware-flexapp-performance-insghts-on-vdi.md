@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title: "Liquidware FlexApp performance insights running on a VDI environment"
 hidden: false
 authors: [gerjon, tom]
@@ -25,11 +26,11 @@ and
 ## Infrastructure and configuration
 This research has taken place on the GO-EUC infrastructure which is described [here](https://www.go-euc.com/architecture-and-hardware-setup-overview-2020/){:target="_blank"}. The same baseline image was used for each scenario. The machines were provisioned with Citrix Virtual Apps & Desktops version 1909 and the infrastructure used VDA 1912. The test machines were deployed using Citrix MCS with a default configuration of 2vCPU’s and 4GB of memory.
 
-Windows 10 1909 is the default operating system which is, optimized using the default settings from the Citrix optimizer tool. only the FlexApp runtime version 1.1.0, Office 2016, and FlexApp client were deployed on the image, except when testing with all applications locally installed then all applications were deployed locally. The applications that were packaged for testing are Adobe Reader and Google Chrome. 
+Windows 10 1909 is the default operating system which is, optimized using the default settings from the Citrix optimizer tool. only the FlexApp runtime version 1.1.0, Office 2016, and FlexApp client were deployed on the image, except when testing with all applications locally installed then all applications were deployed locally. The applications that were packaged for testing are Adobe Reader and Google Chrome.
 
 During testing the packaging of Microsoft Office 2016 there were some issues with the packaging. After contacting Liquidware their best practice is not to package Microsoft Office but to deploy it in the image. So the best practice from the vendor was used.
 
-For testing, at the time of the test, the latest available version of the Liquidware FlexApp client-tools (version 6.8.3R2-Hotfix) was used. This version was used to be sure that none of the known bugs would tamper with the result of the tests. As per best practice from Liquidware, the base image used for testing and the packager had the Liquidware runtime installer version 1.1.0 installed. 
+For testing, at the time of the test, the latest available version of the Liquidware FlexApp client-tools (version 6.8.3R2-Hotfix) was used. This version was used to be sure that none of the known bugs would tamper with the result of the tests. As per best practice from Liquidware, the base image used for testing and the packager had the Liquidware runtime installer version 1.1.0 installed.
 
 Also, the best practices as described by Liquidware regarding the configuration of windows defender were implemented. These can be found [here](https://liquidwarelabs.zendesk.com/hc/en-us/articles/210628383-Antivirus-slows-logon-while-scanning-of-ProfileUnity-Program-Files-and-directories-){:target="_blank"}.
 
@@ -38,19 +39,19 @@ Four different scenarios were tested:
   * ‘No FlexApp’ without FlexApp used
   * ‘FlexApp PerApp’ at user login, each app in its own FlexApp package
   * ‘FlexApp CombinedApp’ at user logon, all applications in one FlexApp package
-  * ‘FlexApp PerMachine’ at system boot, each application in its own FlexApp package 
+  * ‘FlexApp PerMachine’ at system boot, each application in its own FlexApp package
 
 The scenarios ran via the LoadGen solution and the standard testing methodology was used, which is described [here](https://www.go-euc.com/insight-in-the-testing-methodology-2020/){:target="_blank"}.
 
 As mentioned earlier, Google Chrome and Adobe reader were packaged in a separate FlexApp container and a combined container. Microsoft Office is installed in the base image, as this is the best practice from Liquidware.
 
-## Expectations and results 
+## Expectations and results
 When executing this kind of researches there is always an expectation. Based on experience, adding filter drivers and extra software to an operating system will result in higher resource utilization. The expectation would be that adding the applications on machine boot would give the lease impact.
 
 Also, the documentation of FlexApp states a 2-4 second logon delay. Below is the excerpt of the documentation.
 
-> Application Playback Considerations ProfileUnity’s FlexApp Technology layers in application packages in parallel to the user login process without impacting user login speeds. It generally takes 2-4 seconds to layer in each package and make it ready for use. In cases where 10 or more FlexApp packages are assigned to a user, it is possible for the login process to finish and the desktop to be ready before all the FlexApp packages have been layered in leaving a user waiting for their applications to appear. 
-> 
+> Application Playback Considerations ProfileUnity’s FlexApp Technology layers in application packages in parallel to the user login process without impacting user login speeds. It generally takes 2-4 seconds to layer in each package and make it ready for use. In cases where 10 or more FlexApp packages are assigned to a user, it is possible for the login process to finish and the desktop to be ready before all the FlexApp packages have been layered in leaving a user waiting for their applications to appear.
+>
 > Source: [ProfileUnity™ with FlexApp™ Technology: FlexApp Packaging Console Manual (liquidware.com)](https://www.liquidware.com/content/pdf/documents/support/Liquidware-ProfileUnity-FlexApp-Packaging-Console-Manual.pdf){:target="blank"}
 
 During the tests, multiple performance data sources are collected. As usual, the hypervisor data is a good starting point, as this provides a clear indication of the performance impact on scalability.
@@ -69,9 +70,9 @@ During the tests, multiple performance data sources are collected. As usual, the
   <i>Lower is better</i>
 </p>
 
-Looking at the CPU utilization when using the different FlexApp packages, the first thing that stands out is: Yes adding FlexApp to the virtual environment adds extra CPU load on the hypervisor. Connecting the FlexApp volumes on boot is less CPU consuming than adding them on a per user basis. 
+Looking at the CPU utilization when using the different FlexApp packages, the first thing that stands out is: Yes adding FlexApp to the virtual environment adds extra CPU load on the hypervisor. Connecting the FlexApp volumes on boot is less CPU consuming than adding them on a per user basis.
 
-Next to the CPU utilization is it very important to take the storage into account. Once a storage bottleneck is reached, it is most likely the entire VDI won’t respond to any input. Therefore when implementing a solution like FlexApp it is very important to ensure the bottleneck is not reached. 
+Next to the CPU utilization is it very important to take the storage into account. Once a storage bottleneck is reached, it is most likely the entire VDI won’t respond to any input. Therefore when implementing a solution like FlexApp it is very important to ensure the bottleneck is not reached.
 
 <a href="{{site.baseurl}}/assets/images/posts/032-liquidware-flexapp-performance-insghts-on-vdi/032-liquidware-flexapp-host-reads.png" data-lightbox="host-reads">
 ![host-reads]({{site.baseurl}}/assets/images/posts/032-liquidware-flexapp-performance-insghts-on-vdi/032-liquidware-flexapp-host-reads.png)
@@ -162,8 +163,8 @@ There is some difference in the write activities from the file server perspectiv
 
 In general, when using FlexApp is important to not only take the performance impact on the hypervisor into account, but the file server is an important factor as well.
 
-## User logon times 
-One of the key metrics, at least for the user’s standpoint, is the logon time of the environment. As stated by the documentation from Liquidware adding FlexApp to the VDI environment will add an extra delay in logon times. To quantify that statement, the test also included the login time of the sessions. 
+## User logon times
+One of the key metrics, at least for the user’s standpoint, is the logon time of the environment. As stated by the documentation from Liquidware adding FlexApp to the VDI environment will add an extra delay in logon times. To quantify that statement, the test also included the login time of the sessions.
 
 <a href="{{site.baseurl}}/assets/images/posts/032-liquidware-flexapp-performance-insghts-on-vdi/032-liquidware-flexapp-session-logon.png" data-lightbox="session-logon">
 ![session-logon]({{site.baseurl}}/assets/images/posts/032-liquidware-flexapp-performance-insghts-on-vdi/032-liquidware-flexapp-session-logon.png)

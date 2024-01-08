@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The true difference between Citrix Visual Quality profiles"
 hidden: false
 authors: [ryan]
@@ -188,11 +189,11 @@ The visual quality can be controlled using a Citrix policy which will control th
 The recommended way from Citrix is to leave the settings by default depending on the scenario as mentioned in the following post.
 
 > **Do I need to deliver 3D/CAD-style workloads?**
-> 
+>
 > No: Don’t set any graphics policies — leave everything at their defaults (I know that might be difficult for some of you who love to know what all the knobs and buttons do!).”
-> 
+>
 > Yes: set the “Visual Quality” policy to “Build to Lossless”.
-> 
+>
 > Source: [https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when/](https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when){:target="_blank"}
 
 The default visual quality setting from Citrix VDA version 7.18 and up is medium.

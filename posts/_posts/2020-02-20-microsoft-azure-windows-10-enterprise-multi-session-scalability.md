@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Microsoft Azure Windows 10 Enterprise multi-session scalability"
 hidden: false
 authors: [ryan]

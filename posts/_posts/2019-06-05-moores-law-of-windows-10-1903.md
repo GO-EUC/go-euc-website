@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Moore’s law of Windows 10 1903"
 hidden: false
 authors: [ryan, omar]

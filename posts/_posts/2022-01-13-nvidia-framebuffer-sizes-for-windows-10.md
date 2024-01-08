@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "NVIDIA framebuffer sizes for Windows 10"
 hidden: false
 authors: [ryan, eltjo, tom]
@@ -34,7 +35,7 @@ As explained above, multiple factors will influence the framebuffer size, but ho
 ## Infrastructure and configuration
 This research has taken place on the GO-EUC platform, which is described [here](https://www.go-euc.com/architecture-and-hardware-setup-overview-2020/){:target="_blank"}. The default operating system is Windows 10 21H1 delivered using Citrix Virtual Apps and Desktops. This research is not focused on density, like most studies, but on the implications of various framebuffer sizes. To ensure all the results can be compared, the maximum virtual machine density is configured, based on the largest framebuffer configuration. The host has 4 NVIDIA Tesla T4 cards, each with 16GB of memory available, summing up to 64GB in total. That means that in this case, all tests are done using 16 VMs. The amount of VM’s is based on 16 multiplied by 4GB  which is equal to 64GB memory, the maximum capacity of the NVIDIA GPU’s available on the host. Using 4GB as the maximum will be determined that the 4Q profile will be used as the max.
 
-Because the driver version could also have an impact on the test results, it is worth mentioning that the driver version used was version 13.0, the latest version available at the time of testing. 
+Because the driver version could also have an impact on the test results, it is worth mentioning that the driver version used was version 13.0, the latest version available at the time of testing.
 
 This research will use two primary data sources, Remote Display Analyzer, which provides the data from an individual user (session charts), and ESXtop data including NVIDIA SMI to provide the perspective from the hypervisor (host charts).
 
@@ -48,7 +49,7 @@ The following framebuffer sizes are included in this research:
 
 All scenarios are configured with a 1920x1080 resolution and a single display. The only configuration that is changed between each scenario is the framebuffer size. The recommended Citrix policies are used, which are described [here](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/hdx-graphics.html#3d-workload){:target="_blank"}.
 
-This research is executed using the GO-EUC testing methodology, which is described [here](https://www.go-euc.com/insight-in-the-testing-methodology-2020/){:target="_blank"}. Except for the workload running time as this is extended to a total of 90 minutes. This will ensure, that at least one cycle of the workload is completed for each individual simulated user. 
+This research is executed using the GO-EUC testing methodology, which is described [here](https://www.go-euc.com/insight-in-the-testing-methodology-2020/){:target="_blank"}. Except for the workload running time as this is extended to a total of 90 minutes. This will ensure, that at least one cycle of the workload is completed for each individual simulated user.
 
 The default GO-EUC knowledge worker workload is used for two reasons: first and foremost to see the effect of the framebuffer usage in a regular workload. Secondly, it is not intended to fully utilize the GPU as this will have a negative effect on the framebuffer usage. The GO-EUC knowledge worker workload is a productivity workload using Microsoft Office, web-based content, and videos. This workload does not include any heavy GPU applications.
 
@@ -95,7 +96,7 @@ The overall GPU utilization for this research is low, as only 16 users are simul
 
 {% include chart.html type='bar' data_file='assets/data/081-nvidia-framebuffer-sizes-for-windows-10/host-gpu-mem-compare.json' %}
 
-The host GPU memory utilization is the same as the host GPU utilization. As the overall usage is very low, this difference won’t be directly noticeable on this scale. However, this might be different when the load is increasing. 
+The host GPU memory utilization is the same as the host GPU utilization. As the overall usage is very low, this difference won’t be directly noticeable on this scale. However, this might be different when the load is increasing.
 
 Now from a host CPU perspective, it is expected to see no difference between the scenarios.
 

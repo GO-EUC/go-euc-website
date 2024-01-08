@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Maximizing server scalability with Citrix Policy templates"
 hidden: false
 authors: [eltjo]
@@ -12,7 +13,7 @@ Citrix delivers XenApp and XenDesktop with several built-in policy templates tha
 As Ryan concluded in his research post “Performance difference of Citrix ICA Visual Quality profiles”, the impact of a high user setting on the Server side scalability is negligible.
 
 > The Visual Quality Policy setting allows you to improve the quality of the image sent through the ICA protocol. The overall impact on capacity is none which means switching from a Low to High Visual Quality setting does not affect the overall user density on the servers.
-> 
+>
 > Source: [{{site.baseurl}}performance-difference-of-citrix-ica-visual-quality-profiles/]({{site.baseurl}}performance-difference-of-citrix-ica-visual-quality-profiles){:target="_blank"}
 
 But what if wanted to boost server side scalability? How much would using the built in Citrix policy template “High server scalability” gain us in terms of user density per server?
@@ -52,7 +53,7 @@ This template is provided to ensure maximum user experience. A close look at thi
 | Use asynchronous writes | Disabled |
 | Desktop wallpaper | Allowed |
 | Menu animation | Allowed |
-| View window contents while dragging | Allowed | 
+| View window contents while dragging | Allowed |
 | Audio quality | High – high definition audio |
 | Flash video fallback prevention | Not Configured |
 | Windows Media fallback prevention | Not Configured |
@@ -238,9 +239,9 @@ The results warrant some additional research. As we concluded we suspect the h.2
 Also we ran these scenario’s with XenDesktop 7.15 CU2. Citrix has stated in a post that from version 7.18 and onward, you’re best off leaving all settings to the default, and let the system dynamically deceide what to use:
 
 > “Do I need to deliver 3D/CAD-style workloads?”
-> 
+>
 > No: Don’t set any graphics policies — leave everything at their defaults (I know that might be difficult for some of you who love to know what all the knobs and buttons do!).
-> 
+>
 > Source: [https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when/](https://www.citrix.com/blogs/2018/10/02/what-graphics-policies-do-i-need-and-when){:target="_blank"}
 
 For questions you can always reach out or leave a comment below.

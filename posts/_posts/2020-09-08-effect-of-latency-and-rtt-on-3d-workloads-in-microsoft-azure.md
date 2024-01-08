@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The effect of latency and RTT on 3D workloads in Microsoft Azure"
 hidden: false
 authors: [ryan]
@@ -39,7 +40,7 @@ Specification details:
 | :------------- | :----------------- |
 | €900,- for life | €674.09 per month |
 | 6 core with 16GB memory | 6vCPU with 56GB memory |
-| AMD Ryzen 5 3600 (3.6GHz) | Intel Xeon E5-2690 v3 (2.6GHz) | 
+| AMD Ryzen 5 3600 (3.6GHz) | Intel Xeon E5-2690 v3 (2.6GHz) |
 | 1TB NVMe SSD (2x) | 340GB Standard SSD |
 | AMD Radeon RX 5700 | NVIDIA TESLA M60 |
 | Max 1.725GHz with 8GB GGDR6 | Max 1.178GHz with 8GB GGDR5 |
@@ -52,13 +53,13 @@ For the remote session the following Citrix policies where configured:
 | :------------- | :----------------- |
 | Target frame rate  | 60 fps |
 | Visual quality | Build to Lossless |
-| Use video codec for compression | For active changing regions | 
+| Use video codec for compression | For active changing regions |
 | Use hardware encoding for video codec | Enabled |
 | Optimize for 3D graphics workload | Enabled |
 | Client USB device redirection | Allowed |
 | Client USB device redirection rules | Allow: #all ok |
 
-The policy are based on the best practices from Citrix which can be found [here](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/hdx-graphics.html#3d-workload){:target="_blank"}. The Azure machine NV6 has a NVIDIA M60, so therefore H.265 encoding cannot be used as this is not supported. This means H.264 is used, which is the default by Citrix. In this research Citrix Cloud is used and unfortunately Citrix EDT (UDP) is not available at the time of this research, so therefore a TCP connection is by default. 
+The policy are based on the best practices from Citrix which can be found [here](https://docs.citrix.com/en-us/tech-zone/design/design-decisions/hdx-graphics.html#3d-workload){:target="_blank"}. The Azure machine NV6 has a NVIDIA M60, so therefore H.265 encoding cannot be used as this is not supported. This means H.264 is used, which is the default by Citrix. In this research Citrix Cloud is used and unfortunately Citrix EDT (UDP) is not available at the time of this research, so therefore a TCP connection is by default.
 
 The machine is hosted in the West Europe Azure region, which is the closed location to the game pc. A hybrid configuration is used with the GO-EUC environment to use the on-premises identities.
 
@@ -621,7 +622,7 @@ Potential fastest lap: 01:37.359
 
 | Lap | Time |
 |:--- | :---- |
-| Difference best lap |  00:01.914 | 
+| Difference best lap |  00:01.914 |
 | Difference potential lap |  00:01.602 |
 
 Besides the potential fastest lap, there is still a difference of 1.602 seconds between the local and remote session. This shows the RTT and latency does have a negative effect.
@@ -632,7 +633,7 @@ As a driver, it took some time to adapt to the delay, especially the braking poi
 
 {% include youtube.html id="NUjyBWAkStw" %}
 
-In case of a multiplayer, the disadvantage of the delay will affect your performance compared to the others. As the other player might be unpredicted, this might resolve in crashes, as the RTT influence the 
+In case of a multiplayer, the disadvantage of the delay will affect your performance compared to the others. As the other player might be unpredicted, this might resolve in crashes, as the RTT influence the
 
 Now in case of a racing game, the effect of both RTT and input delay is acceptable, but in case of a first-person shooter this is way different. In a shooter it is all about the response time to hit the target so fast as possible, especially in multiplayer. This require fast human reaction time with hand and eye coordination for the aim. Adding the additional delay will affect both factors and your performance, resulting in a [bottom fragger](https://www.urbandictionary.com/define.php?term=Bottom%20Frag){:target="_blank"}.
 
@@ -650,4 +651,3 @@ Therefore, it is always important to validate the experience together with the u
 Want to know more about this topic? Feel free to leave a comment below or start the conversation on the [Slack channel](https://worldofeuc.slack.com){:target="_blank"}.
 
 Photo by [Spencer Davis](https://unsplash.com/@spencerdavis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"} on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"}
-

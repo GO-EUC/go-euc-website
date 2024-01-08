@@ -83,7 +83,7 @@
                 const ctx = chart.canvas.getContext('2d');
                 ctx.save();
                 ctx.globalCompositeOperation = 'destination-over';
-                ctx.fillStyle = '#333D4E';
+                ctx.fillStyle = '#0F0E15' // '#333D4E'; //#0F0E15
                 ctx.fillRect(0, 0, chart.width, chart.height);
                 ctx.restore();
             },
@@ -136,7 +136,7 @@
                         display: true,
                         text: subTitle,
                         position: 'bottom',
-                        color: '#ffffff',
+                        color: '#FFFFFF',
                         font: {
                             size: 16,
                             style: 'italic'
@@ -154,14 +154,14 @@
                         font: {
                             size: 10
                         },
-                        color: '#ffffff',
+                        color: '#FFFFFF',
                         anchor: 'end',
                         align: 'end',
                         offset: 10
                     },
                     legend: {
                         labels: {
-                            color: '#ffffff',
+                            color: '#FFFFFF',
                         },
                         display: true,
                         position: legendPosition
@@ -169,7 +169,7 @@
                     title: {
                         display: true,
                         text: title,
-                        color: '#ffffff',
+                        color: '#FFFFFF',
                         font: {
                             size: 26
                         }
@@ -178,17 +178,22 @@
                 scales: {
                     y: {
                         beginAtZero: scale,
+                        grid: {
+                            color: '#575757',
+                            display: true
+                        },
                         ticks: {
-                            color: '#ffffff'
+                            color: '#FFFFFF'
                         }
                     },
                     x: {
                         grid: {
+                            color: '#FFFFFF',
                             display: false
                         },
                         ticks: {
                             display: showTicks,
-                            color: '#ffffff',
+                            color: '#FFFFFF',
                             maxTicksLimit: 6,
                             maxRotation: 0,
                             minRotation: 0

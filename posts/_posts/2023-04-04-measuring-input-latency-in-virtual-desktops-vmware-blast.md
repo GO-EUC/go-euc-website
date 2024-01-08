@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Measuring Input Latency in Virtual Desktops: VMware Blast"
 hidden: false
 authors: [ eltjo, ryan]

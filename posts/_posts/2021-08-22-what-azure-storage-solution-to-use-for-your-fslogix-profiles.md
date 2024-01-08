@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "What Azure storage solution to use for your FSlogix profiles"
 hidden: false
 authors: [ryan, tom, eltjo]
@@ -51,7 +52,7 @@ More information on the performance tiers: [Azure Files scalability and performa
 At the time of writing, Azure Files shares are available in all current Azure regions.
 
 ## Azure Netapp Files
-Azure NetApp Files (ANF) is a highly available and enormously scalable platform for creating cloud-based file-share environments by NetApp. ANF is sold and supported by Microsoft and is not a 3rd party marketplace offering. 
+Azure NetApp Files (ANF) is a highly available and enormously scalable platform for creating cloud-based file-share environments by NetApp. ANF is sold and supported by Microsoft and is not a 3rd party marketplace offering.
 
 ANF is divided into capacity pools that can consist of one or more volumes as schematically depicted below:
 
@@ -88,16 +89,16 @@ Apart from regional availability, Microsoft requires that you have been granted 
 More information on Azure NetApp files: [Azure File Storage Service For Enterprise Workloads - NetApp](https://cloud.netapp.com/azure-netapp-files){:target="_blank"}.
 
 ## Setup and configuration
-This research has taken place in the GO-EUC lab environment in combination with Microsoft Azure. Using a site-to-site VPN the on-premises resources are made available to the Azure subscription, where multiple roles are leveraged as Active Directory and the LoadGen infrastructure. Desktops are delivered with Citrix Cloud, using a Windows 10 build 20H2 multi-session VDA which is optimized using the recommended template of the Citrix Optimizer. 
+This research has taken place in the GO-EUC lab environment in combination with Microsoft Azure. Using a site-to-site VPN the on-premises resources are made available to the Azure subscription, where multiple roles are leveraged as Active Directory and the LoadGen infrastructure. Desktops are delivered with Citrix Cloud, using a Windows 10 build 20H2 multi-session VDA which is optimized using the recommended template of the Citrix Optimizer.
 
 A single Cloud Connector was deployed in the Azure subscription as a one Cloud Connector is sufficient for handling the number of sessions launched during the runs in the research: [Scale and size considerations for Cloud Connectors - Citrix](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/install-configure/resource-location/cc-scale-and-size.html){:target="_blank"}
 
 An on-premises LoadGen configuration is used which means the user sessions are simulated using the existing GO-EUC lab infrastructure as described [here](https://www.go-euc.com/architecture-and-hardware-setup-overview-2020/){:target="_blank"}.
 
-In addition to the normal application set used in other research, we’ve added the FSlogix agent version 2009 (2.9.7621.30127) with the following configuration: 
+In addition to the normal application set used in other research, we’ve added the FSlogix agent version 2009 (2.9.7621.30127) with the following configuration:
 
 | Policy | Value |
-| :----- | :---- | 
+| :----- | :---- |
 | Delete local profile when FSLogix Profile should apply | Enabled |
 | Enabled | Enabled |
 | Set Outlook cached mode on successful container attach | Enabled |
@@ -110,8 +111,8 @@ In total 100 users are simulated on 20 AVD machines based on the DS3v2 SKU. To a
 Performance data from each individual AVD machine is collected during the research.
 
 The following scenarios are included in this research:
-  * Azure Files Standard 
-  * Azure Files Premium 
+  * Azure Files Standard
+  * Azure Files Premium
   * Azure NetApp File Premium
 
 As the NetApp offerings are bandwidth limited it has been decided to test a single NetApp offering as all storage levels are delivered using the same physical hardware. In theory, this means there are no performance differences between the offerings depending on the configured size. GO-EUC worked in close collaboration with NetApp on the configuration. For more information on available configurations, please consult the [NetApp sizing calculator](https://anftechteam.github.io/calc/){:target="_blank"}.

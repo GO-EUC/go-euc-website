@@ -1,0 +1,38 @@
+<div class="col col-4 col-d-6 col-t-12">
+  <div class="widget">
+
+    <div class="widget__head">
+      <h3 class="widget__title">Upcoming events</h3>
+
+    </div>
+    {% assign events = site.categories.events | sort: "eventdate" %}
+
+    {% for event in events %}
+
+        {% assign today_date = 'now' | date: "%y %m %d" %}
+        {% assign event_date =  event.eventdate | date: "%y %m %d" %}
+
+        {% if event_date >= today_date %}
+        <div class="event-inner animate">
+          <a class="event-image" href="{{event.site}}" target="_blank">
+              <img class="lazy loaded" src="{{ site.baseurl }}/{{ event.image }}" alt="{{ event.title }}">
+          </a>
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="article__minutes">{{ event.eventdate | date_to_string }}</span>
+
+            </div>
+            <h2 class="event-title">{{ event.title }}</h2>
+            <p>{{ event.location }}</p>
+
+
+          </div>
+        </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+
+  </div>
+</div>

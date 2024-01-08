@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The delivered user experience of thin clients, the good, the bad and the ugly"
 hidden: false
 authors: [eltjo, ryan]
@@ -272,7 +273,7 @@ The GPU utilization however, is much higher than for the Car Visualizer. The vid
 
 Framebuffer usage is huge compared to the other sections of the workload. Please note that the line chart for the Dell Wyse thin client advanced longer that the line charts for the other clients, this is the result of the fact that the Wyse cannot keep up with 60 FPS stream.
 
-Remember that these tests are running as a single user test and in some sections there the framebuffer usage almost reaches 50%.  
+Remember that these tests are running as a single user test and in some sections there the framebuffer usage almost reaches 50%.
 
 Based on the results shown above, it is expected to see consistent 60 FPS stream from the remoting protocol.
 
@@ -308,9 +309,3 @@ For the task-worker like workloads the older thin clients can keep up just fine,
 How do you deal with your thin clients in your environment? Share your experience in the comment below or start the conversation at the Slack channel.
 
 Photo by [Mahir Uysal](https://unsplash.com/@mahiruysal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"} on [Unsplash](https://unsplash.com/s/photos/western?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"}.
-
-
-
-
-
-

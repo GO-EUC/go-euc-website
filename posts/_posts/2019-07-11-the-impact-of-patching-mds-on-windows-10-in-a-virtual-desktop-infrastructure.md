@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The impact of patching MDS on Windows 10 in a virtual desktop infrastructure"
 hidden: false
 authors: [sven, ryan]
@@ -32,7 +33,7 @@ This research has taken place on the {{site.title}} platform which is described 
 In order to get a complete overview of the impact, five scenarios are required.
 
 | Test          | Windows   | VMware vSphere    | Comment                            |
-| :-----------: | :-------: | :---------------: | :--------------------------------: | 
+| :-----------: | :-------: | :---------------: | :--------------------------------: |
 | Baseline      | 17763.475 | ESXi670-201904001 | Pre MDS patches                    |
 | vSphere Patch | 17763.475 | ESXi670-201905001 | Without Windows patch              |
 | Windows Patch | 17763.503 | ESXi670-201905001 | Includes vSphere patch             |

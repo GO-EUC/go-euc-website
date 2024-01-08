@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Measuring Input Latency in Virtual Desktops: Introduction and Baselines of the NVIDIA LDAT Research"
 hidden: false
 authors: [ryan, eltjo]
@@ -26,7 +27,7 @@ To showcase the capabilities of the tool, Linus Tech Tips produced an informativ
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/26DbJ3E4YKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-LDAT is a valuable tool for measuring input latency, In gaming, this refers to the time it takes for a mouseclick to be visible for the user. While this metric may not be relevant for the average gamer, it holds significant importance in competitive gaming. 
+LDAT is a valuable tool for measuring input latency, In gaming, this refers to the time it takes for a mouseclick to be visible for the user. While this metric may not be relevant for the average gamer, it holds significant importance in competitive gaming.
 
 The hardware part of the LDAT tool is relatively simple, consisting primarily of the luminance sensor that can detect changes in light intensity. This sensor measures the click-to-photon latency by measuring the time between the simulated mouse click and the detected change in luminous intensity by the sensor. In the gaming context this can be a muzzle flash in a first person shooter.
 
@@ -39,7 +40,7 @@ Unfortunately, the LDAT tool is not for sale and NVIDIA only makes LDAT availabl
 ## Alternatives to the NVIDIA LDAT
 There are several alternative ways to measure latency, one straightforward option is to use a high-speed camera, such as those commonly found on modern smartphones. These cameras can record video at exceptionally high frame rates, potentially up to 480 or 960 frames per second depending on the make and model phone. When using this method, it is crucial to record at the camera's native frame rate without upscaling, as this can affect the accuracy of the results.
 
-A straightforward and budget-friendly approach to replicate mouse clicks or keyboard presses is to employ a [Makey Makey](https://makeymakey.com/){:target="_blank"} circuit board. This device functions by using closed loop electrical signals to transmit a keyboard stroke or mouse click signal to the computer, and it is connected via alligator clips and a USB cable. Furthermore, the Makey Makey provides an illuminated LED when the simulated mouse click or keyboard press is initiated. 
+A straightforward and budget-friendly approach to replicate mouse clicks or keyboard presses is to employ a [Makey Makey](https://makeymakey.com/){:target="_blank"} circuit board. This device functions by using closed loop electrical signals to transmit a keyboard stroke or mouse click signal to the computer, and it is connected via alligator clips and a USB cable. Furthermore, the Makey Makey provides an illuminated LED when the simulated mouse click or keyboard press is initiated.
 
 In order to determine the latency, record a video of the screen and the keyboard, mouse or Makey Makey. After recording, analyze the video footage frame-by-frame, and count the frames from when the user input occurred to the first frame where the corresponding response appeared on the screen. This method provides a precise measurement of the latency.
 
@@ -88,12 +89,12 @@ Delving further into the data, the 144Hz refresh rate offers the lowest mean and
 
 However, it's important to note that there might be a diminishing return effect when moving from 120Hz to 144Hz, as the improvement in latency is not as high as when changing from 60Hz to 120Hz.
 
-A higher refresh rate enables faster display updates, resulting in a smoother experience. The following website serves as a good demonstration, although the real difference is noticeable when using a higher Hz screen: 
+A higher refresh rate enables faster display updates, resulting in a smoother experience. The following website serves as a good demonstration, although the real difference is noticeable when using a higher Hz screen:
 
 [UFO Test: Multiple Framerates](https://testufo.com){:target="_blank"}.
 
 ## Next steps
-This post presents the first part of a series that aims to showcase measuring latency with the NVIDIA LDAT tool. 
+This post presents the first part of a series that aims to showcase measuring latency with the NVIDIA LDAT tool.
 
 During the research, it was discovered that simply purchasing a high refresh rate screen may not necessarily lead to a lower latency. [Previous studies](https://www.go-euc.com/the-delivered-user-experience-of-thin-clients/){:target="_blank"} at GO-EUC have demonstrated that the endpoint is a crucial factor. Specifically, one of the endpoint devices used during the research was unable to provide the full potential of 144Hz, resulting in no significant difference between 144Hz and 120Hz. As a result, the decision was made to use a full-blown desktop as the endpoint device to ensure there were no limitations in performance.
 

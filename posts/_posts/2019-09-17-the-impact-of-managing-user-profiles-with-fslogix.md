@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The impact of managing user profiles with FSLogix"
 hidden: false
 authors: [omar]

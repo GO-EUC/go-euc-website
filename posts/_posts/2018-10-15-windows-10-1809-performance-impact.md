@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Windows 10 1809 performance impact"
 hidden: false
 authors: [ryan]

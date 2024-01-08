@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Microsoft Windows 11 VDI performance short"
 hidden: false
 authors: [eltjo, omar]
@@ -15,7 +16,7 @@ Windows 11 will be the first major update to the Windows operating platform sinc
 
 Possibly the biggest, but at least the most apparent change, is the new interface. With a redesigned Start menu which is now located in the middle of the screen by default, the new look is sleeker and more akin to the Mac-like interfaces from Apple.
 
-Microsoft Teams will be integrated directly into the Windows taskbar for easier accessibility. 
+Microsoft Teams will be integrated directly into the Windows taskbar for easier accessibility.
 
 <a href="{{site.baseurl}}/assets/images/posts/079-windows-11-vdi-performance-short/079-windows-11-vdi-performance-short-desktop.png" data-lightbox="Windows 11">
 ![watermark-example]({{site.baseurl}}/assets/images/posts/079-windows-11-vdi-performance-short/079-windows-11-vdi-performance-short-desktop.png)
@@ -88,4 +89,3 @@ The increase in load on the storage is significant, although with fast storage t
 Big shoutout to Omar Bouhaj for setting up and running the tests.
 
 Please let us know what you think of these preliminary results via social media or on our [World of EUC Slack channel](https://worldofeuc.slack.com){:target="_blank"}!
-

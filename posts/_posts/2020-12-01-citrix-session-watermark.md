@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The performance impact of Citrix session watermark"
 hidden: false
 authors: [eltjo]
@@ -8,23 +9,23 @@ tags: [ 'Citrix', 'CVAD', 'watermark']
 image: assets/images/posts/068-citrix-session-watermark/068-citrix-session-watermark-feature-image.png
 ---
 The text-based session watermark is a built-in Citrix Virtual Apps and Desktops functionality that creates a text overlay in the Citrix sessions that can assist in the deterrence and tracking of data theft.
- 
-Enabling the Text-based session watermark feature can potentially bring negative effect to the end user experience of the session, but Citrix has no definitive numbers published on the magnitude or the extend of the impact. 
 
-In this research, GO-EUC will focus on quantifying the impact of the text-based session watermark feature in CVAD. 
+Enabling the Text-based session watermark feature can potentially bring negative effect to the end user experience of the session, but Citrix has no definitive numbers published on the magnitude or the extend of the impact.
+
+In this research, GO-EUC will focus on quantifying the impact of the text-based session watermark feature in CVAD.
 
 ## Background information
 Session watermarking was introduced in CVAD 7.16 as an experimental feature and later on added to the feature list of CVAD 7.17 in 2018.
 
 The Text-based session watermark feature (hereafter abbreviated to watermark) is supported on both single and multiuser OS's, on both Desktop and Server OS and requires a minimum of Virtual Delivery Agent version 7.17.
- 
+
 As the name implies this feature allows administrators to add a transparent text-based watermark to the session of the users.
- 
+
 Traceability when information from Citrix sessions has leaked. The feature functions just like the watermark features of Adobe Acrobat PDF for example by _‘superimposing’_ a semi-transparent text overlay over the entire session of the end users.
 
 {% include youtube.html id="0NR6ugrpjlE" %}
 
-This watermark will therefor also show up in pictures and screenshots taken from a user's session. 
+This watermark will therefor also show up in pictures and screenshots taken from a user's session.
 
 Be aware that the watermark labels on pictures and screenshots taken from a session could be removed, distorted, modified or falsified using a variety of methods.
 
@@ -35,8 +36,8 @@ Technically the session watermark process works as following:
 3.  Thinwire does the encoding of the newly created image and sends the image to the endpoint
 4.  The endpoint decodes the image and displays the images containing the session graphics with the transparent watermark image to the user.
 
-There are a couple of limitations, such as the fact that screen captures taken from within the VDA will not include the watermark. 
- 
+There are a couple of limitations, such as the fact that screen captures taken from within the VDA will not include the watermark.
+
 * Session watermarks are not supported in sessions where Local App Access, Windows media redirection, MediaStream, browser content redirection, and HTML5 video redirection are used. To use session watermark, ensure that these features are disabled.
 * Session watermark is not supported and doesn’t appear if the session is running in full-screen hardware accelerated modes (full-screen H.264 or H.265 encoding).
 * Session watermark supports only Thinwire and not the Framehawk or Desktop Composition Redirection (DCR) graphic modes.
@@ -46,13 +47,13 @@ There are a couple of limitations, such as the fact that screen captures taken f
 Source: [https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/graphics/session-watermark.html](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/graphics/session-watermark.html){:target="_blank"}
 
 The textual information to displayed for the watermark is configurable and can include the following information:
- 
+
 * Client IP address
 * Connection time
 * Logon username
 * VDA hostname
 * VDA IP address
- 
+
 There are two style options available, one where they overlay is in the center of the Session and one where the information is on the 4 corners of the session:
 
 <a href="{{site.baseurl}}/assets/images/posts/068-citrix-session-watermark/068-citrix-session-watermark-example.png" data-lightbox="watermark-example">
@@ -71,7 +72,7 @@ In the second scenario were the text-based watermark is enabled the following po
 | :------------- | :----------------- |
 | Enable session watermark | Enabled |
 | Include connection time | Enabled |
-| Include logon user name | Enabled | 
+| Include logon user name | Enabled |
 | Include VDA host name | Enabled |
 | Include VDA IP address | Enabled |
 | Session watermark style | Multiple |
@@ -155,7 +156,7 @@ Because the session watermark is added _before_ Thinwire encoding, it appears to
   <i>Lower is better</i>
 </p>
 
-The session round trip time and latency metrics show seemingly irreconcilable differences, as is clearly visible around 36 minutes of the test. There are no clear indications that data is invalid and the data is consistent across all 10 runs without any outliers in any of the runs. The averages are also compared from the different sessions, and these numbers also seem consistent. 
+The session round trip time and latency metrics show seemingly irreconcilable differences, as is clearly visible around 36 minutes of the test. There are no clear indications that data is invalid and the data is consistent across all 10 runs without any outliers in any of the runs. The averages are also compared from the different sessions, and these numbers also seem consistent.
 
 At the moment the speculation is that the differences in the data might be related to the polling interval of Remote Display Analyzer (RDA) tooling that is used to analyze the protocol data, but at this point there isn’t a conclusive answer as of yet and such analysis would go beyond the scope of this research.
 
@@ -193,7 +194,7 @@ Due to the way how Thinwire reduces bandwidth consumption, the data for the band
   <i>Lower is better</i>
 </p>
 
-The Thinwire protocol reduces bandwidth by employing an algorithm that detects duplicate images and uses caching and buffering in order to avoid having to re-send these images. Because the watermark is created and superimposed on the image </i>before<i> the Thinwire encoding happens, the effectiveness of the algorithm in detecting duplicate regions will be affected. 
+The Thinwire protocol reduces bandwidth by employing an algorithm that detects duplicate images and uses caching and buffering in order to avoid having to re-send these images. Because the watermark is created and superimposed on the image </i>before<i> the Thinwire encoding happens, the effectiveness of the algorithm in detecting duplicate regions will be affected.
 
 The bigger the area is that the watermark covers, the bigger this impact will be, and this results in a higher bandwidth usage as shown in the bandwidth usage charts.
 
@@ -229,15 +230,15 @@ The most important aspect of the watermark will most likely in most real-world s
   <i>Lower is better</i>
 </p>
 
-The observed impact on the LoadGen bots is significant. It should go without saying, that the more the watermark covers parts of the screen or region, the bigger the impact will be. This is also the reason why Citrix recommends not more than 2 elements. 
+The observed impact on the LoadGen bots is significant. It should go without saying, that the more the watermark covers parts of the screen or region, the bigger the impact will be. This is also the reason why Citrix recommends not more than 2 elements.
 
 The endpoint impact could potentially negatively affect the user experience, if the endpoint is not capable of decoding the images fast enough. For more information on the real user experience from different endpoints and the shortcomings, consult the delivered user experience of thin clients playlist on the [GO-EUC YouTube channel](https://www.youtube.com/playlist?list=PLof9ZpIRuTnF_k7dVk1hMPEkkL8jmJ895){:target="_blank"}.
 
-## Preliminary conclusion 
+## Preliminary conclusion
 Results show that the impact of a session watermark on the VDA side is only minimal, but there is a clear increase in bandwidth, which is expected and in line with Citrix recommendations.
- 
+
 The data shows that the impact of a session watermark is minimal on the VDA sized. The main impact is on the endpoints and the bandwidth used.
- 
+
 The impact on the VDA size might be further mitigated when Citrix add support for Hardware encoded session and offloads the overlaying of the watermark to the GPU.
 
 These results are very much dependent on the type of watermark, the amount of text but also on the video encoding method. In this research the video encoding was left at default which is 'let the system decide'. Using ‘for actively changing regions’ as the video encoding method might reduce the impact, whilst 'for the entire screen' will most probably have a higher impact on both the VDA as on the endpoints were it not for the fact that 'For the entire screen' is not supported with the session watermark at the time of writing.

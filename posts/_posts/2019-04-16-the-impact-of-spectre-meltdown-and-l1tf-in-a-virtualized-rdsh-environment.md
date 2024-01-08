@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The Impact of Spectre, Meltdown and L1TF in a virtualized RDSH environment"
 hidden: false
 authors: [sven]
@@ -17,7 +18,7 @@ In most cases, after installing the necessary patches, you are protected against
 
 | OS                             | Spectre  | Meltdown |
 | :----------------------------: | :------: | :------: |
-| Windows 10                     | Enabled  | Enabled  | 
+| Windows 10                     | Enabled  | Enabled  |
 | Windows Server 2016 or earlier | Disabled | Disabled |
 | Windows Server 2019            | Disabled | Enabled  |
 

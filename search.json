@@ -1,16 +1,16 @@
 ---
 ---
+{% assign filtered_posts = site.posts | where: 'location', nil %}
 [
-  {% for post in site.posts %}
 
-  {% if post.categories contains "posts" %}
+  {% for post in filtered_posts %}
     {
       "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | array_to_sentence_string }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "category" : "{{ post.categories | join: ', ' }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "date"     : "{{ post.date }}"
+      "date"     : "{{ post.date | date: '%b %-d, %Y' }}",
+      "article"  : "<div class='article col col-4 col-d-6 col-t-12 grid__post animate'> <div class='article__inner'>{% if post.image %}<a class='article__image' href='{{post.url | prepend: site.baseurl}}'> <img src='{{site.baseurl}}/{{post.image}}' alt='{{post.title}}'> </a>{% endif %}<div class='article__content'> <div class='article__meta'> <span class='article__minutes'>{% assign words=post.content | number_of_words %}{% if words < 360 %}1 min read{% else %}{{words | divided_by:180}} min read{% endif %} <time class='article__date' datetime='{{post.date | date_to_xmlschema}}'>{% assign date_format=site.minima.date_format | default: '%b %-d, %Y' %}{{post.date | date: date_format}}</time> </span> </div><h2 class='article__title'>{{post.title | escape}}</h2> <p class='article__excerpt'>{{post.description | escape}}</p><div class='article__bottom'>{% if post.authors %}{% for post_author in post.authors %}{% assign author = site.authors[post_author] %}<div class='article__author'><a href='{{site.baseurl}}/members/{{author.page}}' aria-label='{{author.name}}'><img class='article__author-image' src='{{site.baseurl}}/{{ author.picture }}'></a></div><div class='article__bottom-meta'><a href='{{site.baseurl}}/members/{{author.page}}' class='article__author-link'>{{ author.display_name }}</a></div>{% endfor %}{% endif %}</div></div></div></div></div>"
     }{% unless forloop.last %},{% endunless %}
-    {% endif %}
   {% endfor %}
 ]

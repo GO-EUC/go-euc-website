@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Stuck in the middle, an introduction into statistical analysis for GO-EUC"
 hidden: false
 authors: [eltjo]
@@ -21,7 +22,7 @@ While that doesn't seem like much data by todays standards, a single character u
 
 In order to represent and compare this amount of data in a understandable, and easier to digest format, central tendency numbers are used at GO-EUC.
 
-The definition of the three most commonly used central tendencies can be explained best with an example. 
+The definition of the three most commonly used central tendencies can be explained best with an example.
 
 Take the following logon times in seconds for a given test. Let's assume that the dataset is limited to these runs, and therefor 7 data points. For sake of argument these are all integer, or whole numbers.
 
@@ -55,7 +56,7 @@ In Python the built-in module <span style="font-family:Courier New;">statistics<
 ```python
 import statistics
 list = [ 9,10,9,15,11,9,10]
-mean = statistics.mean(list) 
+mean = statistics.mean(list)
 print(mean)
 10.428571428571429
 print(round(mean))
@@ -85,7 +86,7 @@ In Python the <span style="font-family:Courier New;">statistics</span> module ca
 ```python
 import statistics
 list = [ 9,10,9,15,11,9,10]
-mode = statistics.mode(list) 
+mode = statistics.mode(list)
 print(mode)
 ```
 
@@ -106,7 +107,7 @@ To retrieve the median from the dataset, it first had to be ordered:
 | 15 |
 
 The middle number as shown above is **10**, which means that in this dataset the median is 10.
- 
+
 As shown in the example, for a data set with an odd number of data points, the median is the middle number. If the data set were to have an even number of data points, the median would be the mean of the middle two number in the data set.
 
 The middle number of the data set can be calculated as follows:
@@ -131,7 +132,7 @@ if ($list.count%2) {
 else {
     #list containts an even number of elements
     $Median = ($list[$list.Count/2],$list[$list.count/2-1] |Measure-Object -Average).average
-}    
+}
 Write-host $Median
 ```
 Once again with Python the statistics module is leveraged which contains a function for the Median calculation as well:
@@ -139,24 +140,24 @@ Once again with Python the statistics module is leveraged which contains a funct
 ```python
 import statistics
 list = [ 9,10,9,15,11,9,10]
-median = statistics.median(list) 
+median = statistics.median(list)
 print(median)
 ```
 
-The arithmetic mean is most often used to report central tendencies, but it is not described as a robust statistic, meaning that it is greatly influenced by outliers. The median however is considered more robust against outliers. While outliers are not bad in principle, outliers could be considered as problematic, as they can potentially distort the results. 
+The arithmetic mean is most often used to report central tendencies, but it is not described as a robust statistic, meaning that it is greatly influenced by outliers. The median however is considered more robust against outliers. While outliers are not bad in principle, outliers could be considered as problematic, as they can potentially distort the results.
 
 ## Outliers
 
-Outliers are values that are very much larger or smaller than most of the values in a given dataset. At GO-EUC we have to deal with outliers frequently. 
+Outliers are values that are very much larger or smaller than most of the values in a given dataset. At GO-EUC we have to deal with outliers frequently.
 
 Take for example a situation where in a given scenario CPU metrics have been collected for a single test run on a multisession VDI. It is expected that when the VDI is loaded with virtual users that the VDI’s CPU usage will start to increase. At certain points in the scenario there are bound to be spikes in the CPU usage, sometimes even as high as 100%. For this frame of reference, these spikes are considered to be normal behavior and are just part of the dataset.
 
 
-Other times due to faults in the measuring or other outside influences out or our control, the data set can contain outliers that are not expected. These outliers can influence the averages, the arithmetic mean of the dataset. In the login time dataset example used above, it is assumed that 15 is a correct value, but this could also be an error in the measurements taken. The mean in this case is affected by this perhaps false measurement. This example can be taken even further; what if one of the Loadgen servers which are used to feed the VDIs with simulated users was in a faulty state which caused the logins initiated from this server to take excessively longer than expected and thereby greatly influencing the average login times. 
+Other times due to faults in the measuring or other outside influences out or our control, the data set can contain outliers that are not expected. These outliers can influence the averages, the arithmetic mean of the dataset. In the login time dataset example used above, it is assumed that 15 is a correct value, but this could also be an error in the measurements taken. The mean in this case is affected by this perhaps false measurement. This example can be taken even further; what if one of the Loadgen servers which are used to feed the VDIs with simulated users was in a faulty state which caused the logins initiated from this server to take excessively longer than expected and thereby greatly influencing the average login times.
 
 There are several ways to handle these outliers. The most commonly used method at GO-EUC is to leave the identification of these outliers to the analysts and strip these abnormal or faulty measurements from the dataset before we calculate the averages (the mean) that are reported in the final publication. However, this method can be combined with a more scientific method. This could for instance be to use a percentile based approach, for example using the 95th percentile and include this in the measurements that are to be reported on.
- 
- 
+
+
 Let's take a slightly larger data set for this example. Below is a table with CPU usage data collected from a given run:
 
 | CPU Usage in % |
@@ -231,7 +232,7 @@ After we've sorted the list in ascending order:
 
 In the ordered list 95th percentile is 29. Now leaving the values from the ordered dataset greater than 29, the dataset will exclude 42 and 56,  Because these values fall out of the 95th percentile, these values will be discarded from the dataset. By looking at the 95th percentile, both 42 and 56 are considered outliers.
 
-While statistically correct, just removing these values from the dataset without proper inspection would be short-sighted or at least a too simplistic approach. In order to properly assess if the outliers can be safely removed, we need to carefully look at the data, at what we want to measure and take all factors into consideration in order to determine if these values are indeed ‘polluting’ our dataset and need to be removed. The tradeoff is that the removal will inherently cause some loss of information. 
+While statistically correct, just removing these values from the dataset without proper inspection would be short-sighted or at least a too simplistic approach. In order to properly assess if the outliers can be safely removed, we need to carefully look at the data, at what we want to measure and take all factors into consideration in order to determine if these values are indeed ‘polluting’ our dataset and need to be removed. The tradeoff is that the removal will inherently cause some loss of information.
 
 Sometimes not only the top outliers, but also the bottom outliers need to be evaluated and for this we can also calculate the 5th percentile. Trimming both the top and bottom 5 percentages of the data will result in a truncated mean. The truncated mean is also a measure of central tendency, just like the 'normal' mean and the median. The truncated mean is calculated as a mean after trimming the outliers at the high and the bottom end of the dataset. One thing to bear in mind is that by using the truncated mean more information was removed from the original dataset.
 
@@ -241,18 +242,18 @@ The truncated mean is sometimes erroneously referred to as the Winsor mean. With
 
 The metrics and data collected by GO-EUC should be able to give an valuable insight to the readers.
 
-GO-EUC still uses the most commonly used central tendency, the mean, for summarizing data sets most of the time. Because the majority, if not all, of the data collected is of an ordinal nature, the mode is not useful for our researches. The median however is considered valuable measure and at GO-EUC we will see how we can report the median of the datasets in our future research. 
+GO-EUC still uses the most commonly used central tendency, the mean, for summarizing data sets most of the time. Because the majority, if not all, of the data collected is of an ordinal nature, the mode is not useful for our researches. The median however is considered valuable measure and at GO-EUC we will see how we can report the median of the datasets in our future research.
 
-As for handling outliers, when considering removing data points that are considered outliers, we’ll calculate the 95th percentile and use that value to identify the outliers before removing these values from the data sets that will be reported on in the coming future. 
+As for handling outliers, when considering removing data points that are considered outliers, we’ll calculate the 95th percentile and use that value to identify the outliers before removing these values from the data sets that will be reported on in the coming future.
 This means that the presentation of the data could also change, as shown in the chart below. Here we have to scenarios, and the bar chart for both scenarios not only shows the mean, but also the 90th and 9th percentile.
 
-Here, the percentile values are incorporated into the bar chart. The average or mean is still the primary statistic that we report, but it is complemented with the percentile values from the dataset. 
+Here, the percentile values are incorporated into the bar chart. The average or mean is still the primary statistic that we report, but it is complemented with the percentile values from the dataset.
 
 <a href="{{site.baseurl}}/assets/images/posts/076-stuck-in-the-middle/076-stuck-in-the-middle-chart-example.png" data-lightbox="Middle-Calculation">
 ![Middle-Calculation]({{site.baseurl}}/assets/images/posts/076-stuck-in-the-middle/076-stuck-in-the-middle-chart-example.png)
 </a>
 
-Dealing with central tendency and outliers in data isn’t as clear cut as it seems on the surface. Relying only on perception when it comes to dealing with outliers or completely relying on math, both don’t do the data justice. By combining several methods mentioned in this blog post, we can not only see when and if the data that is collected is imbalanced, but also where the data is deviates from the (expected) norm. Detecting and classifying outliers is an integral part of the data analysis performed and involves in-depth knowledge on all the variables of the tests. 
+Dealing with central tendency and outliers in data isn’t as clear cut as it seems on the surface. Relying only on perception when it comes to dealing with outliers or completely relying on math, both don’t do the data justice. By combining several methods mentioned in this blog post, we can not only see when and if the data that is collected is imbalanced, but also where the data is deviates from the (expected) norm. Detecting and classifying outliers is an integral part of the data analysis performed and involves in-depth knowledge on all the variables of the tests.
 
 At GO-EUC we always strive for statistical accuracy for, and reproducibility by the community. Our goal is always to show the best best possible representation of the datasets used in our researches.
 

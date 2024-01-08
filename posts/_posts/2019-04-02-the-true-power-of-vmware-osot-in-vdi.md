@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "The true power of VMware OSOT in VDI"
 hidden: false
 authors: [ryan]
@@ -227,8 +228,8 @@ Right now, there is one universal template for Windows 10 and not for each indiv
 <a href="https://twitter.com/HilkoLantinga" data-lightbox="Hilko Lantinga">
 > <img style="width: 100px; float: left; margin-right: 15px; margin-top: 15px" src="{{site.baseurl}}/assets/images/posts/022-the-true-power-of-vmware-osot-in-vdi/022-vmware-osot-hilko-lantinga.png"/> A special thanks to [Hilko Lantinga](https://twitter.com/HilkoLantinga){:target="_blank"} from VMware for the time to review and share thoughts about these results. The results has been shared with VMware and they will further investigate the storage behaviour.
 </a>
-> 
-> 
+>
+>
 >  	&nbsp;
 
 Share your thought about these results in the comments below or get involved by joining our Slack channel right [here](https://worldofeuc.slack.com){:target="_blank"}.

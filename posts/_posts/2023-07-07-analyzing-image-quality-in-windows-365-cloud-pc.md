@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Analyzing Image Quality in Windows 365 Cloud PC: HTML5 Webclient vs. Remote Desktop Client"
 hidden: false
 authors: [eltjo]

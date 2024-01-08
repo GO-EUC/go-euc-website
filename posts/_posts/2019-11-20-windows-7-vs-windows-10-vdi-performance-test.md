@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Windows 7 vs Windows 10 VDI Performance Test"
 hidden: false
 authors: [sven]

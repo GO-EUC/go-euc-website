@@ -1,20 +1,46 @@
-# Site
-name: "GO-EUC"
-title: "GO-EUC"
-description: "The research platform for the EUC space"
-meta_description: "The research platform for the EUC space"
+#-------------------------------
+# General Site Settings
+title: GO-EUC
 logo: 'assets/images/logo-white.png'
-favicon: 'assets/images/favicon.ico'
-paginate: 10
-baseurl: ''
-email: 'info@go-euc.com'
-slack: 'https://worldofeuc.slack.com/join/shared_invite/zt-dexotib9-vL0IzKmh9QhPrGxE8LotAA'
+description: Research is creating new knowledge
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "https://www.go-euc.com" # The base hostname & protocol for your site, e.g. http://example.com
 paypal: https://www.paypal.com/donate/?hosted_button_id=FE592EDA2QQT6
-google_analytics: 'G-QERQ4899QY'
-disqus: 'ict-r'
-permalink: /:title/
 
-# Authors
+
+#-------------------------------
+# Hero Settings
+hero:
+  title: GO-EUC
+  description: Research is creating new knowledge
+  image: 'assets/images/head.jpg'
+
+#-------------------------------
+# Footer section
+# Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
+# Other icons can be found at https://ionicons.com/v4/
+social:
+- {icon: "ion-logo-twitter", link: "https://twitter.com/g0_euc"}
+- {icon: "ion-logo-youtube", link: "https://www.youtube.com/channel/UC8wCPbi_qZk6jRewEnuKtZw"}
+- {icon: "ion-logo-github", link: "https://github.com/go-euc"}
+- {icon: "ion-logo-linkedin", link: "https://www.linkedin.com/company/go-euc/"}
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: ict-r
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: 'G-QERQ4899QY'
+
+
+#-------------------------------
+# Newsletter
+mailchimp: disable # To enable the mailchimp form, use the value 'enable'. To disable the form, leave the field blank.
+mailchimp-identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+
 authors:
   ryan:
     active: true
@@ -262,14 +288,50 @@ sponsors:
     page: 'loadgen'
     site: 'https://www.loadgen.com'
 
-# Plugins
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: /:title/
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll/tagging
   - jekyll-redirect-from
+  - jekyll-toc
 
-# Other
+kramdown:
+  parse_block_html: true
+
+paginate: 8
+paginate_path: "/page/:num"
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+# tag_page_dir:         tag
+# tag_page_layout:      tag_page
+# tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
 markdown: kramdown
-highlighter: rouge
+highlighter: github.dark
+
+kramdown:
+  parse_block_html: true
+  input: GFM
+  syntax_highlighter: github.dark
+
+exclude:
+    - node_modules

@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "SD-WAN & network architecture setup 2019 – current"
 hidden: false
 authors: [ruud, bas]

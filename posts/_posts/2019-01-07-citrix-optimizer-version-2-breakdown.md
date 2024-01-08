@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Citrix Optimizer version 2 – Breakdown"
 hidden: false
 authors: [eltjo]
@@ -33,11 +34,11 @@ While the optimization of the first four groups are mostly self-explanatory, the
 ## Infrastructure and configuration
 As always this research was done on the GO-EUC platform that is described in the following [post]({{site.baseurl}}/architecture-and-hardware-setup-overview-2018){:target="_blank"}. This setup is identical as our previous two CTXO posts. Although the setups are identical we never compare these results to the results from the previous post due to a number of factors. The image is built from scratch for every research and is updated with both Windows and Office updates afterwards so this could result in a difference of the installed updates between the researches that can influence the results.
 
-The desktop delivery solution is Citrix Virtual Desktop running the latest available version which is version 1808.2 as of writing. The virtual machines are created using Citrix Machine Creation Service (MCS) with a stateless configuration using local profiles. All virtual machines are configured with 2vCPU’s and 4GB memory. 
+The desktop delivery solution is Citrix Virtual Desktop running the latest available version which is version 1808.2 as of writing. The virtual machines are created using Citrix Machine Creation Service (MCS) with a stateless configuration using local profiles. All virtual machines are configured with 2vCPU’s and 4GB memory.
 
 In each scenario the tests were run multiple times as per default and after a scenario is completed the VDI’s were rolled back to their default state and the new optimization for the chosen scenario was applied. More information about the testing methodology can be found in the following [post]({{site.baseurl}}/insight-in-the-testing-methodology){:target="_blank"}.
 
-## Results 
+## Results
 As with all {{site.title}} posts, we use the Login VSI VSImax as the main performance gauge. The VSImax is the defacto industry standard metric and is a calculated score to determine the saturation point of the VDI environment. The saturation point (VSImax) is defined as the session count before the threshold was reached.
 
 More information about the VSImax can be found on the [Login VSI website](https://www.loginvsi.com/blog-alias/login-vsi/481-calculating-maximum-virtual-desktop-capacity-vsimax-explained){:target="_blank"}.

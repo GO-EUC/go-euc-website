@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Performance comparison Windows 2016 vs Windows 2019 RDSH"
 hidden: false
 authors: [sven]

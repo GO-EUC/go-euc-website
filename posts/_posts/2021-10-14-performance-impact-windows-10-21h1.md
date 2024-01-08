@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Performance impact of Windows 10 21H1"
 hidden: false
 authors: [ryan, omar]

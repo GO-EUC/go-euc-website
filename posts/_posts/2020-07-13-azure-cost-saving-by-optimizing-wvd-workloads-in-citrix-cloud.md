@@ -1,5 +1,6 @@
 ---
 layout: post
+toc: true
 title:  "Azure cost saving by optimizing WVD workloads in Citrix Cloud."
 hidden: false
 authors: [ryan, eltjo]
@@ -34,7 +35,7 @@ The estimated compute running costs for this VM are around €360 euros per mont
 ![vm-size-details]({{site.baseurl}}/assets/images/posts/062-azure-cost-saving-by-optimizing-wvd-workloads-in-citrix-cloud/062-azure-cost-saving-vm-details.png)
 </a>
 
-More information about VM sizes can be found [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general){:target="_blank"}. Please be aware the listed VM sizes may not be available in your region. 
+More information about VM sizes can be found [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general){:target="_blank"}. Please be aware the listed VM sizes may not be available in your region.
 
 For this research the following two scenarios are specified:
 
@@ -43,7 +44,7 @@ For this research the following two scenarios are specified:
 
 Our testing methodology, as described [here]({{site.baseurl}}/insight-in-the-testing-methodology-2020/), applies to this research. Because of limited credits available in our Azure subscription, only 4 test runs are configured instead of the normal 10 runs.
 
-More information on the various Citrix Optimizer optimizations can be found in another research [here]({{site.baseurl}}/microsoft-azure-windows-10-enterprise-multi-session-scalability/){:target="_blank"}. 
+More information on the various Citrix Optimizer optimizations can be found in another research [here]({{site.baseurl}}/microsoft-azure-windows-10-enterprise-multi-session-scalability/){:target="_blank"}.
 
 ## Expectations and results
 Prior this research we did a poll on Twitter where we asked the community what they thought was the most important factor to take into consideration when choosing a new DaaS or Hybrid cloud VDI solution.
@@ -79,7 +80,7 @@ Applying optimizations is a best practice, and these results show this also appl
 
 The metrics show a significant difference in the CPU utilization between both scenarios. Due to the way the user density is calculated, the data for the CPU utilization is in line with expectations.
 
-As mentioned in the introduction, from a storage perspective standard SSDs are used. In Azure the IOPs limit for the Standard_D4_v2 SKU is 500 IOPs per disk with maximum of 32 disks totaling 32x500 IOPs in total. 
+As mentioned in the introduction, from a storage perspective standard SSDs are used. In Azure the IOPs limit for the Standard_D4_v2 SKU is 500 IOPs per disk with maximum of 32 disks totaling 32x500 IOPs in total.
 
 <a href="{{site.baseurl}}/assets/images/posts/062-azure-cost-saving-by-optimizing-wvd-workloads-in-citrix-cloud/062-azure-cost-saving-vm-read.png" data-lightbox="reads">
 ![reads]({{site.baseurl}}/assets/images/posts/062-azure-cost-saving-by-optimizing-wvd-workloads-in-citrix-cloud/062-azure-cost-saving-vm-read.png)
@@ -102,7 +103,7 @@ As mentioned in the introduction, from a storage perspective standard SSDs are u
   <i>Lower is better</i>
 </p>
 
-The optimized images show a solid reduction in both read and write operations, and neither of the scenarios is hitting the upper limit of 500 IOPs. 
+The optimized images show a solid reduction in both read and write operations, and neither of the scenarios is hitting the upper limit of 500 IOPs.
 From an end user perspective the time it takes to load their VDI desktop is their first interaction with the VDI. For that reason it is important to give the end user the lowest logon time possible.
 
 <a href="{{site.baseurl}}/assets/images/posts/062-azure-cost-saving-by-optimizing-wvd-workloads-in-citrix-cloud/062-azure-cost-saving-logon-times.png" data-lightbox="logon-times">
