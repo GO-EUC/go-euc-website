@@ -68,7 +68,7 @@ authors:
     twitter: https://twitter.com/eltjovg
     linkedin: https://www.linkedin.com/in/eltjovangulik/
     page: eltjo-van-gulik
-    description: "Eltjo van Gulik is the Principal Product Manager for HDX at Citrix and one of the co-founders of G0-EUC. Social, a tad pedantic and suitably lazy."
+    description: "Eltjo van Gulik is the Principal Product Manager for HDX Graphics & Seamless at Citrix and one of the co-founders of G0-EUC. Social, a tad pedantic and suitably lazy."
   omar:
     active: true
     name: Omar
@@ -265,7 +265,18 @@ authors:
     github: https://github.com/LooseDevGoose
     page: mick-hilhorst
     description: "Mick Hilhorst is a Senior Consultant at Orange Business Services, who takes care of the many challenges customers may face regarding the Citrix Portfolio"
-
+  leee:
+    active: true
+    name: Leee
+    display_name: Leee Jeffries
+    company: Leee Jeffries Consulting
+    title: IT Consultant
+    picture: 'assets/images/authors/leee.png'
+    web: https://www.leeejeffries.com/
+    twitter: https://twitter.com/leeejeffries
+    linkedin: https://www.linkedin.com/in/leee-jeffries-0021752a/
+    page: leee-jeffries
+    description: "Leee Jeffries is a freelance IT Consultant working within a range of different areas in the IT industry over the last 15 years, Leee's main focus is End User Computing."
 # Sponsors
 sponsors:
   loadgen:
