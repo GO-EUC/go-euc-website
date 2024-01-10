@@ -1,0 +1,49 @@
+{
+    "title":  "retail-price-per-VM-SKU-per-minute-usd.csv",
+    "subTitle":  "Lower is Better",
+    "series":  [
+                   {
+                       "serie":  "SKU",
+                       "data":  [
+                                    {
+                                        "x":  null,
+                                        "y":  "Standard_DS2_v2"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "Standard_D2s_v3"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "Standard_D2ds_v4"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "Standard_D2ds_v5"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "USD",
+                       "data":  [
+                                    {
+                                        "x":  null,
+                                        "y":  "0.000550267"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "0.000346667"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "0.000371667"
+                                    },
+                                    {
+                                        "x":  null,
+                                        "y":  "0.000371667"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "ms"
+}

@@ -1,0 +1,81 @@
+{
+    "title":  "Processor Speed per SKU",
+    "subTitle":  "",
+    "series":  [
+                   {
+                       "serie":  "Count",
+                       "data":  [
+                                    {
+                                        "x":  "Standard_D2ds_v5",
+                                        "y":  "10"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v4",
+                                        "y":  "10"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "1"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "6"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "3"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "4"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "5"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "1"
+                                    }
+                                ]
+                   },
+                   {
+                       "serie":  "Processor Speed",
+                       "data":  [
+                                    {
+                                        "x":  "Standard_D2ds_v5",
+                                        "y":  "2793"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v4",
+                                        "y":  "2594"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "2594"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "2295"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "2095"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "2594"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "2295"
+                                    },
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "2095"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "ms"
+}

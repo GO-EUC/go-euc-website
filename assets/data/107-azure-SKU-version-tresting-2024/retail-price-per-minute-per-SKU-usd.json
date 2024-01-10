@@ -1,0 +1,28 @@
+{
+    "title":  "Retail Price per Minute per SKU (USD)",
+    "subTitle":  "Lower is Better",
+    "series":  [
+                   {
+                       "serie":  "Timings (Minutes)",
+                       "data":  [
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "0.00055"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "0.000347"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v4",
+                                        "y":  "0.000372"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v5",
+                                        "y":  "0.000372"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "$"
+}

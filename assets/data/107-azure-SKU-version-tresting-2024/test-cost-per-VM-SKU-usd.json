@@ -1,0 +1,28 @@
+{
+    "title":  "test-cost-per-VM-SKU-usd",
+    "subTitle":  "Lower is Better",
+    "series":  [
+                   {
+                       "serie":  "USD",
+                       "data":  [
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "0.009152137"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "0.009891571"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v4",
+                                        "y":  "0.009139547"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v5",
+                                        "y":  "0.007379808"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  "$"
+}

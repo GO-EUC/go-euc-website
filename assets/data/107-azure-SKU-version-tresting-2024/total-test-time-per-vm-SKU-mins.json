@@ -1,0 +1,28 @@
+{
+    "title":  "Total Test Time per VM SKU",
+    "subTitle":  "Lower is Better",
+    "series":  [
+                   {
+                       "serie":  "Timings (Minutes)",
+                       "data":  [
+                                    {
+                                        "x":  "Standard_DS2_v2",
+                                        "y":  "25.02"
+                                    },
+                                    {
+                                        "x":  "Standard_D2s_v3",
+                                        "y":  "27.01"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v4",
+                                        "y":  "24.59"
+                                    },
+                                    {
+                                        "x":  "Standard_D2ds_v5",
+                                        "y":  "20.25"
+                                    }
+                                ]
+                   }
+               ],
+    "unit":  ""
+}
