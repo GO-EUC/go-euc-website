@@ -19,7 +19,7 @@ layout: default
       {% for page_reviewer in page.reviewers %}
       {% assign reviewer = site.authors[page_reviewer] %}
       <div class="post__author">
-        <a href="{{ site.baseurl }}/member/{{ reviewer.page }}" aria-label="{{ reviewer.name }}"><img class="post__author-image" style="border: 0px;"
+        <a href="{{ site.baseurl }}/members/{{ reviewer.page }}" aria-label="{{ reviewer.name }}"><img class="post__author-image" style="border: 0px;"
             src="{{ site.baseurl }}/{{ reviewer.picture }}" alt="{{ reviewer.name }}'s Picture"></a>
       </div>
       {% endfor %}
@@ -46,12 +46,12 @@ layout: default
       {% for page_author in page.authors %}
       {% assign author = site.authors[page_author] %}
       <div class="post__author">
-        <a href="{{site.baseurl}}/member/{{author.page}}" aria-label="{{author.name}}"><img class="post__author-image"
+        <a href="{{site.baseurl}}/members/{{author.page}}" aria-label="{{author.name}}"><img class="post__author-image"
             src="{{ site.baseurl }}/{{ author.picture }}" alt="{{author.name}}'s Picture"></a>
       </div>
 
       <div class="post__bottom-meta" style="margin-right: 15px;">
-        <a href="{{site.baseurl}}/member/{{author.page}}" class="post__author-link">{{author.display_name}}</a>
+        <a href="{{site.baseurl}}/members/{{author.page}}" class="post__author-link">{{author.display_name}}</a>
       </div>
       {% endfor %}
       {% endif %}
