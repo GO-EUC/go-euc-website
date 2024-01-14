@@ -16,4 +16,4 @@ jobs:
             
       - name: Website validation with Pester
         continue-on-error: true
-        run: pwsh -Command Invoke-Pester -Path ".github/powershell/validation.ps1" -CIFormat GithubActions
+        run: pwsh -Command Invoke-Pester -Path ".github/powershell/validation.ps1" -CI GithubActions
