@@ -13,7 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-            
+      
       - name: Website validation with Pester
-        continue-on-error: true
-        run: pwsh -Command Invoke-Pester -Path ".github/powershell/validation.ps1" -CI GithubActions
+        shell: pwsh
+        run: Invoke-Pester .github/powershell/validation.ps1 -Passthru | Export-CliXml -Path validation.xml
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: ubuntu-Unit-Tests
+          path: validation.xml
+    if: ${{ always() }}
