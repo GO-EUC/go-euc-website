@@ -17,10 +17,3 @@ jobs:
       - name: Website validation with Pester
         continue-on-error: true
         run: pwsh -Command Invoke-Pester -Path ".github/powershell/validation.ps1" -CIFormat GithubActions
-      
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: |
-            result.xml
