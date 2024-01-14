@@ -16,7 +16,6 @@ jobs:
       
       - name: Website validation with Pester
         shell: pwsh
-        continue-on-error: true
         run: Invoke-Pester .github/powershell/validation.ps1 -Passthru | Export-CliXml -Path validation.xml
       
       - name: Upload test results
