@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
             
-      - name: Website validation on Ansible
+      - name: Website validation with Pester
         continue-on-error: true
-        run: pwsh -Command Invoke-Pester -Path ".github/powershel/validation.ps1" -OutputFile "results.xml" -OutputFormat NUnitXml
+        run: pwsh -Command Invoke-Pester -Path ".github/powershell/validation.ps1" -OutputFile "results.xml" -OutputFormat NUnitXml
       
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action@v2
