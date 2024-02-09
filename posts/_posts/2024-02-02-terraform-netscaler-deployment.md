@@ -4,8 +4,9 @@ toc: true
 title:  "Terraform: NetScaler Deployment"
 hidden: false
 authors: [mick]
-categories: [ 'Citrix' ]
+categories: [ 'Development' ]
 tags: [ 'NetScaler', 'Terraform', 'Citrix', 'Automation', 'Best Practice']
+image: assets/images/posts/108-terraform-netscaler-deployment/terraform-netscaler-deployment.png
 ---
 
 # Terraform: NetScaler Deployment
@@ -302,3 +303,6 @@ gateway = {
   storefronturl = "https://storefront.go-euc.local/Citrix/StoreWeb"
 }
 ```
+
+Photo by <a href="https://unsplash.com/@clemhlrdt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément Hélardot</a> on <a href="https://unsplash.com/photos/black-and-silver-laptop-computer-on-table-95YRwf6CNw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
