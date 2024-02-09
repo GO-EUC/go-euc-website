@@ -16,8 +16,8 @@ The code is capable of both deployment and configuration.
 You can find the complete repository [here](https://github.com/GO-EUC/go-euc-lab/tree/develop/terraform/citrix-adc){:target="_blank"}.
 
 Sleep deprived contributors:
-[Sven Jansen] (https://www.linkedin.com/in/sven-jansen-b763b654/)
-[Mick Hilhorst] (https://www.linkedin.com/in/mick-hilhorst/)
+[Sven Jansen] (https://www.linkedin.com/in/sven-jansen-b763b654/){:target="_blank"}
+[Mick Hilhorst] (https://www.linkedin.com/in/mick-hilhorst/){:target="_blank"}
 
 #### Please review the tables for an updated overview.
 
@@ -36,7 +36,7 @@ A NetScaler would be advised.
 Administrative credentials for the NetScaler are required.
 
 #### A  `.tfvar` file
-Please find the `.tfvar` file example [here](#tfvar){:target="_blank"}.
+Please find the `.tfvar` file example [here](#tfvar).
 
 #### License
 A license is required for some deployment types, but freemium is supported.
@@ -62,7 +62,7 @@ The goal of the Terraform code's architecture is to give flexibility and provide
 ### Variables
 The goal of the Terraform code's architecture is to give flexibility and provide a baseline best practice deployment. Your needs can differ if you want to use this code for production deployments, but it should provide a good start if you want to create a custom deployment.
 
-Throughout the code,  a `.tfvar` file will be used. A baseline `.tfvar` file will be [supplied in this article](#tfvar){:target="_blank"}.  It's adviced to use this approach as it makes it easy to create multiple deployments. If you are not familiair with `.tfvar` files, please review the [official terraform documentation.](https://developer.hashicorp.com/terraform/language/values/variables)
+Throughout the code,  a `.tfvar` file will be used. A baseline `.tfvar` file will be [supplied in this article](#tfvar).  It's adviced to use this approach as it makes it easy to create multiple deployments. If you are not familiair with `.tfvar` files, please review the [official terraform documentation.](https://developer.hashicorp.com/terraform/language/values/variables){:target="_blank"}
 
 
 We want to maintain a proper code base where reproducability is at the core. It needs to be easy to use and edit for the sake of research. 
