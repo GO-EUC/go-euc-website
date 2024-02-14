@@ -1,23 +1,23 @@
 ---
 layout: post
-toc: true
+toc: false
 title:  "Terraform: NetScaler Deployment"
 hidden: false
 authors: [mick]
 categories: [ 'Development' ]
 tags: [ 'NetScaler', 'Terraform', 'Citrix', 'Automation', 'Best Practice']
-image: assets/images/posts/108-terraform-netscaler-deployment/terraform-netscaler-deployment.png
+image: assets/images/posts/000-terraform-netscaler-deployment/terraform-netscaler-deployment.png
 ---
 
-# Terraform: NetScaler Deployment
 GO-EUC publishes & uses NetScaler deployments with best practice settings. Please mind that best practice is not always 'best solution', especially in research.
 These settings should assist you in getting a solid out of the box deployment going, that is easily re-deployable.
 The code is capable of both deployment and configuration.
 You can find the complete repository [here](https://github.com/GO-EUC/go-euc-lab/tree/develop/terraform/citrix-adc){:target="_blank"}.
 
 Sleep deprived contributors:
-[Sven Jansen] (https://www.linkedin.com/in/sven-jansen-b763b654/){:target="_blank"}
-[Mick Hilhorst] (https://www.linkedin.com/in/mick-hilhorst/){:target="_blank"}
+
+  * [Sven Jansen](https://www.linkedin.com/in/sven-jansen-b763b654/){:target="_blank"}
+  * [Mick Hilhorst](https://www.linkedin.com/in/mick-hilhorst/){:target="_blank"}
 
 #### Please review the tables for an updated overview.
 
