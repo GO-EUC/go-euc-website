@@ -1,0 +1,41 @@
+{
+  "title": "Car Visualizer - Average input latency (ms)",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "Baseline - Car Visualizer",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "42.5"
+        },
+        {
+          "x": "60 FPS",
+          "y": "42.5"
+        },
+        {
+          "x": "120 FPS",
+          "y": "42.5"
+        }
+      ]
+    },
+    {
+      "serie": "vGPU - Car Visualizer",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "120"
+        },
+        {
+          "x": "60 FPS",
+          "y": "91.9"
+        },
+        {
+          "x": "120 FPS",
+          "y": "78.8"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}

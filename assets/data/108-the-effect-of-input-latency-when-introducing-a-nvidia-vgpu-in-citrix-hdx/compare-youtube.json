@@ -1,0 +1,58 @@
+{
+  "title": "YouTube Video - Average input latency (ms)",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "Baseline - Youtube",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "57.4"
+        },
+        {
+          "x": "60 FPS",
+          "y": "57.4"
+        },
+        {
+          "x": "120 FPS",
+          "y": "57.4"
+        }
+      ]
+    },
+    {
+      "serie": "Default - Youtube",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "126.8"
+        },
+        {
+          "x": "60 FPS",
+          "y": "122.3"
+        },
+        {
+          "x": "120 FPS",
+          "y": "114.9"
+        }
+      ]
+    },
+    {
+      "serie": "vGPU - Youtube",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "126.5"
+        },
+        {
+          "x": "60 FPS",
+          "y": "93"
+        },
+        {
+          "x": "120 FPS",
+          "y": "91.8"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}

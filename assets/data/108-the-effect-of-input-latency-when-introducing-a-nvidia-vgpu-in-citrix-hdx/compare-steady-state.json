@@ -1,0 +1,58 @@
+{
+  "title": "Steady state - Average input latency (ms)",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "Baseline - Steady",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "44.8"
+        },
+        {
+          "x": "60 FPS",
+          "y": "44.8"
+        },
+        {
+          "x": "120 FPS",
+          "y": "44.8"
+        }
+      ]
+    },
+    {
+      "serie": "Default - Steady",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "80.3"
+        },
+        {
+          "x": "60 FPS",
+          "y": "71.9"
+        },
+        {
+          "x": "120 FPS",
+          "y": "59.7"
+        }
+      ]
+    },
+    {
+      "serie": "vGPU - Steady",
+      "data": [
+        {
+          "x": "30 FPS",
+          "y": "100.2"
+        },
+        {
+          "x": "60 FPS",
+          "y": "76.8"
+        },
+        {
+          "x": "120 FPS",
+          "y": "69.4"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}
