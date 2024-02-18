@@ -9,17 +9,22 @@ tags: [ 'NetScaler', 'Terraform', 'Citrix', 'Automation', 'Best Practice']
 image: assets/images/posts/000-terraform-netscaler-deployment/terraform-netscaler-deployment.png
 ---
 
-GO-EUC publishes & uses NetScaler deployments with best practice settings. Please mind that best practice is not always 'best solution', especially in research.
+## Introduction
+
+It's of great importance to GO-EUC to publish research with reproduceable results. As part of this ongoing effort, an Infrastructure as Code (IAC) repository is maintained.
+The repository contains out-of-the-box deployments for many common EUC technologies. With that in mind, this post serves as documentation for the NetScaler deployment.
+
+GO-EUC publishes & uses NetScaler deployments with best practice settings. Please mind that best practice is not always "best solution", especially in the context of research.
 These settings should assist you in getting a solid out of the box deployment going, that is easily re-deployable.
 The code is capable of both deployment and configuration.
 You can find the complete repository [here](https://github.com/GO-EUC/go-euc-lab/tree/develop/terraform/citrix-adc){:target="_blank"}.
 
-Sleep deprived contributors:
+#### NetScaler IaC Contributors
 
   * [Sven Jansen](https://www.linkedin.com/in/sven-jansen-b763b654/){:target="_blank"}
   * [Mick Hilhorst](https://www.linkedin.com/in/mick-hilhorst/){:target="_blank"}
 
-#### Please review the tables for an updated overview.
+#### Depoyment capabilities
 
 | Deployment Type | Supported |
 | -------- | ------- |
@@ -61,7 +66,6 @@ base_configuration = ({
 
 The goal of the Terraform code's architecture is to give flexibility and provide a baseline best practice deployment. Your needs can differ if you want to use this code for production deployments, but it should provide a good start if you want to create a custom deployment.
 ### Variables
-The goal of the Terraform code's architecture is to give flexibility and provide a baseline best practice deployment. Your needs can differ if you want to use this code for production deployments, but it should provide a good start if you want to create a custom deployment.
 
 Throughout the code,  a `.tfvar` file will be used. A baseline `.tfvar` file will be [supplied in this article](#tfvar).  It's adviced to use this approach as it makes it easy to create multiple deployments. If you are not familiair with `.tfvar` files, please review the [official terraform documentation.](https://developer.hashicorp.com/terraform/language/values/variables){:target="_blank"}
 
