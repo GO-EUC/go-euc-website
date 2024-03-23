@@ -1,13 +1,13 @@
 ---
 layout: post
 toc: true
-title:  "Is performance a guaranteed on an Azure VM at all times during the day?"
+title:  "Is performance guaranteed on an Azure VM at all times?"
 hidden: false
 authors: [leee]
 reviewers: [esther, ryan, eltjo]
 categories: [ 'Azure' ]
 tags: [ 'Azure', 'Compute', 'SKU', 'Cost', 'Cloud']
-image: assets/images/posts/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times.png
+image: assets/images/posts/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/110-is-performance-guaranteed-on-an-azure-vm-at-all-times.png
 ---
 Azure is a shared public cloud, by definition it means it is utilized by multiple companies all using multiple services at the same time, when running workloads on-premises it is best practice to isolate EUC workloads on separate HyperVisors/Physical Servers. By nature EUC workloads have the potential to be highly resource intensive and unpredictable, it’s not a good idea to share resources with infrastructure workloads. In public cloud scenario’s this cannot be controlled.
 
@@ -118,15 +118,15 @@ Test run days of the week:
 - Monday > Tuesday
 - Tuesday > Wednesday
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/saturday-line.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/saturday-line.json' %}
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/sunday-line.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/sunday-line.json' %}
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/monday-line.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/monday-line.json' %}
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/tuesday-line.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/tuesday-line.json' %}
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/wednesday-line.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/wednesday-line.json' %}
 
 These graphs generally show a consistent execution time with a very small variance between data points.
 
@@ -134,7 +134,7 @@ These graphs generally show a consistent execution time with a very small varian
 
 The expectation when sharing physical hardware across any enterprise is always, at some point you will impact performance due to resource contention. In public cloud environments you could almost say that it would be more than probable. Based on the collected results the initial hypnosis is busted as it shows a consistent and reliable performance.
 
-{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-a-guaranteed-on-an-azure-vm-at-all-times/summary.json' %}
+{% include chart.html scale='auto' type='line' data_file='assets/data/110-is-performance-guaranteed-on-an-azure-vm-at-all-times/summary.json' %}
 
 The above graph depicts the total average execution time of all tests for the entire period of 24 hours. There is a small increase in execution speed over the weekend period with a slow ramp up to the middle of the week. That being said, the variance in these numbers of fractions of a second.
 
