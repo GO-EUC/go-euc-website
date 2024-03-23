@@ -1,0 +1,32 @@
+{
+  "title": "Summary - Average Execution Time in ms",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "Average Execution Time",
+      "data": [
+        {
+          "x": "Friday",
+          "y": "7650"
+        },
+        {
+          "x": "Saturday",
+          "y": "7571"
+        },
+        {
+          "x": "Sunday",
+          "y": "7597"
+        },
+        {
+          "x": "Monday",
+          "y": "7614"
+        },
+        {
+          "x": "Tuesday",
+          "y": "7659"
+        }
+      ]
+    }
+  ],
+  "unit": "ms"
+}
