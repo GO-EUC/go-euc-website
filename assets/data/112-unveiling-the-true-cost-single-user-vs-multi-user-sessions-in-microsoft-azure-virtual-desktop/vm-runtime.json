@@ -1,0 +1,92 @@
+{
+  "title": "Estimated VM running time in hours / minutes",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "D4s_v5 - Single",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "08.01"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "10.18"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "06.00"
+        }
+      ]
+    },
+    {
+      "serie": "D4s_v5 - Multi",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "12.56"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "14.37"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "09.52"
+        }
+      ]
+    },
+    {
+      "serie": "D8s_v5 - Multi",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "13.35"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "15.09"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "11.55"
+        }
+      ]
+    },
+    {
+      "serie": "D16s_v5 - Multi",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "14.04"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "14.51"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "13.58"
+        }
+      ]
+    },
+    {
+      "serie": "D32s_v5 - Multi",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "14.24"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "15.16"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "14.06"
+        }
+      ]
+    }
+  ],
+  "unit": ""
+}

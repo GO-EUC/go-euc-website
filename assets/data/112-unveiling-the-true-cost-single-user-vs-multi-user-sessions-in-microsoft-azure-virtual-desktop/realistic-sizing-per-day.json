@@ -1,0 +1,52 @@
+{
+  "title": "Realistic prices per day for 1000 users",
+  "subTitle": "Lower is better",
+  "series": [
+    {
+      "serie": "D4s_v5 - Single",
+      "data": [
+        {
+          "x": "Realistic sizing",
+          "y": "3329.97"
+        }
+      ]
+    },
+    {
+      "serie": "D4s_v5 - Multi",
+      "data": [
+        {
+          "x": "Realistic sizing",
+          "y": "1203.92"
+        }
+      ]
+    },
+    {
+      "serie": "D8s_v5 - Multi",
+      "data": [
+        {
+          "x": "Realistic sizing",
+          "y": "1192.53"
+        }
+      ]
+    },
+    {
+      "serie": "D16s_v5 - Multi",
+      "data": [
+        {
+          "x": "Realistic sizing",
+          "y": "1142.34"
+        }
+      ]
+    },
+    {
+      "serie": "D32s_v5 - Multi",
+      "data": [
+        {
+          "x": "Realistic sizing",
+          "y": "1157.71"
+        }
+      ]
+    }
+  ],
+  "unit": " USD"
+}
