@@ -149,7 +149,12 @@
                     datalabels: {
                         display: displayLabel,
                         formatter: function(value, context) {
-                            return value + unit;
+                            if ("{{ include.currency }}" === 'true') {
+                                return unit + value ;
+                            } else {
+                                return value + unit;
+                            }
+
                         },
                         font: {
                             size: 10
