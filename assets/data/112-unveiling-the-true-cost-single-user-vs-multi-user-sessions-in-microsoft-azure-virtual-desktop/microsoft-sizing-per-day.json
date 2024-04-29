@@ -1,13 +1,38 @@
 {
-  "title": "Estimated prices per day for 1000 users",
+  "title": "Total cost per day for 1000 users based on Microsoft sizing",
   "subTitle": "Lower is better",
   "series": [
+    {
+      "serie": "D2s_v5 - Single",
+      "data": [
+        {
+          "x": "Light",
+          "y": "2388"
+        },
+        {
+          "x": "Medium",
+          "y": "0"
+        },
+        {
+          "x": "Heavy",
+          "y": "0"
+        }
+      ]
+    },
     {
       "serie": "D4s_v5 - Single",
       "data": [
         {
-          "x": "Recommended sizing",
-          "y": "3329.97"
+          "x": "Light",
+          "y": "0"
+        },
+        {
+          "x": "Medium",
+          "y": "4042"
+        },
+        {
+          "x": "Heavy",
+          "y": "4042"
         }
       ]
     },
@@ -15,17 +40,34 @@
       "serie": "D4s_v5 - Multi",
       "data": [
         {
-          "x": "Recommended sizing",
-          "y": "351.96"
+          "x": "Light",
+          "y": "273"
+        },
+        {
+          "x": "Medium",
+          "y": "439"
+        },
+        {
+          "x": "Heavy",
+          "y": "749"
         }
       ]
     },
+
     {
       "serie": "D8s_v5 - Multi",
       "data": [
         {
-          "x": "Recommended sizing",
-          "y": "374.27"
+          "x": "Light",
+          "y": "270"
+        },
+        {
+          "x": "Medium",
+          "y": "418"
+        },
+        {
+          "x": "Heavy",
+          "y": "751"
         }
       ]
     },
@@ -33,20 +75,37 @@
       "serie": "D16s_v5 - Multi",
       "data": [
         {
-          "x": "Recommended sizing",
-          "y": "394.43"
+          "x": "Light",
+          "y": "287"
+        },
+        {
+          "x": "Medium",
+          "y": "416"
+        },
+        {
+          "x": "Heavy",
+          "y": "779"
         }
       ]
     },
+
     {
       "serie": "D32s_v5 - Multi",
       "data": [
         {
-          "x": "Recommended sizing",
-          "y": "403.16"
+          "x": "Light",
+          "y": "316"
+        },
+        {
+          "x": "Medium",
+          "y": "414"
+        },
+        {
+          "x": "Heavy",
+          "y": "775"
         }
       ]
     }
   ],
-  "unit": " USD"
+  "unit": "$"
 }

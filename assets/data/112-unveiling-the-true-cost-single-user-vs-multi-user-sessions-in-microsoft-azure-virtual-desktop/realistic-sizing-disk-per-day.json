@@ -1,5 +1,5 @@
 {
-  "title": "Total cost per day for 1000 users based on realistic sizing",
+  "title": "Storage cost per day for 1000 users based on realistic sizing",
   "subTitle": "Lower is better",
   "series": [
     {
@@ -7,7 +7,7 @@
       "data": [
         {
           "x": "Light",
-          "y": "2388"
+          "y": "712"
         },
         {
           "x": "Medium",
@@ -28,11 +28,11 @@
         },
         {
           "x": "Medium",
-          "y": "4042"
+          "y": "712"
         },
         {
           "x": "Heavy",
-          "y": "4042"
+          "y": "712"
         }
       ]
     },
@@ -41,15 +41,15 @@
       "data": [
         {
           "x": "Light",
-          "y": "972"
+          "y": "119"
         },
         {
           "x": "Medium",
-          "y": "838"
+          "y": "178"
         },
         {
           "x": "Heavy",
-          "y": "1560"
+          "y": "356"
         }
       ]
     },
@@ -58,15 +58,15 @@
       "data": [
         {
           "x": "Light",
-          "y": "848"
+          "y": "53"
         },
         {
           "x": "Medium",
-          "y": "788"
+          "y": "81"
         },
         {
           "x": "Heavy",
-          "y": "1371"
+          "y": "178"
         }
       ]
     },
@@ -75,15 +75,15 @@
       "data": [
         {
           "x": "Light",
-          "y": "831"
+          "y": "25"
         },
         {
           "x": "Medium",
-          "y": "792"
+          "y": "36"
         },
         {
           "x": "Heavy",
-          "y": "1214"
+          "y": "71"
         }
       ]
     },
@@ -92,15 +92,15 @@
       "data": [
         {
           "x": "Light",
-          "y": "785"
+          "y": "11"
         },
         {
           "x": "Medium",
-          "y": "781"
+          "y": "18"
         },
         {
           "x": "Heavy",
-          "y": "1193"
+          "y": "36"
         }
       ]
     }

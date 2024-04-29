@@ -3,6 +3,23 @@
   "subTitle": "Lower is better",
   "series": [
     {
+      "serie": "D2s_v5 - Single",
+      "data": [
+        {
+          "x": "VM average runtime",
+          "y": "08.01"
+        },
+        {
+          "x": "VM max runtime",
+          "y": "10.18"
+        },
+        {
+          "x": "VM min runtime",
+          "y": "06.00"
+        }
+      ]
+    },
+    {
       "serie": "D4s_v5 - Single",
       "data": [
         {
